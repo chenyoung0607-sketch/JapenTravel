@@ -146,7 +146,7 @@
 
         .timeline-item {
             display: flex;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             position: relative;
         }
 
@@ -161,11 +161,18 @@
         .event {
             padding-left: 15px;
             border-left: 3px solid var(--soft-pink);
+            width: 100%;
         }
 
         .event h3 {
             font-size: 1.1rem;
             margin-bottom: 5px;
+        }
+
+        .event p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 8px;
         }
 
         /* 知識小卡 (歷史/特色) */
@@ -177,14 +184,16 @@
             font-size: 0.9rem;
             border: 1px dashed #f6c23e;
             position: relative;
+            line-height: 1.7;
         }
         
         .note-card::before {
             content: '💡';
             position: absolute;
-            top: -10px;
+            top: -12px;
             left: -5px;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            transform: rotate(-10deg);
         }
 
         .tag {
@@ -194,6 +203,7 @@
             border-radius: 10px;
             margin-right: 5px;
             color: white;
+            vertical-align: middle;
         }
         .tag.food { background-color: #ffb7b2; }
         .tag.history { background-color: #a0ced9; }
@@ -206,16 +216,6 @@
             font-size: 0.8rem;
             color: #aaa;
         }
-
-        /* 裝飾貼紙 */
-        .sticker {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            opacity: 0.2;
-            z-index: 0;
-        }
     </style>
 </head>
 <body>
@@ -224,7 +224,7 @@
     <h1>🌸 九州賞櫻．熊本回 🌸</h1>
     <div class="subtitle">2026/03/26 - 04/04</div>
     <p style="margin-top:15px; font-size: 0.9rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-        探索日本最南端的自然景觀、溫泉與歷史。從福岡的熱鬧到由布院的寧靜，再到熊本的壯麗。
+        九州位於日本最南端，以壯麗的活火山、熱帶雨林與豐富溫泉資源聞名 。這裡不僅是賞櫻勝地，更是美食拉麵與歷史文化的交會點，準備好迎接這場味覺與視覺的盛宴吧！
     </p>
 </header>
 
@@ -252,38 +252,25 @@
         </div>
         <ul class="timeline">
             <li class="timeline-item">
-                <div class="time">06:30</div>
-                <div class="event">
-                    <h3>🛫 高雄國際機場</h3>
-                    <p>準備出發！</p>
-                </div>
-            </li>
-            <li class="timeline-item">
                 <div class="time">16:15</div>
                 <div class="event">
                     <h3>📍 抵達福岡機場</h3>
-                    <p>國內線轉乘，開始自駕旅程。</p>
+                    <p>轉乘國內線並取車，開始九州自駕之旅。</p>
                 </div>
             </li>
             <li class="timeline-item">
                 <div class="time">18:14</div>
                 <div class="event">
                     <h3>🛍️ 西新商店街</h3>
-                    <p>感受在地的商店街氛圍，尋找晚餐。</p>
+                    <p>體驗在地人的生活步調。這裡不同於天神的喧囂，保留了昭和時代的溫馨氛圍，是尋找平價美食的好去處。</p>
                 </div>
             </li>
             <li class="timeline-item">
                 <div class="time">19:46</div>
                 <div class="event">
                     <h3>🍗 小林養雞本店</h3>
-                    <span class="tag food">美食</span>
-                </div>
-            </li>
-            <li class="timeline-item">
-                <div class="time">20:57</div>
-                <div class="event">
-                    <h3>🏨 梅の由竹ノ屋</h3>
-                    <p>入住休息。</p>
+                    <span class="tag food">居酒屋</span>
+                    <p>九州以雞肉料理聞名，宮崎有雞南蠻，而福岡的炭火燒鳥更是不可錯過 。這裡是放鬆小酌、品嚐地道雞料理的絕佳起點。</p>
                 </div>
             </li>
         </ul>
@@ -302,39 +289,32 @@
                 <div class="time">11:09</div>
                 <div class="event">
                     <h3>🌊 金鱗湖</h3>
-                    <span class="tag view">自然景觀</span>
+                    <span class="tag view">晨霧</span>
                     <div class="note-card">
-                        這裡以晨霧聞名，湖底同時湧出溫泉與清水，使得水溫較高，冬季清晨常有夢幻的霧氣。
+                        金鱗湖底同時湧出溫泉與清水，這種獨特構造使得冬季清晨湖面常飄著夢幻的霧氣 。陽光折射下，湖面波光粼粼如金色魚鱗，因而得名。
                     </div>
-                </div>
-            </li>
-            <li class="timeline-item">
-                <div class="time">12:12</div>
-                <div class="event">
-                    <h3>🍚 由布釜飯「心」</h3>
-                    <p>金鱗湖本店，知名的釜飯料理。</p>
                 </div>
             </li>
             <li class="timeline-item">
                 <div class="time">13:15</div>
                 <div class="event">
                     <h3>🏠 湯布院花卉村</h3>
-                    <p>充滿童話感的歐式小鎮風格。</p>
+                    <p>彷彿走進英國科茨沃爾德（Cotswolds）的童話世界。低矮的石牆與色彩繽紛的花朵，重現了彼得兔故事中的夢幻場景，每個轉角都超好拍！</p>
                 </div>
             </li>
             <li class="timeline-item">
                 <div class="time">16:34</div>
                 <div class="event">
                     <h3>🚶 湯之坪街道</h3>
-                    <p>沿途有許多特色小店與甜點，包括 B-SPEAK 蛋糕卷。</p>
+                    <p>這裡匯集了各種特色甜點與雜貨，包括知名的 B-SPEAK 蛋糕卷本店。漫步其中，可以邊吃邊逛，感受溫泉小鎮的熱鬧氣氛。</p>
                 </div>
             </li>
             <li class="timeline-item">
                 <div class="time">19:22</div>
                 <div class="event">
                     <h3>🌸 大分川河畔櫻花</h3>
-                    <span class="tag view">賞櫻</span>
-                    <p>Oita River Riverbed Cherry Blossom Trees。</p>
+                    <span class="tag view">私房景點</span>
+                    <p>Oita River Riverbed。相較於觀光區，這裡的櫻花樹沿著河岸綻放，能拍出以由布岳為背景的絕美櫻花照 [cite: 237, 238]。</p>
                 </div>
             </li>
         </ul>
@@ -344,7 +324,7 @@
         <div class="day-header">
             <div class="day-badge">Day 3</div>
             <div class="day-title">
-                <h2>西公園與大濠公園</h2>
+                <h2>職人漢堡與古城櫻花</h2>
                 <div class="day-date">03/28 (六) • 福岡市</div>
             </div>
         </div>
@@ -353,39 +333,32 @@
                 <div class="time">11:18</div>
                 <div class="event">
                     <h3>🌸 西公園</h3>
-                    <p>福岡賞櫻名所百選之一。</p>
+                    <p>入選「日本櫻花名所100選」，園內種植約1300棵櫻花樹。從展望台還能遠眺博多灣的景色。</p>
                 </div>
             </li>
             <li class="timeline-item">
                 <div class="time">12:20</div>
                 <div class="event">
                     <h3>🍔 今屋漢堡 (西公園本店)</h3>
-                    <span class="tag food">必吃美食</span>
+                    <span class="tag food">傳奇名店</span>
                     <div class="note-card">
-                        由一位快80歲的老爺爺經營，開業超過50年。老爺爺彎著腰在小餐車中製作手工慢烤熱狗堡，美味程度常需排隊2小時以上，是充滿職人精神的傳奇小店。
+                        這是一家擁有50年以上歷史的傳奇小店！由一位快80歲的可愛老爺爺經營，他最初是開著餐車起家。老爺爺彎著腰，堅持手工慢烤每一個熱狗堡，那份專注的職人精神與美味，讓許多人願意排隊等上2個小時 [cite: 256, 257, 258, 260, 263]。
                     </div>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">13:08</div>
+                <div class="event">
+                    <h3>🦊 だしいなり海木 (豆皮壽司)</h3>
+                    <span class="tag food">需預約</span>
+                    <p>使用熊本南關町特產的炸豆皮，吸飽了九州大豆製成的高湯。這是專為豆皮壽司開發的特製品，因製作費時，經常中午就售完，建議事先預約 。</p>
                 </div>
             </li>
             <li class="timeline-item">
                 <div class="time">15:23</div>
                 <div class="event">
                     <h3>🏯 舞鶴公園 (福岡城跡)</h3>
-                    <span class="tag history">歷史</span>
-                    <p>福岡城遺跡與櫻花交織的絕美景色。</p>
-                </div>
-            </li>
-            <li class="timeline-item">
-                <div class="time">16:25</div>
-                <div class="event">
-                    <h3>🦢 大濠公園</h3>
-                    <p>模仿中國西湖修築的水景公園。</p>
-                </div>
-            </li>
-            <li class="timeline-item">
-                <div class="time">17:28</div>
-                <div class="event">
-                    <h3>🍲 博多水炊鍋專門 橙</h3>
-                    <p>福岡代表性料理。</p>
+                    <p>由黑田官兵衛之子長政所築。雖然天守閣已不在，但每到春天，城牆邊的櫻花與石垣相互輝映，晚上點燈後的「夜櫻」更是如夢似幻。</p>
                 </div>
             </li>
         </ul>
@@ -401,27 +374,20 @@
         </div>
         <ul class="timeline">
             <li class="timeline-item">
-                <div class="time">09:11</div>
-                <div class="event">
-                    <h3>🍱 元祖博多明太重</h3>
-                    <p>福岡著名的明太子料理。</p>
-                </div>
-            </li>
-            <li class="timeline-item">
                 <div class="time">10:23</div>
                 <div class="event">
                     <h3>⛩️ 櫛田神社</h3>
-                    <span class="tag history">文化</span>
-                    <p>博多的總鎮守，以「博多祇園山笠」祭典聞名。</p>
+                    <span class="tag history">博多總鎮守</span>
+                    <p>深受博多市民愛戴的神社，也是著名的「博多祇園山笠」祭典的舉辦地。境內展示著巨大的裝飾山笠，全年都能感受到祭典的魄力。</p>
                 </div>
             </li>
             <li class="timeline-item">
                 <div class="time">11:33</div>
                 <div class="event">
                     <h3>🍘 もち吉 (Mochikichi) 博多本店</h3>
-                    <span class="tag food">伴手禮</span>
+                    <span class="tag food">90年老店</span>
                     <div class="note-card">
-                        擁有90年以上歷史的老店，專注於用優質國產米製作仙貝與米果。本店位於東長寺旁，價格親民且深受在地人喜愛。
+                        位於東長寺旁的老字號，創業超過90年。堅持使用優質國產米製作仙貝與米果，在全日本擁有220間以上分店。這裡的現烤美味與親民價格，是九州在地人最愛的伴手禮 。
                     </div>
                 </div>
             </li>
@@ -429,7 +395,7 @@
                 <div class="time">16:56</div>
                 <div class="event">
                     <h3>🤖 LaLaport 福岡</h3>
-                    <p>著名的實體大鋼彈立像所在地。</p>
+                    <p>這裡矗立著實體大的「RX-93ff ν鋼彈」立像。除了購物，定時演出的燈光音樂秀更是鋼彈迷的朝聖重點。</p>
                 </div>
             </li>
         </ul>
@@ -448,28 +414,22 @@
                 <div class="time">09:54</div>
                 <div class="event">
                     <h3>🌸 一本松川綠道</h3>
-                    <p>悠閒的賞櫻散步路徑。</p>
+                    <p>隱藏在住宅區中的賞櫻秘境。沿著小河川種植的櫻花樹，形成了一條寧靜的粉色隧道，適合悠閒散步拍照。</p>
                 </div>
             </li>
             <li class="timeline-item">
                 <div class="time">12:13</div>
                 <div class="event">
                     <h3>🍜 大砲拉麵</h3>
-                    <p>久留米系豚骨拉麵名店。</p>
-                </div>
-            </li>
-            <li class="timeline-item">
-                <div class="time">13:19</div>
-                <div class="event">
-                    <h3>🛍️ 天神地下街</h3>
-                    <p>九州最大的地下購物區，風格優雅。</p>
+                    <span class="tag food">久留米系</span>
+                    <p>起源於豚骨拉麵發源地久留米。其特色是「呼叫回湯（呼び戻し）」技法，將新舊湯頭混合，創造出濃郁且帶有獨特香氣的醇厚湯頭。</p>
                 </div>
             </li>
             <li class="timeline-item">
                 <div class="time">17:51</div>
                 <div class="event">
                     <h3>⛲ 博多運河城</h3>
-                    <p>複合式購物中心，定時有音樂水舞秀。</p>
+                    <p>這座複合式購物中心本身就是一個大型藝術品。流經中央的運河定時會有華麗的水舞秀，是結合購物、娛樂與美食的博多地標。</p>
                 </div>
             </li>
         </ul>
@@ -479,7 +439,7 @@
         <div class="day-header">
             <div class="day-badge">Day 6</div>
             <div class="day-title">
-                <h2>秋月城下町</h2>
+                <h2>筑前小京都：秋月</h2>
                 <div class="day-date">03/31 (二) • 浮羽/朝倉</div>
             </div>
         </div>
@@ -488,7 +448,7 @@
                 <div class="time">10:08</div>
                 <div class="event">
                     <h3>🌲 杉之馬場 (Sugi no Baba)</h3>
-                    <p>通往秋月城的櫻花隧道。</p>
+                    <p>通往秋月城的昔日馬場，現在則是著名的櫻花隧道。兩旁古樹參天，櫻花盛開時如同粉色屋頂，景色壯觀。</p>
                 </div>
             </li>
             <li class="timeline-item">
@@ -496,14 +456,7 @@
                 <div class="event">
                     <h3>🏯 秋月城跡</h3>
                     <span class="tag history">小京都</span>
-                    <p>有「筑前小京都」之稱，古色古香的城下町風光。</p>
-                </div>
-            </li>
-            <li class="timeline-item">
-                <div class="time">13:02</div>
-                <div class="event">
-                    <h3>🌸 甘木公園</h3>
-                    <p>知名的賞櫻景點，適合戶外野餐。</p>
+                    <p>保留了江戶時代的城下町風貌，被稱為「筑前的小京都」。這裡的黑門（原秋月城大門）周圍紅葉與櫻花交錯，充滿歷史的寂靜美感。</p>
                 </div>
             </li>
         </ul>
@@ -513,7 +466,7 @@
         <div class="day-header">
             <div class="day-badge">Day 7</div>
             <div class="day-title">
-                <h2>北九州小倉散策</h2>
+                <h2>北九州昭和風情</h2>
                 <div class="day-date">04/01 (三) • 北九州市</div>
             </div>
         </div>
@@ -522,29 +475,22 @@
                 <div class="time">12:30</div>
                 <div class="event">
                     <h3>🥟 小倉鐵鍋煎餃</h3>
-                    <p>在地特色美食，熱騰騰的鐵鍋上桌。</p>
+                    <p>北九州的靈魂美食。將餃子放在燒熱的鐵鍋上直接上桌，外皮酥脆、內餡多汁，吃到最後一口都是熱騰騰的。</p>
                 </div>
             </li>
             <li class="timeline-item">
                 <div class="time">13:34</div>
                 <div class="event">
                     <h3>🐟 旦過市場</h3>
-                    <span class="tag history">庶民廚房</span>
-                    <p>被稱為「北九州的廚房」，充滿昭和風情的老市場。</p>
+                    <span class="tag history">北九州廚房</span>
+                    <p>擁有百年歷史的傳統市場，保留了濃濃的昭和風情。這裡販售新鮮的魚獲、蔬果以及著名的「糠味噌炊（ぬか炊き）」，是體驗在地生活感的最佳場所。</p>
                 </div>
             </li>
             <li class="timeline-item">
                 <div class="time">17:28</div>
                 <div class="event">
                     <h3>🏯 小倉城</h3>
-                    <p>唐造風格的天守閣，周邊勝山公園也是賞櫻點。</p>
-                </div>
-            </li>
-            <li class="timeline-item">
-                <div class="time">19:26</div>
-                <div class="event">
-                    <h3>🛍️ THE OUTLETS KITAKYUSHU</h3>
-                    <p>大型購物中心。</p>
+                    <p>其天守閣採用獨特的「唐造」風格（上層比下層大）。周邊的勝山公園也是賞櫻名所，現代城市與古城的對比別有一番風味。</p>
                 </div>
             </li>
         </ul>
@@ -554,7 +500,7 @@
         <div class="day-header">
             <div class="day-badge">Day 8</div>
             <div class="day-title">
-                <h2>太宰府與柳川</h2>
+                <h2>太宰府傳說與水鄉</h2>
                 <div class="day-date">04/02 (四) • 福岡南部</div>
             </div>
         </div>
@@ -564,16 +510,16 @@
                 <div class="event">
                     <h3>⛩️ 太宰府天滿宮</h3>
                     <span class="tag history">學問之神</span>
-                    <p>祭祀菅原道真公，祈求學業進步的聖地。</p>
+                    <p>祭祀「學問之神」菅原道真公的總本宮。境內的「飛梅」傳說一夜之間從京都飛來此地，每年早春率先綻放，守護著這片聖地。</p>
                 </div>
             </li>
             <li class="timeline-item">
                 <div class="time">12:10</div>
                 <div class="event">
                     <h3>🍵 梅枝餅 (安武)</h3>
-                    <span class="tag food">傳說</span>
+                    <span class="tag food">必吃傳說</span>
                     <div class="note-card">
-                        傳說一位老婆婆將栗子餅繞在梅枝上，送給被貶至大宰府的菅原道真公，這便是梅枝餅的由來。「安武」是唯一能隨時吃到現烤梅枝餅的名店。
+                        梅枝餅的由來充滿溫情：傳說一位老婆婆為了安慰被流放、飢餓的菅原道真，將栗子餅繞在梅枝上送給他。在眾多店家之中，「安武」是唯一一間能隨時提供「現烤」梅枝餅的名店，外酥內軟的口感絕佳 [cite: 347, 348]。
                     </div>
                 </div>
             </li>
@@ -581,14 +527,7 @@
                 <div class="time">14:26</div>
                 <div class="event">
                     <h3>🚣 柳川遊船</h3>
-                    <p>體驗水鄉柳川的搖櫓船，欣賞沿岸風光。</p>
-                </div>
-            </li>
-            <li class="timeline-item">
-                <div class="time">18:37</div>
-                <div class="event">
-                    <h3>🏨 抵達熊本</h3>
-                    <p>入住熊本城飯店。</p>
+                    <p>由船夫撐著搖櫓船，緩緩穿梭在交錯的水路間。沿岸垂柳依依，船夫有時還會哼唱傳統歌謠，讓人沉浸在詩情畫意的風光中。</p>
                 </div>
             </li>
         </ul>
@@ -607,36 +546,22 @@
                 <div class="time">09:32</div>
                 <div class="event">
                     <h3>🏯 熊本城</h3>
-                    <span class="tag history">日本三名城</span>
-                    <p>加藤清正建造的堅固堡壘，雖然經歷地震，但修復後的姿態依然壯觀。</p>
-                </div>
-            </li>
-            <li class="timeline-item">
-                <div class="time">10:48</div>
-                <div class="event">
-                    <h3>🍡 櫻之馬場 城彩苑</h3>
-                    <p>熊本城下的美食商店街。</p>
+                    <span class="tag history">難攻不落</span>
+                    <p>由名將加藤清正耗時7年建造，以其易守難攻的「武者返」石牆聞名。雖然經歷大地震，但修復後的天守閣再次展現了「黑色城堡」的威嚴與壯麗 。</p>
                 </div>
             </li>
             <li class="timeline-item">
                 <div class="time">11:57</div>
                 <div class="event">
                     <h3>🍜 黑亭拉麵</h3>
-                    <p>熊本特色的焦蒜豚骨拉麵。</p>
+                    <p>熊本拉麵的代表老店。湯頭中加入了焦香蒜油（麻油），濃郁的蒜香與豚骨湯頭完美融合，是口味偏重的本格派拉麵。</p>
                 </div>
             </li>
             <li class="timeline-item">
                 <div class="time">13:12</div>
                 <div class="event">
                     <h3>🌳 水前寺成趣園</h3>
-                    <p>優美的迴遊式庭園。</p>
-                </div>
-            </li>
-            <li class="timeline-item">
-                <div class="time">14:17</div>
-                <div class="event">
-                    <h3>🏴‍☠️ 海賊王魯夫雕像</h3>
-                    <p>位於熊本縣廳散步道，動漫迷必訪。</p>
+                    <p>這是一座優美的桃山式迴遊庭園。園內引進阿蘇山的伏流水，並仿造「東海道五十三次」的景致，其中縮小版的富士山造景最為著名。</p>
                 </div>
             </li>
         </ul>
@@ -655,14 +580,14 @@
                 <div class="time">08:00</div>
                 <div class="event">
                     <h3>🏨 退房出發</h3>
-                    <p>前往機場。</p>
+                    <p>整理好滿滿的戰利品與回憶，前往機場。</p>
                 </div>
             </li>
             <li class="timeline-item">
                 <div class="time">08:35</div>
                 <div class="event">
                     <h3>🛫 熊本機場</h3>
-                    <p>搭機返程，結束美好的賞櫻之旅。</p>
+                    <p>搭機返程，結束這趟從福岡到熊本，充滿櫻花與美食的精彩旅程。</p>
                 </div>
             </li>
         </ul>
