@@ -24,6 +24,11 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth; /* 點擊按鈕時會平滑捲動 */
+            scroll-padding-top: 80px; /* 避免標題被導覽列擋住 */
+        }
+
         body {
             font-family: 'Zen Maru Gothic', sans-serif;
             background-color: var(--bg-color);
@@ -66,9 +71,15 @@
             gap: 10px;
             position: sticky;
             top: 0;
-            background: rgba(253, 251, 247, 0.95);
+            background: rgba(253, 251, 247, 0.98);
             z-index: 100;
             border-bottom: 2px dashed #ddd;
+            /* 隱藏捲軸但保留功能 */
+            scrollbar-width: none; 
+            -ms-overflow-style: none;
+        }
+        .nav-scroller::-webkit-scrollbar { 
+            display: none; 
         }
 
         .nav-item {
@@ -80,14 +91,20 @@
             text-decoration: none;
             color: var(--text-color);
             font-size: 0.9rem;
-            transition: transform 0.2s;
+            transition: all 0.3s ease;
         }
 
-        .nav-item:hover, .nav-item.active {
+        .nav-item:hover {
+            transform: rotate(-2deg);
+        }
+
+        /* 導覽列被選中時的樣式 */
+        .nav-item.active {
             background: var(--primary-pink);
             color: white;
             border-color: #d65db1;
-            transform: rotate(-2deg);
+            transform: scale(1.05);
+            box-shadow: 0 2px 5px rgba(255, 154, 158, 0.5);
         }
 
         /* 主要內容 */
@@ -102,11 +119,12 @@
             background: var(--paper-white);
             margin-bottom: 40px;
             padding: 25px;
-            /* 模擬手繪不規則邊框 */
             border: 3px solid #5d5d5d;
             border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
             box-shadow: var(--shadow);
             position: relative;
+            /* 用於 JS 偵測 */
+            transition: transform 0.3s; 
         }
 
         .day-header {
@@ -175,7 +193,7 @@
             margin-bottom: 8px;
         }
 
-        /* 知識小卡 (歷史/特色) */
+        /* 知識小卡 */
         .note-card {
             background: #fff8e1;
             padding: 15px;
@@ -209,7 +227,6 @@
         .tag.history { background-color: #a0ced9; }
         .tag.view { background-color: #95e1d3; }
 
-        /* 頁尾 */
         footer {
             text-align: center;
             padding: 40px;
@@ -224,12 +241,12 @@
     <h1>🌸 九州賞櫻．熊本回 🌸</h1>
     <div class="subtitle">2026/03/26 - 04/04</div>
     <p style="margin-top:15px; font-size: 0.9rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-        九州位於日本最南端，以壯麗的活火山、熱帶雨林與豐富溫泉資源聞名 。這裡不僅是賞櫻勝地，更是美食拉麵與歷史文化的交會點，準備好迎接這場味覺與視覺的盛宴吧！
+        九州位於日本最南端，以壯麗的活火山、熱帶雨林與豐富溫泉資源聞名。這裡不僅是賞櫻勝地，更是美食拉麵與歷史文化的交會點，準備好迎接這場味覺與視覺的盛宴吧！
     </p>
 </header>
 
 <nav class="nav-scroller">
-    <a href="#day1" class="nav-item">D1 到達</a>
+    <a href="#day1" class="nav-item active">D1 到達</a>
     <a href="#day2" class="nav-item">D2 由布院</a>
     <a href="#day3" class="nav-item">D3 福岡城</a>
     <a href="#day4" class="nav-item">D4 櫛田</a>
@@ -270,7 +287,7 @@
                 <div class="event">
                     <h3>🍗 小林養雞本店</h3>
                     <span class="tag food">居酒屋</span>
-                    <p>九州以雞肉料理聞名，宮崎有雞南蠻，而福岡的炭火燒鳥更是不可錯過 。這裡是放鬆小酌、品嚐地道雞料理的絕佳起點。</p>
+                    <p>九州以雞肉料理聞名，宮崎有雞南蠻，而福岡的炭火燒鳥更是不可錯過。這裡是放鬆小酌、品嚐地道雞料理的絕佳起點。</p>
                 </div>
             </li>
         </ul>
@@ -291,7 +308,7 @@
                     <h3>🌊 金鱗湖</h3>
                     <span class="tag view">晨霧</span>
                     <div class="note-card">
-                        金鱗湖底同時湧出溫泉與清水，這種獨特構造使得冬季清晨湖面常飄著夢幻的霧氣 。陽光折射下，湖面波光粼粼如金色魚鱗，因而得名。
+                        金鱗湖底同時湧出溫泉與清水，這種獨特構造使得冬季清晨湖面常飄著夢幻的霧氣。陽光折射下，湖面波光粼粼如金色魚鱗，因而得名。
                     </div>
                 </div>
             </li>
@@ -314,7 +331,7 @@
                 <div class="event">
                     <h3>🌸 大分川河畔櫻花</h3>
                     <span class="tag view">私房景點</span>
-                    <p>Oita River Riverbed。相較於觀光區，這裡的櫻花樹沿著河岸綻放，能拍出以由布岳為背景的絕美櫻花照 [cite: 237, 238]。</p>
+                    <p>Oita River Riverbed。相較於觀光區，這裡的櫻花樹沿著河岸綻放，能拍出以由布岳為背景的絕美櫻花照。</p>
                 </div>
             </li>
         </ul>
@@ -342,7 +359,7 @@
                     <h3>🍔 今屋漢堡 (西公園本店)</h3>
                     <span class="tag food">傳奇名店</span>
                     <div class="note-card">
-                        這是一家擁有50年以上歷史的傳奇小店！由一位快80歲的可愛老爺爺經營，他最初是開著餐車起家。老爺爺彎著腰，堅持手工慢烤每一個熱狗堡，那份專注的職人精神與美味，讓許多人願意排隊等上2個小時 [cite: 256, 257, 258, 260, 263]。
+                        這是一家擁有50年以上歷史的傳奇小店！由一位快80歲的可愛老爺爺經營，他最初是開著餐車起家。老爺爺彎著腰，堅持手工慢烤每一個熱狗堡，那份專注的職人精神與美味，讓許多人願意排隊等上2個小時。
                     </div>
                 </div>
             </li>
@@ -351,7 +368,7 @@
                 <div class="event">
                     <h3>🦊 だしいなり海木 (豆皮壽司)</h3>
                     <span class="tag food">需預約</span>
-                    <p>使用熊本南關町特產的炸豆皮，吸飽了九州大豆製成的高湯。這是專為豆皮壽司開發的特製品，因製作費時，經常中午就售完，建議事先預約 。</p>
+                    <p>使用熊本南關町特產的炸豆皮，吸飽了九州大豆製成的高湯。這是專為豆皮壽司開發的特製品，因製作費時，經常中午就售完，建議事先預約。</p>
                 </div>
             </li>
             <li class="timeline-item">
@@ -387,7 +404,7 @@
                     <h3>🍘 もち吉 (Mochikichi) 博多本店</h3>
                     <span class="tag food">90年老店</span>
                     <div class="note-card">
-                        位於東長寺旁的老字號，創業超過90年。堅持使用優質國產米製作仙貝與米果，在全日本擁有220間以上分店。這裡的現烤美味與親民價格，是九州在地人最愛的伴手禮 。
+                        位於東長寺旁的老字號，創業超過90年。堅持使用優質國產米製作仙貝與米果，在全日本擁有220間以上分店。這裡的現烤美味與親民價格，是九州在地人最愛的伴手禮。
                     </div>
                 </div>
             </li>
@@ -519,7 +536,7 @@
                     <h3>🍵 梅枝餅 (安武)</h3>
                     <span class="tag food">必吃傳說</span>
                     <div class="note-card">
-                        梅枝餅的由來充滿溫情：傳說一位老婆婆為了安慰被流放、飢餓的菅原道真，將栗子餅繞在梅枝上送給他。在眾多店家之中，「安武」是唯一一間能隨時提供「現烤」梅枝餅的名店，外酥內軟的口感絕佳 [cite: 347, 348]。
+                        梅枝餅的由來充滿溫情：傳說一位老婆婆為了安慰被流放、飢餓的菅原道真，將栗子餅繞在梅枝上送給他。在眾多店家之中，「安武」是唯一一間能隨時提供「現烤」梅枝餅的名店，外酥內軟的口感絕佳。
                     </div>
                 </div>
             </li>
@@ -547,7 +564,7 @@
                 <div class="event">
                     <h3>🏯 熊本城</h3>
                     <span class="tag history">難攻不落</span>
-                    <p>由名將加藤清正耗時7年建造，以其易守難攻的「武者返」石牆聞名。雖然經歷大地震，但修復後的天守閣再次展現了「黑色城堡」的威嚴與壯麗 。</p>
+                    <p>由名將加藤清正耗時7年建造，以其易守難攻的「武者返」石牆聞名。雖然經歷大地震，但修復後的天守閣再次展現了「黑色城堡」的威嚴與壯麗。</p>
                 </div>
             </li>
             <li class="timeline-item">
@@ -561,7 +578,7 @@
                 <div class="time">13:12</div>
                 <div class="event">
                     <h3>🌳 水前寺成趣園</h3>
-                    <p>這是一座優美的桃山式迴遊庭園。園內引進阿蘇山的伏流水，並仿造「東海道五十三次」的景致，其中縮小版的富士山造景最為著名。</p>
+                    <p>優美的桃山式迴遊庭園。園內引進阿蘇山的伏流水，並仿造「東海道五十三次」的景致，其中縮小版的富士山造景最為著名。</p>
                 </div>
             </li>
         </ul>
@@ -598,6 +615,49 @@
 <footer>
     <p>2026 Kyushu Sakura Trip • 祝旅途愉快</p>
 </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-item");
+        const navScroller = document.querySelector(".nav-scroller");
+
+        // 使用 IntersectionObserver 來偵測目前哪個區域在畫面上
+        const observerOptions = {
+            root: null,
+            // 關鍵設定：當區塊進入視窗高度的 30% 到 60% 之間時觸發，
+            // 這樣能確保是在瀏覽該區塊的主要內容時才切換。
+            rootMargin: "-25% 0px -65% 0px", 
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute("id");
+                    
+                    // 1. 移除所有 active 樣式
+                    navLinks.forEach(link => link.classList.remove("active"));
+                    
+                    // 2. 幫當前對應的按鈕加上 active 樣式
+                    const activeLink = document.querySelector(`.nav-item[href="#${id}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add("active");
+
+                        // 3. 自動橫向捲動導覽列，讓被選中的按鈕置中
+                        const scrollLeft = activeLink.offsetLeft - (navScroller.clientWidth / 2) + (activeLink.clientWidth / 2);
+                        navScroller.scrollTo({
+                            left: scrollLeft,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+    });
+</script>
 
 </body>
 </html>
