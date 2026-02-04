@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 九州福岡賞櫻・熊本回</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fdfbf7;
+            --text-color: #5d5d5d;
+            --primary-pink: #ff9a9e;
+            --soft-pink: #fecfef;
+            --accent-green: #a8e6cf;
+            --paper-white: #ffffff;
+            --shadow: 4px 4px 0px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Zen Maru Gothic', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-image: radial-gradient(#ffb7b2 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* 頂部標題 */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(180deg, #fff0f0 0%, var(--bg-color) 100%);
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #d65db1;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0px #fff;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            background: var(--accent-green);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px 5px 20px 5px;
+            color: #fff;
+            font-weight: bold;
+            box-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+        }
+
+        /* 導覽列 */
+        .nav-scroller {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px 20px;
+            gap: 10px;
+            position: sticky;
+            top: 0;
+            background: rgba(253, 251, 247, 0.95);
+            z-index: 100;
+            border-bottom: 2px dashed #ddd;
+        }
+
+        .nav-item {
+            flex: 0 0 auto;
+            padding: 8px 15px;
+            background: white;
+            border: 2px solid #5d5d5d;
+            border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: var(--primary-pink);
+            color: white;
+            border-color: #d65db1;
+            transform: rotate(-2deg);
+        }
+
+        /* 主要內容 */
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 手繪風格卡片 */
+        .day-card {
+            background: var(--paper-white);
+            margin-bottom: 40px;
+            padding: 25px;
+            /* 模擬手繪不規則邊框 */
+            border: 3px solid #5d5d5d;
+            border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .day-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px dashed #eee;
+            padding-bottom: 10px;
+        }
+
+        .day-badge {
+            background: var(--primary-pink);
+            color: white;
+            padding: 10px 15px;
+            font-weight: bold;
+            border-radius: 50% 40% 60% 50% / 50% 60% 40% 50%;
+            margin-right: 15px;
+            transform: rotate(-5deg);
+            border: 2px solid #5d5d5d;
+        }
+
+        .day-title h2 {
+            font-size: 1.3rem;
+            color: #d65db1;
+        }
+
+        .day-date {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* 時間軸列表 */
+        .timeline {
+            list-style: none;
+            padding-left: 10px;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .time {
+            flex: 0 0 60px;
+            font-weight: bold;
+            color: #888;
+            font-size: 0.9rem;
+            padding-top: 2px;
+        }
+
+        .event {
+            padding-left: 15px;
+            border-left: 3px solid var(--soft-pink);
+        }
+
+        .event h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        /* 知識小卡 (歷史/特色) */
+        .note-card {
+            background: #fff8e1;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            border: 1px dashed #f6c23e;
+            position: relative;
+        }
+        
+        .note-card::before {
+            content: '💡';
+            position: absolute;
+            top: -10px;
+            left: -5px;
+            font-size: 1.2rem;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-right: 5px;
+            color: white;
+        }
+        .tag.food { background-color: #ffb7b2; }
+        .tag.history { background-color: #a0ced9; }
+        .tag.view { background-color: #95e1d3; }
+
+        /* 頁尾 */
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+
+        /* 裝飾貼紙 */
+        .sticker {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            opacity: 0.2;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🌸 九州賞櫻．熊本回 🌸</h1>
+    <div class="subtitle">2026/03/26 - 04/04</div>
+    <p style="margin-top:15px; font-size: 0.9rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        探索日本最南端的自然景觀、溫泉與歷史。從福岡的熱鬧到由布院的寧靜，再到熊本的壯麗。
+    </p>
+</header>
+
+<nav class="nav-scroller">
+    <a href="#day1" class="nav-item">D1 到達</a>
+    <a href="#day2" class="nav-item">D2 由布院</a>
+    <a href="#day3" class="nav-item">D3 福岡城</a>
+    <a href="#day4" class="nav-item">D4 櫛田</a>
+    <a href="#day5" class="nav-item">D5 天神</a>
+    <a href="#day6" class="nav-item">D6 秋月</a>
+    <a href="#day7" class="nav-item">D7 小倉</a>
+    <a href="#day8" class="nav-item">D8 太宰府</a>
+    <a href="#day9" class="nav-item">D9 熊本</a>
+    <a href="#day10" class="nav-item">D10 返程</a>
+</nav>
+
+<main>
+    <section id="day1" class="day-card">
+        <div class="day-header">
+            <div class="day-badge">Day 1</div>
+            <div class="day-title">
+                <h2>啟程與福岡之夜</h2>
+                <div class="day-date">03/26 (四) • 高雄 → 福岡</div>
+            </div>
+        </div>
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="time">06:30</div>
+                <div class="event">
+                    <h3>🛫 高雄國際機場</h3>
+                    <p>準備出發！</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">16:15</div>
+                <div class="event">
+                    <h3>📍 抵達福岡機場</h3>
+                    <p>國內線轉乘，開始自駕旅程。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">18:14</div>
+                <div class="event">
+                    <h3>🛍️ 西新商店街</h3>
+                    <p>感受在地的商店街氛圍，尋找晚餐。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">19:46</div>
+                <div class="event">
+                    <h3>🍗 小林養雞本店</h3>
+                    <span class="tag food">美食</span>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">20:57</div>
+                <div class="event">
+                    <h3>🏨 梅の由竹ノ屋</h3>
+                    <p>入住休息。</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="day2" class="day-card">
+        <div class="day-header">
+            <div class="day-badge">Day 2</div>
+            <div class="day-title">
+                <h2>由布院溫泉漫步</h2>
+                <div class="day-date">03/27 (五) • 大分縣由布市</div>
+            </div>
+        </div>
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="time">11:09</div>
+                <div class="event">
+                    <h3>🌊 金鱗湖</h3>
+                    <span class="tag view">自然景觀</span>
+                    <div class="note-card">
+                        這裡以晨霧聞名，湖底同時湧出溫泉與清水，使得水溫較高，冬季清晨常有夢幻的霧氣。
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">12:12</div>
+                <div class="event">
+                    <h3>🍚 由布釜飯「心」</h3>
+                    <p>金鱗湖本店，知名的釜飯料理。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">13:15</div>
+                <div class="event">
+                    <h3>🏠 湯布院花卉村</h3>
+                    <p>充滿童話感的歐式小鎮風格。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">16:34</div>
+                <div class="event">
+                    <h3>🚶 湯之坪街道</h3>
+                    <p>沿途有許多特色小店與甜點，包括 B-SPEAK 蛋糕卷。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">19:22</div>
+                <div class="event">
+                    <h3>🌸 大分川河畔櫻花</h3>
+                    <span class="tag view">賞櫻</span>
+                    <p>Oita River Riverbed Cherry Blossom Trees。</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="day3" class="day-card">
+        <div class="day-header">
+            <div class="day-badge">Day 3</div>
+            <div class="day-title">
+                <h2>西公園與大濠公園</h2>
+                <div class="day-date">03/28 (六) • 福岡市</div>
+            </div>
+        </div>
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="time">11:18</div>
+                <div class="event">
+                    <h3>🌸 西公園</h3>
+                    <p>福岡賞櫻名所百選之一。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">12:20</div>
+                <div class="event">
+                    <h3>🍔 今屋漢堡 (西公園本店)</h3>
+                    <span class="tag food">必吃美食</span>
+                    <div class="note-card">
+                        由一位快80歲的老爺爺經營，開業超過50年。老爺爺彎著腰在小餐車中製作手工慢烤熱狗堡，美味程度常需排隊2小時以上，是充滿職人精神的傳奇小店。
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">15:23</div>
+                <div class="event">
+                    <h3>🏯 舞鶴公園 (福岡城跡)</h3>
+                    <span class="tag history">歷史</span>
+                    <p>福岡城遺跡與櫻花交織的絕美景色。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">16:25</div>
+                <div class="event">
+                    <h3>🦢 大濠公園</h3>
+                    <p>模仿中國西湖修築的水景公園。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">17:28</div>
+                <div class="event">
+                    <h3>🍲 博多水炊鍋專門 橙</h3>
+                    <p>福岡代表性料理。</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="day4" class="day-card">
+        <div class="day-header">
+            <div class="day-badge">Day 4</div>
+            <div class="day-title">
+                <h2>博多傳統與購物</h2>
+                <div class="day-date">03/29 (日) • 福岡市</div>
+            </div>
+        </div>
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="time">09:11</div>
+                <div class="event">
+                    <h3>🍱 元祖博多明太重</h3>
+                    <p>福岡著名的明太子料理。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">10:23</div>
+                <div class="event">
+                    <h3>⛩️ 櫛田神社</h3>
+                    <span class="tag history">文化</span>
+                    <p>博多的總鎮守，以「博多祇園山笠」祭典聞名。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">11:33</div>
+                <div class="event">
+                    <h3>🍘 もち吉 (Mochikichi) 博多本店</h3>
+                    <span class="tag food">伴手禮</span>
+                    <div class="note-card">
+                        擁有90年以上歷史的老店，專注於用優質國產米製作仙貝與米果。本店位於東長寺旁，價格親民且深受在地人喜愛。
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">16:56</div>
+                <div class="event">
+                    <h3>🤖 LaLaport 福岡</h3>
+                    <p>著名的實體大鋼彈立像所在地。</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="day5" class="day-card">
+        <div class="day-header">
+            <div class="day-badge">Day 5</div>
+            <div class="day-title">
+                <h2>天神購物與運河城</h2>
+                <div class="day-date">03/30 (一) • 福岡市</div>
+            </div>
+        </div>
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="time">09:54</div>
+                <div class="event">
+                    <h3>🌸 一本松川綠道</h3>
+                    <p>悠閒的賞櫻散步路徑。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">12:13</div>
+                <div class="event">
+                    <h3>🍜 大砲拉麵</h3>
+                    <p>久留米系豚骨拉麵名店。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">13:19</div>
+                <div class="event">
+                    <h3>🛍️ 天神地下街</h3>
+                    <p>九州最大的地下購物區，風格優雅。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">17:51</div>
+                <div class="event">
+                    <h3>⛲ 博多運河城</h3>
+                    <p>複合式購物中心，定時有音樂水舞秀。</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="day6" class="day-card">
+        <div class="day-header">
+            <div class="day-badge">Day 6</div>
+            <div class="day-title">
+                <h2>秋月城下町</h2>
+                <div class="day-date">03/31 (二) • 浮羽/朝倉</div>
+            </div>
+        </div>
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="time">10:08</div>
+                <div class="event">
+                    <h3>🌲 杉之馬場 (Sugi no Baba)</h3>
+                    <p>通往秋月城的櫻花隧道。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">11:15</div>
+                <div class="event">
+                    <h3>🏯 秋月城跡</h3>
+                    <span class="tag history">小京都</span>
+                    <p>有「筑前小京都」之稱，古色古香的城下町風光。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">13:02</div>
+                <div class="event">
+                    <h3>🌸 甘木公園</h3>
+                    <p>知名的賞櫻景點，適合戶外野餐。</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+     <section id="day7" class="day-card">
+        <div class="day-header">
+            <div class="day-badge">Day 7</div>
+            <div class="day-title">
+                <h2>北九州小倉散策</h2>
+                <div class="day-date">04/01 (三) • 北九州市</div>
+            </div>
+        </div>
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="time">12:30</div>
+                <div class="event">
+                    <h3>🥟 小倉鐵鍋煎餃</h3>
+                    <p>在地特色美食，熱騰騰的鐵鍋上桌。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">13:34</div>
+                <div class="event">
+                    <h3>🐟 旦過市場</h3>
+                    <span class="tag history">庶民廚房</span>
+                    <p>被稱為「北九州的廚房」，充滿昭和風情的老市場。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">17:28</div>
+                <div class="event">
+                    <h3>🏯 小倉城</h3>
+                    <p>唐造風格的天守閣，周邊勝山公園也是賞櫻點。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">19:26</div>
+                <div class="event">
+                    <h3>🛍️ THE OUTLETS KITAKYUSHU</h3>
+                    <p>大型購物中心。</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="day8" class="day-card">
+        <div class="day-header">
+            <div class="day-badge">Day 8</div>
+            <div class="day-title">
+                <h2>太宰府與柳川</h2>
+                <div class="day-date">04/02 (四) • 福岡南部</div>
+            </div>
+        </div>
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="time">09:52</div>
+                <div class="event">
+                    <h3>⛩️ 太宰府天滿宮</h3>
+                    <span class="tag history">學問之神</span>
+                    <p>祭祀菅原道真公，祈求學業進步的聖地。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">12:10</div>
+                <div class="event">
+                    <h3>🍵 梅枝餅 (安武)</h3>
+                    <span class="tag food">傳說</span>
+                    <div class="note-card">
+                        傳說一位老婆婆將栗子餅繞在梅枝上，送給被貶至大宰府的菅原道真公，這便是梅枝餅的由來。「安武」是唯一能隨時吃到現烤梅枝餅的名店。
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">14:26</div>
+                <div class="event">
+                    <h3>🚣 柳川遊船</h3>
+                    <p>體驗水鄉柳川的搖櫓船，欣賞沿岸風光。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">18:37</div>
+                <div class="event">
+                    <h3>🏨 抵達熊本</h3>
+                    <p>入住熊本城飯店。</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="day9" class="day-card">
+        <div class="day-header">
+            <div class="day-badge">Day 9</div>
+            <div class="day-title">
+                <h2>熊本城與海賊王</h2>
+                <div class="day-date">04/03 (五) • 熊本市</div>
+            </div>
+        </div>
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="time">09:32</div>
+                <div class="event">
+                    <h3>🏯 熊本城</h3>
+                    <span class="tag history">日本三名城</span>
+                    <p>加藤清正建造的堅固堡壘，雖然經歷地震，但修復後的姿態依然壯觀。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">10:48</div>
+                <div class="event">
+                    <h3>🍡 櫻之馬場 城彩苑</h3>
+                    <p>熊本城下的美食商店街。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">11:57</div>
+                <div class="event">
+                    <h3>🍜 黑亭拉麵</h3>
+                    <p>熊本特色的焦蒜豚骨拉麵。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">13:12</div>
+                <div class="event">
+                    <h3>🌳 水前寺成趣園</h3>
+                    <p>優美的迴遊式庭園。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">14:17</div>
+                <div class="event">
+                    <h3>🏴‍☠️ 海賊王魯夫雕像</h3>
+                    <p>位於熊本縣廳散步道，動漫迷必訪。</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="day10" class="day-card" style="border-color: #a0ced9;">
+        <div class="day-header">
+            <div class="day-badge" style="background:#a0ced9;">Day 10</div>
+            <div class="day-title">
+                <h2>再見九州</h2>
+                <div class="day-date">04/04 (六) • 熊本 → 溫暖的家</div>
+            </div>
+        </div>
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="time">08:00</div>
+                <div class="event">
+                    <h3>🏨 退房出發</h3>
+                    <p>前往機場。</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">08:35</div>
+                <div class="event">
+                    <h3>🛫 熊本機場</h3>
+                    <p>搭機返程，結束美好的賞櫻之旅。</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>2026 Kyushu Sakura Trip • 祝旅途愉快</p>
+</footer>
+
+</body>
+</html>
