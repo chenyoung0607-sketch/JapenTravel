@@ -8,6 +8,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* 櫻花進度條容器 */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            z-index: 2000; /* 確保在最上層 */
+            width: 100%;
+            height: 6px;
+            background: transparent;
+        }
+
+        /* 進度條本體 */
+        .progress-bar {
+            height: 6px;
+            background: linear-gradient(to right, var(--soft-pink), var(--primary-pink));
+            width: 0%; /* 初始寬度為 0 */
+            border-radius: 0 3px 3px 0;
+            box-shadow: 0 0 8px rgba(255, 154, 158, 0.5);
+        }
+
         :root {
             --bg-color: #fdfbf7;
             --text-color: #5d5d5d;
@@ -299,8 +318,11 @@
             }
     </style>
 </head>
-<body>
 
+<body>
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
     <header>
         <h1>2026 九州賞櫻行</h1>
         <div class="subtitle">福岡賞櫻・熊本回</div>
@@ -1300,7 +1322,7 @@
     </footer>
 
     <script>
-        // 1. 詳細內容展開/收合功能 (Toggle)
+        // 1. 詳細內容展開/收合功能 (Toggle) - 保留您原本的邏輯
         function toggleDetail(btn) {
             const content = btn.nextElementSibling;
             if (content.style.display === "block") {
@@ -1314,18 +1336,27 @@
             }
         }
 
-        // 2. 滾動監測與導覽列自動捲動 (Scrollspy)
+        // 2. 獲取導覽與進度條需要的元素
         const navItems = document.querySelectorAll('.nav-item');
         const sections = document.querySelectorAll('section[id]');
         const navScroller = document.getElementById('navScroller');
+        const progressBar = document.getElementById('myBar'); // 獲取進度條元素
 
-        // 監聽滾動事件
+        // 3. 整合監聽滾動事件
         window.addEventListener('scroll', () => {
+
+            // --- A. 更新進度條邏輯 (新增) ---
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            if (progressBar) {
+                progressBar.style.width = scrolled + "%";
+            }
+
+            // --- B. 滾動監測與導覽列自動捲動 (您原本的邏輯) ---
             let currentDay = "";
-            // 偏移量：確保標題進入視線範圍一點點後才切換
             const scrollPos = window.scrollY + 180;
 
-            // 判斷目前捲動到哪一個 Section
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.offsetHeight;
@@ -1334,13 +1365,12 @@
                 }
             });
 
-            // 更新導覽列狀態
             navItems.forEach(item => {
                 item.classList.remove('active');
                 if (item.getAttribute('href') === `#${currentDay}`) {
                     item.classList.add('active');
 
-                    // 自動將當前日期的標籤捲動至導覽列的中央 (手機版體驗優化)
+                    // 自動將當前日期的標籤捲動至導覽列的中央
                     const itemOffsetLeft = item.offsetLeft;
                     const itemWidth = item.offsetWidth;
                     const containerWidth = navScroller.offsetWidth;
@@ -1351,7 +1381,8 @@
                     });
                 }
             });
-        });</script>
+        });
+    </script>
 
 </body>
 </html>
