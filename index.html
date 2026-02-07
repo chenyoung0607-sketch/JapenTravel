@@ -1270,13 +1270,37 @@
 
     </main>
 
+    <section class="day-card" style="border-style: solid; background: #fff9c4; border-color: #fbc02d;">
+        <div class="day-title">
+            <h2 style="color: #f57f17;">🚗 自駕助手 & 實用連結</h2>
+        </div>
+        <div style="margin-top: 15px; font-size: 0.9rem;">
+            <div style="margin-bottom: 15px; border-bottom: 1px dashed #fbc02d; padding-bottom: 10px;">
+                <p><strong>🌤️ 即時情報：</strong></p>
+                <a href="https://tenki.jp/lite/forecast/9/43/" target="_blank" class="loc-link">福岡天氣預報</a> |
+                <a href="https://weathernews.jp/s/sakura/" target="_blank" class="loc-link">全日櫻花滿開預測</a>
+            </div>
+            <div>
+                <p><strong>⛽ 加油常用語：</strong></p>
+                <ul style="padding-left: 20px;">
+                    <li>Regular 滿：レギュラー、満タン (Man-tan)</li>
+                    <li>現金支付：現金で (Gen-kin de)</li>
+                    <li>刷卡：カードで (Ka-do de)</li>
+                </ul>
+            </div>
+            <div style="margin-top: 15px; color: #d32f2f; font-weight: bold;">
+                <p>⚠️ 事故緊急電話：110 (警察) / 119 (救護車)</p>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <p>🌸 2026 Kyushu Sakura Trip 🌸</p>
         <p style="margin-top:5px; opacity:0.6;">祝您旅途平安愉快</p>
     </footer>
 
     <script>
-    // 1. 詳細內容展開/收合功能 (Toggle)
+        // 1. 詳細內容展開/收合功能 (Toggle)
         function toggleDetail(btn) {
             const content = btn.nextElementSibling;
             if (content.style.display === "block") {
