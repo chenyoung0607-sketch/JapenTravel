@@ -8,6 +8,90 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* 機票資訊卡片樣式 */
+        .flight-info-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0 40px;
+        }
+
+        .flight-card {
+            background: #fff;
+            border: 2px solid #5d5d5d;
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+            box-shadow: var(--shadow);
+            background-image: radial-gradient(#eee 1px, transparent 1px);
+            background-size: 15px 15px;
+        }
+
+            .flight-card::before {
+                content: '✈️ FLIGHT';
+                position: absolute;
+                top: -12px;
+                right: 20px;
+                background: var(--btn-color);
+                color: white;
+                padding: 2px 10px;
+                font-size: 0.8rem;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+
+        .flight-header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .flight-no {
+            font-weight: bold;
+            color: #d65db1;
+        }
+
+        .pnr-code {
+            font-family: monospace;
+            background: #fdf2f8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #e91e63;
+        }
+
+        .flight-body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .airport-code {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .flight-time {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .flight-arrow {
+            color: var(--primary-pink);
+            font-size: 1.2rem;
+        }
+
+        .baggage-note {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #666;
+            background: #f0f8ff;
+            padding: 5px 10px;
+            border-radius: 8px;
+        }
+
         /* 櫻花進度條容器 */
         .progress-container {
             position: fixed;
@@ -347,6 +431,65 @@
     </nav>
 
     <main>
+
+        <div class="flight-info-container">
+            <div class="flight-card" style="border-left: 8px solid var(--primary-pink);">
+                <div class="flight-header">
+                    <span class="flight-no">03/26 泰國獅航 SL390</span>
+                    <span class="pnr-code">PNR: (請填入代號)</span>
+                </div>
+                <div class="flight-body">
+                    <div>
+                        <div class="airport-code">KHH</div>
+                        <div class="flight-time">08:15</div>
+                    </div>
+                    <div class="flight-arrow">➔</div>
+                    <div>
+                        <div class="airport-code">OKA</div>
+                        <div class="flight-time">10:50</div>
+                    </div>
+                </div>
+                <div class="baggage-note">⚠️ 提醒：部分旅客僅含手提行李</div>
+            </div>
+
+            <div class="flight-card" style="border-left: 8px solid var(--sky-blue);">
+                <div class="flight-header">
+                    <span class="flight-no">03/26 天馬航空 SKY506</span>
+                    <span class="pnr-code">PNR: (請填入代號)</span>
+                </div>
+                <div class="flight-body">
+                    <div>
+                        <div class="airport-code">OKA</div>
+                        <div class="flight-time">14:20</div>
+                    </div>
+                    <div class="flight-arrow">➔</div>
+                    <div>
+                        <div class="airport-code">FUK</div>
+                        <div class="flight-time">16:00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flight-card" style="border-left: 8px solid var(--accent-green); margin-top: 20px;">
+                <div class="flight-header">
+                    <span class="flight-no">04/04 中華航空 CI199</span>
+                    <span class="pnr-code">PNR: (請填入代號)</span>
+                </div>
+                <div class="flight-body">
+                    <div>
+                        <div class="airport-code">KMJ</div>
+                        <div class="flight-time">11:50</div>
+                    </div>
+                    <div class="flight-arrow">➔</div>
+                    <div>
+                        <div class="airport-code">KHH</div>
+                        <div class="flight-time">13:30</div>
+                    </div>
+                </div>
+                <div class="baggage-note">💼 提醒：回程包含 1-2 件託運行李</div>
+            </div>
+        </div>
+
         <section id="day1" class="day-card">
             <div class="day-header">
                 <div class="day-badge">Day 1</div>
