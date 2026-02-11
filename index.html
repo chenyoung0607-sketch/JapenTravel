@@ -460,13 +460,13 @@
 
     <main>
         <section class="flight-dashboard">
-            <div style="text-align:center; margin-bottom:10px; color:#888; font-size:0.9rem;">🎫 航班快速查驗</div>
+            <div style="text-align:center; margin-bottom:10px; color:#888; font-size:0.9rem;">🎫 航班快速查驗 (已整合票卷、行李與座位資訊)</div>
 
             <div class="ticket-card" style="border-top: 5px solid var(--primary-pink);">
                 <div class="ticket-header">
                     <div>
                         <div class="flight-no">03/26 泰國獅航 SL390</div>
-                        <div class="day-date">去程 ‧ 第 1 航段</div>
+                        <div class="day-date">去程 ‧ 高雄 ➔ 那霸 (10:50 抵達)</div>
                     </div>
                 </div>
                 <div class="ticket-body">
@@ -483,49 +483,75 @@
                     </div>
                 </div>
                 <div class="pnr-box">
-                    <span class="pnr-tag">PNR: JGVFGY</span>
-                    <span class="pnr-tag">PNR: DMZEHA</span>
-                    <span class="pnr-tag">PNR: DLAATL</span>
+                    <span class="pnr-tag">PNR: SL45295954</span>
+                    <span class="pnr-tag">PNR: SL45295989</span>
+                    <span class="pnr-tag">PNR: SL45295910</span>
+                    <span class="pnr-tag">PNR: AAMTTX</span>
                 </div>
-                <button class="detail-btn" onclick="toggleDetail(this)">旅客與行李明細</button>
+                <button class="detail-btn" onclick="toggleDetail(this)">旅客座位與行李明細</button>
                 <div class="detail-content">
-                    <ul style="padding-left:15px; font-size:0.85rem;">
-                        <li><strong>PNR: JGVFGY</strong> - CHEN PEILIN, CHEN HONGJIE (無免費託運, 僅手提 7KG) </li>
-                        <li><strong>PNR: DMZEHA</strong> - CHEN JIAXIN, HUANG YUEHCHEN (預購託運 15KG) </li>
-                        <li><strong>PNR: DLAATL</strong> - CHEN CHAOYANG (預購託運 15KG) </li>
+                    <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.6;">
+                        <li>
+                            <strong>PNR: SL45295954</strong><br>
+                            - MS PEILIN CHEN (Seat: 1B) / 行李: 15 KG<br>
+                            - MSTR HONGJIE CHEN (Seat: 1C) / 行李: 15 KG
+                        </li>
+                        <li>
+                            <strong>PNR: SL45295989</strong><br>
+                            - MISS JIAXIN CHEN (Seat: 2A) / 行李: 15 KG<br>
+                            - MISS YUEHCHEN HUANG (Seat: 2B) / 行李: 15 KG
+                        </li>
+                        <li>
+                            <strong>PNR: SL45295910</strong><br>
+                            - MR CHAOYANG CHEN (Seat: 1A) / 行李: 15 KG
+                        </li>
+                        <li>
+                            <strong>PNR: AAMTTX</strong><br>
+                            - Mr Chunyuan Cheng (Seat: 02F) / 無餐飲服務<br>
+                            - Mr Jhihming Liao (Seat: 02E) / 無餐飲服務
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="ticket-card" style="border-top: 5px solid var(--sky-blue);">
+            <div class="ticket-card" style="border-top: 5px solid var(--sky-blue); margin-top: 20px;">
                 <div class="ticket-header">
                     <div>
-                        <div class="flight-no">03/26 天馬航空 SKY506</div>
-                        <div class="day-date">去程 ‧ 第 2 航段</div>
+                        <div class="flight-no">03/26 那霸 ➔ 福岡 (SKY/ANA)</div>
+                        <div class="day-date">去程 ‧ 中轉航段</div>
                     </div>
                 </div>
                 <div class="ticket-body">
                     <div class="airport-info">
                         <div class="airport-code">OKA</div>
                         <div class="airport-name">那霸機場</div>
-                        <div class="time">14:20</div>
+                        <div class="time">14:20/14:30</div>
                     </div>
                     <div class="flight-path">➔</div>
                     <div class="airport-info">
                         <div class="airport-code">FUK</div>
                         <div class="airport-name">福岡機場</div>
-                        <div class="time">16:00</div>
+                        <div class="time">16:00/16:10</div>
                     </div>
                 </div>
                 <div class="pnr-box">
-                    <span class="pnr-tag">PNR: 608</span>
-                    <span class="pnr-tag">PNR: 614</span>
+                    <span class="pnr-tag">PNR: 452174161 (ANA)</span>
+                    <span class="pnr-tag">PNR: 608/614 (SKY)</span>
                 </div>
-                <button class="detail-btn" onclick="toggleDetail(this)">座位與名單</button>
+                <button class="detail-btn" onclick="toggleDetail(this)">ANA 與 SKY 明細</button>
                 <div class="detail-content">
-                    <ul style="padding-left:15px; font-size:0.85rem;">
-                        <li><strong>PNR: 608</strong> - CHEN CHAOYANG, PEILIN, HONGJIE (座位: 6F, 6G, 6H) </li>
-                        <li><strong>PNR: 614</strong> - CHEN JIAXIN, HUANG YUEHCHEN (座位: 9H, 9F) </li>
+                    <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.6;">
+                        <li>
+                            <strong>ANA NH1208 (14:30 - 16:10)</strong> <br>
+                            - CHENG CHUNYUAN (Seat: 11A) / 託運: 2件20KG<br>
+                            - LIAO JHIHMING (Seat: 11B) / 託運: 2件20KG<br>
+                            <small>*手提+個人物品總重上限 10KG [cite: 33, 42]</small>
+                        </li>
+                        <li>
+                            <strong>SKY506 (14:20 - 16:00)</strong><br>
+                            - CHAOYANG, PEILIN, HONGJIE (Seats: 6F, 6G, 6H)<br>
+                            - JIAXIN, YUEHCHEN (Seats: 9H, 9F)
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -534,7 +560,7 @@
                 <div class="ticket-header">
                     <div>
                         <div class="flight-no">04/04 中華航空 CI199</div>
-                        <div class="day-date">回程 ‧ 熊本直飛高雄</div>
+                        <div class="day-date">回程 ‧ 熊本 ➔ 高雄 (13:30 抵達)</div>
                     </div>
                 </div>
                 <div class="ticket-body">
@@ -555,12 +581,24 @@
                     <span class="pnr-tag">PNR: RF7V8L</span>
                     <span class="pnr-tag">PNR: RN3R5A</span>
                 </div>
-                <button class="detail-btn" onclick="toggleDetail(this)">旅客與行李明細</button>
+                <button class="detail-btn" onclick="toggleDetail(this)">華航座位與名單</button>
                 <div class="detail-content">
-                    <ul style="padding-left:15px; font-size:0.85rem;">
-                        <li><strong>PNR: RD9U4W</strong> - CHEN PEILIN, CHEN HONGJIE (各 1 件 23KG 託運)</li>
-                        <li><strong>PNR: RF7V8L</strong> - CHEN JIAXIN, HUANG YUEHCHEN (各 1 件 23KG 託運)</li>
-                        <li><strong>PNR: RN3R5A</strong> - CHEN CHAOYANG (2 件 23KG 託運)</li>
+                    <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.6;">
+                        <li>
+                            <strong>PNR: RD9U4W</strong><br>
+                            - PEILIN MS CHEN (Seat: 12K)<br>
+                            - HONGJIE MSTR CHEN (Seat: 12J)
+                        </li>
+                        <li>
+                            <strong>PNR: RN3R5A</strong><br>
+                            - CHAOYANG CHEN (Seat: 12H)<br>
+                            - 包含 2 件 23KG 託運額度
+                        </li>
+                        <li>
+                            <strong>PNR: RF7V8L</strong><br>
+                            - JIAXIN CHEN / YUEHCHEN HUANG<br>
+                            - 各包含 1 件 23KG 託運額度
+                        </li>
                     </ul>
                 </div>
             </div>
