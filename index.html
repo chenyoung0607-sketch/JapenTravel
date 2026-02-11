@@ -1580,12 +1580,20 @@
     </footer>
 
     <script>
-        // 1. 詳細內容展開/收合功能 (Toggle) - 保留您原本的邏輯
+        // 1. 詳細內容展開/收合功能 (已修正：自動還原原始文字)
         function toggleDetail(btn) {
             const content = btn.nextElementSibling;
+
+            // 如果按鈕還沒有儲存過「原始文字」，就先把它存進 data 屬性中
+            if (!btn.hasAttribute('data-default-text')) {
+                btn.setAttribute('data-default-text', btn.innerText);
+            }
+
+            const defaultText = btn.getAttribute('data-default-text');
+
             if (content.style.display === "block") {
                 content.style.display = "none";
-                btn.innerText = "景點深度故事";
+                btn.innerText = defaultText; // 這裡會變回原本的文字（可能是機票資訊或景點故事）
                 btn.style.background = "var(--btn-color)";
             } else {
                 content.style.display = "block";
@@ -1598,12 +1606,12 @@
         const navItems = document.querySelectorAll('.nav-item');
         const sections = document.querySelectorAll('section[id]');
         const navScroller = document.getElementById('navScroller');
-        const progressBar = document.getElementById('myBar'); // 獲取進度條元素
+        const progressBar = document.getElementById('myBar');
 
         // 3. 整合監聽滾動事件
         window.addEventListener('scroll', () => {
 
-            // --- A. 更新進度條邏輯 (新增) ---
+            // --- A. 更新進度條邏輯 ---
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrolled = (winScroll / height) * 100;
@@ -1611,7 +1619,7 @@
                 progressBar.style.width = scrolled + "%";
             }
 
-            // --- B. 滾動監測與導覽列自動捲動 (您原本的邏輯) ---
+            // --- B. 滾動監測與導覽列自動捲動 ---
             let currentDay = "";
             const scrollPos = window.scrollY + 180;
 
@@ -1628,7 +1636,6 @@
                 if (item.getAttribute('href') === `#${currentDay}`) {
                     item.classList.add('active');
 
-                    // 自動將當前日期的標籤捲動至導覽列的中央
                     const itemOffsetLeft = item.offsetLeft;
                     const itemWidth = item.offsetWidth;
                     const containerWidth = navScroller.offsetWidth;
