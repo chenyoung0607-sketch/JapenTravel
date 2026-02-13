@@ -1534,27 +1534,73 @@
 
     </main>
 
-    <section class="day-card" style="border-style: solid; background: #fff9c4; border-color: #fbc02d;">
-        <div class="day-title">
-            <h2 style="color: #f57f17;">🚗 自駕助手 & 實用連結</h2>
-        </div>
-        <div style="margin-top: 15px; font-size: 0.9rem;">
-            <div style="margin-bottom: 15px; border-bottom: 1px dashed #fbc02d; padding-bottom: 10px;">
-                <p><strong>🌤️ 即時情報：</strong></p>
-                <a href="https://tenki.jp/lite/forecast/9/43/" target="_blank" class="loc-link">福岡天氣預報</a> |
-                <a href="https://weathernews.jp/s/sakura/" target="_blank" class="loc-link">全日櫻花滿開預測</a>
+    <section class="day-card" style="background: #fffbe6; border-color: #fbc02d; border-width: 3px;">
+        <div class="day-header" style="border-bottom-color: #f9a825;">
+            <div class="day-badge" style="background: #fbc02d; color: #333;">Tips</div>
+            <div class="day-title">
+                <h2 style="color: #f57f17;">🧰 旅行萬用工具箱</h2>
+                <div class="day-date">緊急連絡 ‧ 入境 ‧ 購物攻略</div>
             </div>
-            <div>
-                <p><strong>⛽ 加油常用語：</strong></p>
-                <ul style="padding-left: 20px;">
-                    <li>Regular 滿：レギュラー、満タン (Man-tan)</li>
-                    <li>現金支付：現金で (Gen-kin de)</li>
-                    <li>刷卡：カードで (Ka-do de)</li>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+
+            <div style="background: #fff; padding: 15px; border-radius: 10px; border: 1px dashed #fbc02d;">
+                <h3 style="font-size: 1.1rem; color: #f57f17; margin-bottom: 8px;">🚀 入境與網路速查</h3>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <a href="https://www.vjw.digital.go.jp/" target="_blank" style="background: #2196f3; color: white; text-decoration: none; padding: 5px 12px; border-radius: 20px; font-size: 0.9rem; font-weight: bold;">Visit Japan Web (入境卡)</a>
+                    <span style="font-size: 0.9rem; color: #555;">⚠️ 建議截圖 QR Code 備用</span>
+                </div>
+            </div>
+
+            <div style="background: #fff; padding: 15px; border-radius: 10px; border: 1px dashed #fbc02d;">
+                <h3 style="font-size: 1.1rem; color: #d32f2f; margin-bottom: 8px;">🆘 緊急救命卡</h3>
+                <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.8;">
+                    <li><strong>報警 (車禍/遺失)：</strong>110</li>
+                    <li><strong>救護車/火警：</strong>119</li>
+                    <li>
+                        <strong>台北駐福岡辦事處：</strong>
+                        <a href="tel:+81927342810" style="color: #d32f2f; font-weight: bold;">092-734-2810</a><br>
+                        <span style="font-size: 0.8rem; color: #666;">(福岡市中央區櫻坂 3-12-42)</span>
+                    </li>
+                    <li>
+                        <strong>外交部旅外急難救助：</strong>
+                        <a href="tel:+818010026202" style="color: #d32f2f; font-weight: bold;">080-1002-6202</a> (福岡緊急手機)
+                    </li>
                 </ul>
             </div>
-            <div style="margin-top: 15px; color: #d32f2f; font-weight: bold;">
-                <p>⚠️ 事故緊急電話：110 (警察) / 119 (救護車)</p>
+
+            <div style="background: #fff; padding: 15px; border-radius: 10px; border: 1px dashed #fbc02d;">
+                <h3 style="font-size: 1.1rem; color: #388e3c; margin-bottom: 8px;">⛽ 自駕加油小抄</h3>
+                <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 10px;">
+                    <div style="background: #d32f2f; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">紅</div>
+                    <div>
+                        <strong style="color: #d32f2f;">Regular (レギュラー)</strong><br>
+                        <span style="font-size: 0.85rem;">加這個！普通汽油 (92/95)</span>
+                    </div>
+                </div>
+                <button class="detail-btn" onclick="toggleDetail(this)" style="background: #388e3c;">加油站常用日文</button>
+                <div class="detail-content">
+                    <ul style="padding-left: 15px;">
+                        <li><strong>加滿：</strong>満タン (Man-tan)</li>
+                        <li><strong>現金支付：</strong>現金 (Gen-kin)</li>
+                        <li><strong>刷卡：</strong>クレジットカード (Credit Card)</li>
+                        <li><strong>收據：</strong>レシート (Re-shi-to) / 領収書 (Ryo-shu-sho)</li>
+                        <li><strong>輪胎沒氣：</strong>パンク (Panku - Puncture)</li>
+                    </ul>
+                </div>
             </div>
+
+            <div style="background: #fff; padding: 15px; border-radius: 10px; border: 1px dashed #fbc02d;">
+                <h3 style="font-size: 1.1rem; color: #e91e63; margin-bottom: 8px;">🛍️ 購物與退稅提醒</h3>
+                <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.8;">
+                    <li><strong>門檻：</strong>單日單店未稅滿 <strong>5,000 日圓</strong> (含稅 5,500)。</li>
+                    <li><strong>消耗品 (藥妝/零食)：</strong>會被裝入「紅/透明封條袋」，<span style="color: #d32f2f; font-weight: bold;">在日本境內不可拆封</span>，否則出境被查到要補稅。</li>
+                    <li><strong>一般物品 (衣服/電器)：</strong>可以立刻拆用 (除非與消耗品合併計算)。</li>
+                    <li><strong>超市貼紙：</strong>晚上 7-8 點後留意 <span style="background: yellow; color: red; padding: 0 4px; font-weight: bold;">半額</span> (半價) 或 <span style="background: yellow; color: red; padding: 0 4px; font-weight: bold;">20%引</span> (打8折) 貼紙。</li>
+                </ul>
+            </div>
+
         </div>
     </section>
 
