@@ -460,7 +460,7 @@
 
     <main>
         <section class="flight-dashboard">
-            <div style="text-align:center; margin-bottom:10px; color:#888; font-size:0.9rem;">🎫 航班快速查驗 (格式統一：姓名 + 座位 + 行李)</div>
+            <div style="text-align:center; margin-bottom:10px; color:#888; font-size:0.9rem;">🎫 航班快速查驗 (已整合最新票卷資訊)</div>
 
             <div class="ticket-card" style="border-top: 5px solid var(--primary-pink);">
                 <div class="ticket-header">
@@ -488,28 +488,14 @@
                     <span class="pnr-tag">PNR: SL45295910</span>
                     <span class="pnr-tag">PNR: SL45296961</span>
                 </div>
-                <button class="detail-btn" onclick="toggleDetail(this)">旅客座位與行李明細</button>
+                <button class="detail-btn" onclick="toggleDetail(this)">旅客與行李明細</button>
                 <div class="detail-content">
+                    <p><strong>👜 託運行李：全員皆為 15KG</strong></p>
                     <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
-                        <li>
-                            <strong>PNR: SL45295954</strong><br>
-                            • MS PEILIN CHEN (座位: 1B) / 行李: 15KG<br>
-                            • MSTR HONGJIE CHEN (座位: 1C) / 行李: 15KG
-                        </li>
-                        <li>
-                            <strong>PNR: SL45295989</strong><br>
-                            • MISS JIAXIN CHEN (座位: 2A) / 行李: 15KG<br>
-                            • MISS YUEHCHEN HUANG (座位: 2B) / 行李: 15KG
-                        </li>
-                        <li>
-                            <strong>PNR: SL45295910</strong><br>
-                            • MR CHAOYANG CHEN (座位: 1A) / 行李: 15KG
-                        </li>
-                        <li>
-                            <strong>PNR: SL45296961</strong><br>
-                            • MR CHUNYUAN CHENG (座位: 2F) / 行李: 15KG<br>
-                            • MR JHIHMING LIAO (座位: 2E) / 行李: 15KG
-                        </li>
+                        <li>• MS PEILIN CHEN (座位: 1B) / MSTR HONGJIE CHEN (座位: 1C)</li>
+                        <li>• MISS JIAXIN CHEN (座位: 2A) / MISS YUEHCHEN HUANG (座位: 2B)</li>
+                        <li>• MR CHAOYANG CHEN (座位: 1A)</li>
+                        <li>• MR CHUNYUAN CHENG (座位: 2F) / MR JHIHMING LIAO (座位: 2E)</li>
                     </ul>
                 </div>
             </div>
@@ -524,13 +510,11 @@
                 <div class="ticket-body">
                     <div class="airport-info">
                         <div class="airport-code">OKA</div>
-                        <div class="airport-name">那霸機場</div>
                         <div class="time">14:20/14:30</div>
                     </div>
                     <div class="flight-path">➔</div>
                     <div class="airport-info">
                         <div class="airport-code">FUK</div>
-                        <div class="airport-name">福岡機場</div>
                         <div class="time">16:00/16:10</div>
                     </div>
                 </div>
@@ -540,21 +524,20 @@
                 </div>
                 <button class="detail-btn" onclick="toggleDetail(this)">座位與行李詳情</button>
                 <div class="detail-content">
-                    <div style="margin-bottom: 10px;">
+                    <div style="margin-bottom:10px;">
                         <strong>✈️ 全日空 ANA NH1208 (14:30)</strong><br>
                         <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
-                            <li>• CHENG CHUNYUAN (座位: 11A) / 行李: 20KG (限2件)</li>
-                            <li>• LIAO JHIHMING (座位: 11B) / 行李: 20KG (限2件)</li>
+                            <li>• CHENG CHUNYUAN (座位: 11A) / 託運: 20KG (限2件)</li>
+                            <li>• LIAO JHIHMING (座位: 11B) / 託運: 20KG (限2件)</li>
+                            <li>• <small>手提行李 + 個人物品合計上限 10KG</small></li>
                         </ul>
                     </div>
                     <div>
                         <strong>✈️ 天馬航空 SKY506 (14:20)</strong><br>
                         <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
-                            <li>• CHAOYANG CHEN (座位: 6F) / 行李: 20KG (不限件數)</li>
-                            <li>• PEILIN CHEN (座位: 6G) / 行李: 20KG (不限件數)</li>
-                            <li>• HONGJIE CHEN (座位: 6H) / 行李: 20KG (不限件數)</li>
-                            <li>• JIAXIN CHEN (座位: 9H) / 行李: 20KG (不限件數)</li>
-                            <li>• YUEHCHEN HUANG (座位: 9F) / 行李: 20KG (不限件數)</li>
+                            <li>• CHAOYANG (6F), PEILIN (6G), HONGJIE (6H)</li>
+                            <li>• JIAXIN (9H), YUEHCHEN (9F)</li>
+                            <li>• 託運：20KG (不限件數)</li>
                         </ul>
                     </div>
                 </div>
@@ -564,47 +547,44 @@
                 <div class="ticket-header">
                     <div>
                         <div class="flight-no">04/04 中華航空 CI199</div>
-                        <div class="day-date">回程 ‧ 熊本 ➔ 高雄 (13:30 抵達)</div>
+                        <div class="day-date">回程 ‧ 熊本 ➔ 高雄</div>
                     </div>
                 </div>
                 <div class="ticket-body">
                     <div class="airport-info">
                         <div class="airport-code">KMJ</div>
-                        <div class="airport-name">熊本機場</div>
                         <div class="time">11:50</div>
                     </div>
                     <div class="flight-path">➔</div>
                     <div class="airport-info">
                         <div class="airport-code">KHH</div>
-                        <div class="airport-name">高雄國際機場</div>
                         <div class="time">13:30</div>
                     </div>
                 </div>
                 <div class="pnr-box">
-                    <span class="pnr-tag">PNR: FRTZXK</span>
                     <span class="pnr-tag">PNR: CIBQUF</span>
-                    <span class="pnr-tag">PNR: RD9U4W</span>
+                    <span class="pnr-tag">PNR: DW4ZME</span>
+                    <span class="pnr-tag">PNR: FRTZXK</span>
                 </div>
                 <button class="detail-btn" onclick="toggleDetail(this)">旅客座位與行李明細</button>
                 <div class="detail-content">
-                    <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
-                        <li>
-                            <strong>PNR: CIBQUF</strong><br>
-                            • CHENG CHUNYUAN / 行李: 46KG (23KG x 2件)
-                        </li>
-                        <li>
-                            <strong>PNR: RD9U4W</strong><br>
-                            • PEILIN MS CHEN (座位: 12K) / 行李: 23KG<br>
-                            • HONGJIE MSTR CHEN (座位: 12J) / 行李: 23KG
-                        </li>
-                        <li>
-                            <strong>PNR: FRTZXK</strong><br>
-                            • CHAOYANG CHEN (座位: 12H) / 行李: 23KG<br>
-                            • JHIHMING LIAO / 行李: 23KG<br>
-                            • YUEHCHEN HUANG / 行李: 23KG<br>
-                            • JIAXIN CHEN / 行李: 23KG
-                        </li>
-                    </ul>
+                    <div style="margin-bottom: 10px;">
+                        <strong>💼 託運行李：2 件 (每件 23KG)</strong>
+                        <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
+                            <li>• CHENG CHUNYUAN (PNR: CIBQUF)</li>
+                            <li>• PEILIN MS CHEN (座位: 12K) / PNR: DW4ZME</li>
+                            <li>• HONGJIE MSTR CHEN (座位: 12J) / PNR: DW4ZME</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong>💼 託運行李：1 件 (23KG)</strong>
+                        <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
+                            <li>• CHAOYANG CHEN (座位: 12H) / PNR: FRTZXK</li>
+                            <li>• JHIHMING LIAO / PNR: FRTZXK</li>
+                            <li>• YUEHCHEN HUANG / PNR: FRTZXK</li>
+                            <li>• JIAXIN CHEN / PNR: FRTZXK</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
