@@ -552,43 +552,82 @@
                     </div>
                 </div>
                 <div class="ticket-body">
-                    <div class="airport-info">
-                        <div class="airport-code">KMJ</div>
-                        <div class="time">11:50</div>
-                    </div>
-                    <div class="flight-path">➔</div>
-                    <div class="airport-info">
-                        <div class="airport-code">KHH</div>
-                        <div class="time">13:30</div>
-                    </div>
-                </div>
-                <div class="pnr-box">
-                    <span class="pnr-tag">PNR: CIBQUF</span>
-                    <span class="pnr-tag">PNR: DW4ZME</span>
-                    <span class="pnr-tag">PNR: FRTZXK</span>
-                </div>
-                <button class="detail-btn" onclick="toggleDetail(this)">旅客座位與行李明細</button>
-                <div class="detail-content">
-                    <div style="margin-bottom: 10px;">
-                        <strong>💼 託運行李：2 件 (每件 23KG)</strong>
-                        <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
-                            <li>• CHENG CHUNYUAN (PNR: CIBQUF)</li>
-                            <li>• PEILIN MS CHEN (座位: 12K) / PNR: DW4ZME</li>
-                            <li>• HONGJIE MSTR CHEN (座位: 12J) / PNR: DW4ZME</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <strong>💼 託運行李：1 件 (23KG)</strong>
-                        <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
-                            <li>• CHAOYANG CHEN (座位: 12H) / PNR: FRTZXK</li>
-                            <li>• JHIHMING LIAO / PNR: FRTZXK</li>
-                            <li>• YUEHCHEN HUANG / PNR: FRTZXK</li>
-                            <li>• JIAXIN CHEN / PNR: FRTZXK</li>
-                        </ul>
-                    </div>
-                </div>
+<section class="flight-dashboard">
+    <div style="text-align:center; margin-bottom:10px; color:#888; font-size:0.9rem;">🎫 航班快速查驗 (格式統一：姓名 + 座位 + 行李)</div>
+
+    <div class="ticket-card" style="border-top: 5px solid var(--primary-pink);">
+        <div class="ticket-header">
+            <div>
+                <div class="flight-no">03/26 泰國獅航 SL390</div>
+                <div class="day-date">去程 ‧ 高雄 ➔ 那霸 (10:50 抵達)</div>
             </div>
-        </section>
+        </div>
+        <div class="ticket-body">
+            <div class="airport-info"><div class="airport-code">KHH</div><div class="time">08:15</div></div>
+            <div class="flight-path">➔</div>
+            <div class="airport-info"><div class="airport-code">OKA</div><div class="time">10:50</div></div>
+        </div>
+        <div class="pnr-box">
+            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'U0w0NTI5NTk1NA==')">🔒 點擊解鎖 PNR 1</span>
+            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'U0w0NTI5NTk4OQ==')">🔒 點擊解鎖 PNR 2</span>
+            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'U0w0NTI5NTkxMA==')">🔒 點擊解鎖 PNR 3</span>
+            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'U0w0NTI5Njk2MQ==')">🔒 點擊解鎖 PNR 4</span>
+        </div>
+        <button class="detail-btn" onclick="toggleDetail(this)">旅客與行李明細</button>
+        <div class="detail-content">
+            <p><strong>👜 託運行李：全員皆為 15KG</strong></p>
+            <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
+                <li>• Peilin (1B) / Hongjie (1C)</li>
+                <li>• Jiaxin (2A) / Yuehchen (2B)</li>
+                <li>• Chaoyang (1A) / Chunyuan (2F) / Jhihming (2E)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="ticket-card" style="border-top: 5px solid var(--sky-blue); margin-top: 20px;">
+        <div class="ticket-header">
+            <div><div class="flight-no">03/26 那霸 ➔ 福岡 (ANA/SKY)</div></div>
+        </div>
+        <div class="ticket-body">
+            <div class="airport-info"><div class="airport-code">OKA</div><div class="time">14:20/14:30</div></div>
+            <div class="flight-path">➔</div>
+            <div class="airport-info"><div class="airport-code">FUK</div><div class="time">16:00/16:10</div></div>
+        </div>
+        <div class="pnr-box">
+            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'NDUyMTc0MTYx', 'ANA')">🔒 解鎖 ANA</span>
+            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'MDYwOC8wNjE0', 'SKY')">🔒 解鎖 SKY</span>
+        </div>
+        <button class="detail-btn" onclick="toggleDetail(this)">詳細明細</button>
+        <div class="detail-content">
+            <p><strong>✈️ ANA NH1208</strong>: Cheng (11A), Liao (11B) / 託運: 20KG (限2件)</p>
+            <p><strong>✈️ SKY506</strong>: 其餘 5 位 (6F, 6G, 6H, 9H, 9F) / 託運: 20KG (不限件數)</p>
+        </div>
+    </div>
+
+    <div class="ticket-card" style="border-top: 5px solid var(--accent-green); margin-top: 20px;">
+        <div class="ticket-header">
+            <div><div class="flight-no">04/04 中華航空 CI199</div><div class="day-date">熊本 ➔ 高雄</div></div>
+        </div>
+        <div class="ticket-body">
+            <div class="airport-info"><div class="airport-code">KMJ</div><div class="time">11:50</div></div>
+            <div class="flight-path">➔</div>
+            <div class="airport-info"><div class="airport-code">KHH</div><div class="time">13:30</div></div>
+        </div>
+        <div class="pnr-box">
+            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'Q0lCUVVG')">🔒 解鎖 PNR 1</span>
+            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'RFc0Wk1F')">🔒 解鎖 PNR 2</span>
+            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'RlJUWlhL')">🔒 解鎖 PNR 3</span>
+        </div>
+        <button class="detail-btn" onclick="toggleDetail(this)">旅客與行李明細</button>
+        <div class="detail-content">
+            <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
+                <li>• <strong>2件 23KG (共46KG)</strong>: Cheng, Peilin (12K), Hongjie (12J)</li>
+                <li>• <strong>1件 23KG</strong>: Chaoyang (12H), Jhihming, Yuehchen, Jiaxin</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
 
         <section id="day1" class="day-card">
             <div class="day-header">
@@ -1712,6 +1751,27 @@
                 }
             });
         });
+
+                // --- C. PNR 密碼解鎖功能 ---
+        function unlockPNR(element, hiddenData, prefix = "PNR") {
+            // 如果已經解鎖過，就不再重複詢問
+            if (element.getAttribute("data-unlocked") === "true") return;
+
+            let passcode = prompt("請輸入家族通關密語以顯示機票代號\n(提示：我們出發的月+日，共四碼):");
+            
+            if (passcode === "0326") {
+                // 密碼正確，解碼 Base64 並顯示
+                element.innerText = prefix + ": " + atob(hiddenData);
+                element.style.color = "#d65db1"; // 換回原本的亮粉色
+                element.style.background = "#fdf2f8";
+                element.style.border = "1px solid var(--soft-pink)";
+                element.setAttribute("data-unlocked", "true");
+            } else if (passcode !== null) {
+                // 密碼錯誤且不是按取消
+                alert("密碼錯誤！無法顯示機票資訊。");
+            }
+        }
+
     </script>
 
 </body>
