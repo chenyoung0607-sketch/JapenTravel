@@ -460,98 +460,7 @@
     </nav>
 
     <main>
-        <section class="flight-dashboard">
-            <div style="text-align:center; margin-bottom:10px; color:#888; font-size:0.9rem;">🎫 航班快速查驗 (已整合最新票卷資訊)</div>
-
-            <div class="ticket-card" style="border-top: 5px solid var(--primary-pink);">
-                <div class="ticket-header">
-                    <div>
-                        <div class="flight-no">03/26 泰國獅航 SL390</div>
-                        <div class="day-date">去程 ‧ 高雄 ➔ 那霸 (10:50 抵達)</div>
-                    </div>
-                </div>
-                <div class="ticket-body">
-                    <div class="airport-info">
-                        <div class="airport-code">KHH</div>
-                        <div class="airport-name">高雄國際機場</div>
-                        <div class="time">08:15</div>
-                    </div>
-                    <div class="flight-path">➔</div>
-                    <div class="airport-info">
-                        <div class="airport-code">OKA</div>
-                        <div class="airport-name">那霸機場</div>
-                        <div class="time">10:50</div>
-                    </div>
-                </div>
-                <div class="pnr-box">
-                    <span class="pnr-tag">PNR: SL45295954</span>
-                    <span class="pnr-tag">PNR: SL45295989</span>
-                    <span class="pnr-tag">PNR: SL45295910</span>
-                    <span class="pnr-tag">PNR: SL45296961</span>
-                </div>
-                <button class="detail-btn" onclick="toggleDetail(this)">旅客與行李明細</button>
-                <div class="detail-content">
-                    <p><strong>👜 託運行李：全員皆為 15KG</strong></p>
-                    <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
-                        <li>• MS PEILIN CHEN (座位: 1B) / MSTR HONGJIE CHEN (座位: 1C)</li>
-                        <li>• MISS JIAXIN CHEN (座位: 2A) / MISS YUEHCHEN HUANG (座位: 2B)</li>
-                        <li>• MR CHAOYANG CHEN (座位: 1A)</li>
-                        <li>• MR CHUNYUAN CHENG (座位: 2F) / MR JHIHMING LIAO (座位: 2E)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="ticket-card" style="border-top: 5px solid var(--sky-blue); margin-top: 20px;">
-                <div class="ticket-header">
-                    <div>
-                        <div class="flight-no">03/26 那霸 ➔ 福岡 (ANA/SKY)</div>
-                        <div class="day-date">去程 ‧ 分開搭乘</div>
-                    </div>
-                </div>
-                <div class="ticket-body">
-                    <div class="airport-info">
-                        <div class="airport-code">OKA</div>
-                        <div class="time">14:20/14:30</div>
-                    </div>
-                    <div class="flight-path">➔</div>
-                    <div class="airport-info">
-                        <div class="airport-code">FUK</div>
-                        <div class="time">16:00/16:10</div>
-                    </div>
-                </div>
-                <div class="pnr-box">
-                    <span class="pnr-tag">PNR: 452174161 (ANA)</span>
-                    <span class="pnr-tag">PNR: 0608/0614 (SKY)</span>
-                </div>
-                <button class="detail-btn" onclick="toggleDetail(this)">座位與行李詳情</button>
-                <div class="detail-content">
-                    <div style="margin-bottom:10px;">
-                        <strong>✈️ 全日空 ANA NH1208 (14:30)</strong><br>
-                        <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
-                            <li>• CHENG CHUNYUAN (座位: 11A) / 託運: 20KG (限2件)</li>
-                            <li>• LIAO JHIHMING (座位: 11B) / 託運: 20KG (限2件)</li>
-                            <li>• <small>手提行李 + 個人物品合計上限 10KG</small></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <strong>✈️ 天馬航空 SKY506 (14:20)</strong><br>
-                        <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
-                            <li>• CHAOYANG (6F), PEILIN (6G), HONGJIE (6H)</li>
-                            <li>• JIAXIN (9H), YUEHCHEN (9F)</li>
-                            <li>• 託運：20KG (不限件數)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ticket-card" style="border-top: 5px solid var(--accent-green); margin-top: 20px;">
-                <div class="ticket-header">
-                    <div>
-                        <div class="flight-no">04/04 中華航空 CI199</div>
-                        <div class="day-date">回程 ‧ 熊本 ➔ 高雄</div>
-                    </div>
-                </div>
-                <div class="ticket-body">
+        
 <section class="flight-dashboard">
     <div style="text-align:center; margin-bottom:10px; color:#888; font-size:0.9rem;">🎫 航班快速查驗 (格式統一：姓名 + 座位 + 行李)</div>
 
@@ -1757,7 +1666,7 @@
             // 如果已經解鎖過，就不再重複詢問
             if (element.getAttribute("data-unlocked") === "true") return;
 
-            let passcode = prompt("請輸入家族通關密語以顯示機票代號\n(提示：我們出發的月+日，共四碼):");
+            let passcode = prompt("請輸入家族通關密語以顯示機票代號");
             
             if (passcode === "0326") {
                 // 密碼正確，解碼 Base64 並顯示
