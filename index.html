@@ -172,29 +172,37 @@
             background-size: 20px 20px;
         }
 
-        header {
-            text-align: center;
-            padding: 60px 20px 30px;
-            background: linear-gradient(180deg, #e0f2f1 0%, var(--bg-color) 100%);
+                /* --- 春日風 Header 設計 --- */
+        header { 
+            text-align: center; 
+            padding: 70px 20px 40px; 
+            background: linear-gradient(180deg, #fff0f5 0%, var(--bg-color) 100%); 
+        }
+        h1 { 
+            font-size: 2.6rem; 
+            /* 製作櫻花漸層文字 */
+            background: linear-gradient(45deg, #ff758c 0%, #ff7eb3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px; 
+            letter-spacing: 2px;
+            /* 柔和的雙層立體白邊 */
+            filter: drop-shadow(2px 2px 0px rgba(255, 255, 255, 1)) drop-shadow(4px 4px 5px rgba(255, 117, 140, 0.2));
+            font-weight: 900;
+        }
+        .subtitle { 
+            font-size: 1rem; 
+            /* 初春嫩綠漸層 */
+            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%); 
+            display: inline-block; 
+            padding: 8px 22px; 
+            border-radius: 30px; 
+            color: #3b8d99; 
+            font-weight: bold; 
+            box-shadow: 0 4px 10px rgba(168, 230, 207, 0.4);
+            letter-spacing: 1px;
         }
 
-        h1 {
-            font-size: 2rem;
-            color: #d65db1;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 0px #fff;
-        }
-
-        .subtitle {
-            font-size: 0.95rem;
-            background: var(--sky-blue);
-            display: inline-block;
-            padding: 6px 18px;
-            border-radius: 20px 5px 20px 5px;
-            color: #fff;
-            font-weight: bold;
-            box-shadow: 2px 2px 0px rgba(0,0,0,0.1);
-        }
 
         .summary-box {
             background: #fff;
@@ -436,15 +444,14 @@
     <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
     </div>
-    <header>
-        <h1>2026 九州賞櫻行</h1>
-        <div class="subtitle">福岡賞櫻・熊本回</div>
-
+        <header>
+        <h1>🌸 2026 九州賞櫻行 🌸</h1>
+        <div class="subtitle">🌿 福岡進 ‧ 熊本出 🌿</div>
         <div class="summary-box">
-            <p>這是一場為期十天的春日九州自駕漫遊。我們將從福岡的活力街區出發，一路深入由布院的溫泉晨霧，探訪秋月城跡的古老櫻花隧道，並感受北九州小倉的昭和風情。</p>
-            <p>旅途中，我們將品嚐傳承五十年的職人漢堡、太宰府千年傳說的梅枝餅，以及熊本道地的焦蒜拉麵。最終，在壯麗的熊本城與海賊王魯夫的見證下，帶著滿滿的櫻花回憶與暖心故事，畫下這趟旅程的完美句點。</p>
+            <p>這是一場橫跨九州核心地帶的春日祭典。我們將從福岡的櫻花名所出發，品味河畔燒肉與由布院釜飯，最終在熊本城下畫上句點。這不僅是自駕之旅，更是收集所有粉紅回憶的浪漫長征。</p>
         </div>
     </header>
+
 
     <nav class="nav-scroller" id="navScroller">
         <a href="#day1" class="nav-item">D1</a>
