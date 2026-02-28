@@ -462,7 +462,8 @@
 
     <main>
         
-<section class="flight-dashboard">
+
+    <section class="flight-dashboard">
     <div style="text-align:center; margin-bottom:10px; color:#888; font-size:0.9rem;">🎫 航班快速查驗 (格式統一：姓名 + 座位 + 行李)</div>
 
     <div class="ticket-card" style="border-top: 5px solid var(--primary-pink);">
@@ -478,10 +479,10 @@
             <div class="airport-info"><div class="airport-code">OKA</div><div class="time">10:50</div></div>
         </div>
         <div class="pnr-box">
-            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'U0w0NTI5NTk1NA==')">🔒 點擊解鎖 PNR 1</span>
-            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'U0w0NTI5NTk4OQ==')">🔒 點擊解鎖 PNR 2</span>
-            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'U0w0NTI5NTkxMA==')">🔒 點擊解鎖 PNR 3</span>
-            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'U0w0NTI5Njk2MQ==')">🔒 點擊解鎖 PNR 4</span>
+            <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="U0w0NTI5NTk1NA==" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 點擊解鎖 PNR</span>
+            <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="U0w0NTI5NTk4OQ==" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 點擊解鎖 PNR</span>
+            <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="U0w0NTI5NTkxMA==" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 點擊解鎖 PNR</span>
+            <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="U0w0NTI5Njk2MQ==" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 點擊解鎖 PNR</span>
         </div>
         <button class="detail-btn" onclick="toggleDetail(this)">旅客與行李明細</button>
         <div class="detail-content">
@@ -504,8 +505,8 @@
             <div class="airport-info"><div class="airport-code">FUK</div><div class="time">16:00/16:10</div></div>
         </div>
         <div class="pnr-box">
-            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'NDUyMTc0MTYx', 'ANA')">🔒 解鎖 ANA</span>
-            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'MDYwOC8wNjE0', 'SKY')">🔒 解鎖 SKY</span>
+            <span class="pnr-tag locked-pnr" data-prefix="ANA" data-hidden="NDUyMTc0MTYx" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 解鎖 ANA</span>
+            <span class="pnr-tag locked-pnr" data-prefix="SKY" data-hidden="MDYwOC8wNjE0" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 解鎖 SKY</span>
         </div>
         <button class="detail-btn" onclick="toggleDetail(this)">詳細明細</button>
         <div class="detail-content">
@@ -524,9 +525,9 @@
             <div class="airport-info"><div class="airport-code">KHH</div><div class="time">13:30</div></div>
         </div>
         <div class="pnr-box">
-            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'Q0lCUVVG')">🔒 解鎖 PNR 1</span>
-            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'RFc0Wk1F')">🔒 解鎖 PNR 2</span>
-            <span class="pnr-tag" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockPNR(this, 'RlJUWlhL')">🔒 解鎖 PNR 3</span>
+            <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="Q0lCUVVG" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 解鎖 PNR</span>
+            <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="RFc0Wk1F" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 解鎖 PNR</span>
+            <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="RlJUWlhL" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 解鎖 PNR</span>
         </div>
         <button class="detail-btn" onclick="toggleDetail(this)">旅客與行李明細</button>
         <div class="detail-content">
@@ -537,6 +538,7 @@
         </div>
     </div>
 </section>
+
 
 
         <section id="day1" class="day-card">
@@ -1662,25 +1664,41 @@
             });
         });
 
-                // --- C. PNR 密碼解鎖功能 ---
-        function unlockPNR(element, hiddenData, prefix = "PNR") {
-            // 如果已經解鎖過，就不再重複詢問
-            if (element.getAttribute("data-unlocked") === "true") return;
+                        // --- C. 一鍵解鎖所有 PNR 密碼功能 ---
+        let isAllUnlocked = false; // 紀錄是否已經解鎖過
 
-            let passcode = prompt("請輸入家族通關密語以顯示機票代號");
+        function unlockAllPNR() {
+            // 如果已經解鎖過，就不再重複詢問
+            if (isAllUnlocked) return;
+
+            let passcode = prompt("請輸入家族通關密語，以顯示【所有】機票代號\n(提示：我們出發的月+日，共四碼):");
             
             if (passcode === "0326") {
-                // 密碼正確，解碼 Base64 並顯示
-                element.innerText = prefix + ": " + atob(hiddenData);
-                element.style.color = "#d65db1"; // 換回原本的亮粉色
-                element.style.background = "#fdf2f8";
-                element.style.border = "1px solid var(--soft-pink)";
-                element.setAttribute("data-unlocked", "true");
+                // 找出畫面上所有帶有 'locked-pnr' class 的標籤
+                let lockedElements = document.querySelectorAll('.locked-pnr');
+                
+                // 迴圈將每一個標籤解碼並顯示
+                lockedElements.forEach(function(el) {
+                    let hiddenData = el.getAttribute('data-hidden');
+                    let prefix = el.getAttribute('data-prefix');
+                    
+                    if(hiddenData) {
+                        el.innerText = prefix + ": " + atob(hiddenData); // 解碼 Base64
+                        el.style.color = "#d65db1"; // 換回亮粉色
+                        el.style.background = "#fdf2f8";
+                        el.style.border = "1px solid var(--soft-pink)";
+                        el.style.cursor = "default"; // 取消手指游標
+                    }
+                });
+                
+                isAllUnlocked = true; // 標記為已解鎖
             } else if (passcode !== null) {
                 // 密碼錯誤且不是按取消
                 alert("密碼錯誤！無法顯示機票資訊。");
             }
         }
+
+        
 
     </script>
 
