@@ -1671,9 +1671,9 @@
             // 如果已經解鎖過，就不再重複詢問
             if (isAllUnlocked) return;
 
-            let passcode = prompt("請輸入家族通關密語，以顯示【所有】機票代號\n(提示：我們出發的月+日，共四碼):");
+            let passcode = prompt("請輸入家族通關密語，以顯示機票代號");
             
-            if (passcode === "0326") {
+            if (passcode === "Aa03260404") {
                 // 找出畫面上所有帶有 'locked-pnr' class 的標籤
                 let lockedElements = document.querySelectorAll('.locked-pnr');
                 
