@@ -172,33 +172,35 @@
             background-size: 20px 20px;
         }
 
-                /* --- 春日風 Header 設計 --- */
-        header { 
-            text-align: center; 
-            padding: 70px 20px 40px; 
-            background: linear-gradient(180deg, #fff0f5 0%, var(--bg-color) 100%); 
+        /* --- 春日風 Header 設計 --- */
+        header {
+            text-align: center;
+            padding: 70px 20px 40px;
+            background: linear-gradient(180deg, #fff0f5 0%, var(--bg-color) 100%);
         }
-        h1 { 
-            font-size: 2.6rem; 
+
+        h1 {
+            font-size: 2.6rem;
             /* 製作櫻花漸層文字 */
             background: linear-gradient(45deg, #ff758c 0%, #ff7eb3 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 12px; 
+            margin-bottom: 12px;
             letter-spacing: 2px;
             /* 柔和的雙層立體白邊 */
             filter: drop-shadow(2px 2px 0px rgba(255, 255, 255, 1)) drop-shadow(4px 4px 5px rgba(255, 117, 140, 0.2));
             font-weight: 900;
         }
-        .subtitle { 
-            font-size: 1rem; 
+
+        .subtitle {
+            font-size: 1rem;
             /* 初春嫩綠漸層 */
-            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%); 
-            display: inline-block; 
-            padding: 8px 22px; 
-            border-radius: 30px; 
-            color: #3b8d99; 
-            font-weight: bold; 
+            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
+            display: inline-block;
+            padding: 8px 22px;
+            border-radius: 30px;
+            color: #3b8d99;
+            font-weight: bold;
             box-shadow: 0 4px 10px rgba(168, 230, 207, 0.4);
             letter-spacing: 1px;
         }
@@ -444,7 +446,7 @@
     <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
     </div>
-        <header>
+    <header>
         <h1>🌸 2026 九州賞櫻行 🌸</h1>
         <div class="subtitle">🌿 福岡進 ‧ 熊本出 🌿</div>
         <div class="summary-box">
@@ -468,83 +470,118 @@
     </nav>
 
     <main>
-        
 
-    <section class="flight-dashboard">
-    <div style="text-align:center; margin-bottom:10px; color:#888; font-size:0.9rem;">🎫 航班快速查驗 (格式統一：姓名 + 座位 + 行李)</div>
 
-    <div class="ticket-card" style="border-top: 5px solid var(--primary-pink);">
-        <div class="ticket-header">
-            <div>
-                <div class="flight-no">03/26 泰國獅航 SL390</div>
-                <div class="day-date">去程 ‧ 高雄 ➔ 那霸 (10:50 抵達)</div>
+        <section class="flight-dashboard">
+            <div style="text-align:center; margin-bottom:10px; color:#888; font-size:0.9rem;">🎫 航班快速查驗 (格式統一：姓名 + 座位 + 行李)</div>
+
+            <div class="ticket-card" style="border-top: 5px solid var(--primary-pink);">
+                <div class="ticket-header">
+                    <div>
+                        <div class="flight-no">03/26 泰國獅航 SL390</div>
+                        <div class="day-date">去程 ‧ 高雄 ➔ 那霸 (10:50 抵達)</div>
+                    </div>
+                </div>
+                <div class="ticket-body">
+                    <div class="airport-info">
+                        <div class="airport-code">KHH</div>
+                        <div class="time">08:15</div>
+                    </div>
+                    <div class="flight-path">➔</div>
+                    <div class="airport-info">
+                        <div class="airport-code">OKA</div>
+                        <div class="time">10:50</div>
+                    </div>
+                </div>
+                <div class="pnr-box">
+                    <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="U0w0NTI5NTk1NA==" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 點擊解鎖 PNR</span>
+                    <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="U0w0NTI5NTk4OQ==" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 點擊解鎖 PNR</span>
+                    <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="U0w0NTI5NTkxMA==" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 點擊解鎖 PNR</span>
+                    <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="U0w0NTI5Njk2MQ==" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 點擊解鎖 PNR</span>
+                </div>
+                <button class="detail-btn" onclick="toggleDetail(this)">旅客與行李明細</button>
+                <div class="detail-content">
+                    <p>
+                        <strong>👜 託運行李：全員皆為 15KG</strong>
+                    </p>
+                    <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
+                        <li>• Peilin (1B) / Hongjie (1C)</li>
+                        <li>• Jiaxin (2A) / Yuehchen (2B)</li>
+                        <li>• Chaoyang (1A) / Chunyuan (2F) / Jhihming (2E)</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="ticket-body">
-            <div class="airport-info"><div class="airport-code">KHH</div><div class="time">08:15</div></div>
-            <div class="flight-path">➔</div>
-            <div class="airport-info"><div class="airport-code">OKA</div><div class="time">10:50</div></div>
-        </div>
-        <div class="pnr-box">
-            <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="U0w0NTI5NTk1NA==" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 點擊解鎖 PNR</span>
-            <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="U0w0NTI5NTk4OQ==" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 點擊解鎖 PNR</span>
-            <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="U0w0NTI5NTkxMA==" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 點擊解鎖 PNR</span>
-            <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="U0w0NTI5Njk2MQ==" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 點擊解鎖 PNR</span>
-        </div>
-        <button class="detail-btn" onclick="toggleDetail(this)">旅客與行李明細</button>
-        <div class="detail-content">
-            <p><strong>👜 託運行李：全員皆為 15KG</strong></p>
-            <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
-                <li>• Peilin (1B) / Hongjie (1C)</li>
-                <li>• Jiaxin (2A) / Yuehchen (2B)</li>
-                <li>• Chaoyang (1A) / Chunyuan (2F) / Jhihming (2E)</li>
-            </ul>
-        </div>
-    </div>
 
-    <div class="ticket-card" style="border-top: 5px solid var(--sky-blue); margin-top: 20px;">
-        <div class="ticket-header">
-            <div><div class="flight-no">03/26 那霸 ➔ 福岡 (ANA/SKY)</div></div>
-        </div>
-        <div class="ticket-body">
-            <div class="airport-info"><div class="airport-code">OKA</div><div class="time">14:20/14:30</div></div>
-            <div class="flight-path">➔</div>
-            <div class="airport-info"><div class="airport-code">FUK</div><div class="time">16:00/16:10</div></div>
-        </div>
-        <div class="pnr-box">
-            <span class="pnr-tag locked-pnr" data-prefix="ANA" data-hidden="NDUyMTc0MTYx" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 解鎖 ANA</span>
-            <span class="pnr-tag locked-pnr" data-prefix="SKY" data-hidden="MDYwOC8wNjE0" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 解鎖 SKY</span>
-        </div>
-        <button class="detail-btn" onclick="toggleDetail(this)">詳細明細</button>
-        <div class="detail-content">
-            <p><strong>✈️ ANA NH1208</strong>: Cheng (11A), Liao (11B) / 託運: 20KG (限2件)</p>
-            <p><strong>✈️ SKY506</strong>: 其餘 5 位 (6F, 6G, 6H, 9H, 9F) / 託運: 20KG (不限件數)</p>
-        </div>
-    </div>
+            <div class="ticket-card" style="border-top: 5px solid var(--sky-blue); margin-top: 20px;">
+                <div class="ticket-header">
+                    <div>
+                        <div class="flight-no">03/26 那霸 ➔ 福岡 (ANA/SKY)</div>
+                    </div>
+                </div>
+                <div class="ticket-body">
+                    <div class="airport-info">
+                        <div class="airport-code">OKA</div>
+                        <div class="time">14:20/14:30</div>
+                    </div>
+                    <div class="flight-path">➔</div>
+                    <div class="airport-info">
+                        <div class="airport-code">FUK</div>
+                        <div class="time">16:00/16:10</div>
+                    </div>
+                </div>
+                <div class="pnr-box">
+                    <span class="pnr-tag locked-pnr" data-prefix="ANA" data-hidden="NDUyMTc0MTYx" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 解鎖 ANA</span>
+                    <span class="pnr-tag locked-pnr" data-prefix="SKY" data-hidden="MDYwOC8wNjE0" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 解鎖 SKY</span>
+                </div>
+                <button class="detail-btn" onclick="toggleDetail(this)">詳細明細</button>
+                <div class="detail-content">
+                    <p>
+                        <strong>✈️ ANA NH1208</strong>: Cheng (11A), Liao (11B) / 託運: 20KG (限2件)
+                    </p>
+                    <p>
+                        <strong>✈️ SKY506</strong>: 其餘 5 位 (6F, 6G, 6H, 9H, 9F) / 託運: 20KG (不限件數)
+                    </p>
+                </div>
+            </div>
 
-    <div class="ticket-card" style="border-top: 5px solid var(--accent-green); margin-top: 20px;">
-        <div class="ticket-header">
-            <div><div class="flight-no">04/04 中華航空 CI199</div><div class="day-date">熊本 ➔ 高雄</div></div>
-        </div>
-        <div class="ticket-body">
-            <div class="airport-info"><div class="airport-code">KMJ</div><div class="time">11:50</div></div>
-            <div class="flight-path">➔</div>
-            <div class="airport-info"><div class="airport-code">KHH</div><div class="time">13:30</div></div>
-        </div>
-        <div class="pnr-box">
-            <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="Q0lCUVVG" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 解鎖 PNR</span>
-            <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="RFc0Wk1F" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 解鎖 PNR</span>
-            <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="RlJUWlhL" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 解鎖 PNR</span>
-        </div>
-        <button class="detail-btn" onclick="toggleDetail(this)">旅客與行李明細</button>
-        <div class="detail-content">
-            <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
-                <li>• <strong>2件 23KG (共46KG)</strong>: Cheng, Peilin (12K), Hongjie (12J)</li>
-                <li>• <strong>1件 23KG</strong>: Chaoyang (12H), Jhihming, Yuehchen, Jiaxin</li>
-            </ul>
-        </div>
-    </div>
-</section>
+            <div class="ticket-card" style="border-top: 5px solid var(--accent-green); margin-top: 20px;">
+                <div class="ticket-header">
+                    <div>
+                        <div class="flight-no">04/04 中華航空 CI199</div>
+                        <div class="day-date">熊本 ➔ 高雄</div>
+                    </div>
+                </div>
+                <div class="ticket-body">
+                    <div class="airport-info">
+                        <div class="airport-code">KMJ</div>
+                        <div class="time">11:50</div>
+                    </div>
+                    <div class="flight-path">➔</div>
+                    <div class="airport-info">
+                        <div class="airport-code">KHH</div>
+                        <div class="time">13:30</div>
+                    </div>
+                </div>
+                <div class="pnr-box">
+                    <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="Q0lCUVVG" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 解鎖 PNR</span>
+                    <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="RFc0Wk1F" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 解鎖 PNR</span>
+                    <span class="pnr-tag locked-pnr" data-prefix="PNR" data-hidden="RlJUWlhL" style="cursor: pointer; background: #e0f7fa; color: #00838f;" onclick="unlockAllPNR()">🔒 解鎖 PNR</span>
+                </div>
+                <button class="detail-btn" onclick="toggleDetail(this)">旅客與行李明細</button>
+                <div class="detail-content">
+                    <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
+                        <li>
+                            •
+                            <strong>2件 23KG (共46KG)</strong>: Cheng, Peilin (12K), Hongjie (12J)
+                        </li>
+                        <li>
+                            •
+                            <strong>1件 23KG</strong>: Chaoyang (12H), Jhihming, Yuehchen, Jiaxin
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
 
 
@@ -561,7 +598,9 @@
                     <div class="time">06:30</div>
                     <div class="event">
                         <span class="tag move">✈️ 出發</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=高雄國際機場" target="_blank" class="loc-link">高雄國際機場 (KHH) 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=高雄國際機場" target="_blank" class="loc-link">高雄國際機場 (KHH) 📍</a>
+                        </h3>
                         <p>帶著期待的心情辦理登機，準備飛往日本。</p>
                     </div>
                 </li>
@@ -569,7 +608,9 @@
                     <div class="time">10:55</div>
                     <div class="event">
                         <span class="tag move">🔄 轉機</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=那霸機場" target="_blank" class="loc-link">那霸機場 (OKA) 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=那霸機場" target="_blank" class="loc-link">那霸機場 (OKA) 📍</a>
+                        </h3>
                         <p>中轉停留，感受南國沖繩的空氣。</p>
                     </div>
                 </li>
@@ -577,7 +618,9 @@
                     <div class="time">16:15</div>
                     <div class="event">
                         <span class="tag move">🛬 抵達</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=福岡機場國內線" target="_blank" class="loc-link">福岡機場 國內線 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=福岡機場國內線" target="_blank" class="loc-link">福岡機場 國內線 📍</a>
+                        </h3>
                         <p>平安抵達九州大門，辦理租車手續，展開自駕旅程。</p>
                     </div>
                 </li>
@@ -585,17 +628,23 @@
                     <div class="time">18:04</div>
                     <div class="event">
                         <span class="tag park">🅿️ 停車</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=Alice+Parking+Lot+Fukuoka" target="_blank" class="loc-link">Alice Parking Lot 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Alice+Parking+Lot+Fukuoka" target="_blank" class="loc-link">Alice Parking Lot 📍</a>
+                        </h3>
                         <p>停妥車輛，準備步行前往商店街。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">18:14</div>
                     <div class="event">
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=西新商店街" target="_blank" class="loc-link">西新商店街 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=西新商店街" target="_blank" class="loc-link">西新商店街 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>人情味的起點：</strong>西新商店街是福岡最具庶民活力的區域之一。這裡最著名的風景便是從昭和時代延續至今的「推車部隊」（リヤカー部隊）。</p>
+                            <p>
+                                <strong>人情味的起點：</strong>西新商店街是福岡最具庶民活力的區域之一。這裡最著名的風景便是從昭和時代延續至今的「推車部隊」（リヤカー部隊）。
+                            </p>
                             <p>每天下午，當地的婆婆們會推著裝滿自家種植蔬菜、手作漬物或海鮮的木造推車，沿著商店街中央叫賣。這裡也是國民漫畫《海螺小姐》作者長谷川町子曾經居住並獲得靈感的地方，漫步其中，彷彿能看見昭和時代那種溫暖、緊密的人際連結。</p>
                         </div>
                     </div>
@@ -604,7 +653,9 @@
                     <div class="time">19:46</div>
                     <div class="event">
                         <span class="tag food">😋 晚餐</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=小林養雞本店" target="_blank" class="loc-link">小林養雞本店 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=小林養雞本店" target="_blank" class="loc-link">小林養雞本店 📍</a>
+                        </h3>
                         <p>品嚐福岡道地的地雞料理，炭火燒烤的香氣令人食指大動。</p>
                     </div>
                 </li>
@@ -612,7 +663,9 @@
                     <div class="time">20:21</div>
                     <div class="event">
                         <span class="tag park">🚗 取車</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=Alice+Parking+Lot+Fukuoka" target="_blank" class="loc-link">Alice Parking Lot 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Alice+Parking+Lot+Fukuoka" target="_blank" class="loc-link">Alice Parking Lot 📍</a>
+                        </h3>
                         <p>取回車輛，前往今晚的住宿地點。</p>
                     </div>
                 </li>
@@ -620,7 +673,9 @@
                     <div class="time">20:57</div>
                     <div class="event">
                         <span class="tag stay">🏨 住宿</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a>
+                        </h3>
                         <p>抵達位於大宰府附近的溫馨旅宿，整理行李休息。</p>
                     </div>
                 </li>
@@ -640,7 +695,9 @@
                     <div class="time">08:30</div>
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a>
+                        </h3>
                         <p>早晨出發前往博多市區。</p>
                     </div>
                 </li>
@@ -648,7 +705,9 @@
                     <div class="time">09:00</div>
                     <div class="event">
                         <span class="tag park">🅿️ 停車</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=Ecolo+Park+Zonkuhoterunakasu" target="_blank" class="loc-link">Ecolo Park / Zonkuhoterunakasu 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Ecolo+Park+Zonkuhoterunakasu" target="_blank" class="loc-link">Ecolo Park / Zonkuhoterunakasu 📍</a>
+                        </h3>
                         <p>停放車輛，步行前往早餐地點。</p>
                     </div>
                 </li>
@@ -656,10 +715,14 @@
                     <div class="time">09:11</div>
                     <div class="event">
                         <span class="tag food">😋 必吃</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=元祖博多明太重" target="_blank" class="loc-link">元祖博多明太重 (Mentaiju) 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=元祖博多明太重" target="_blank" class="loc-link">元祖博多明太重 (Mentaiju) 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>福岡的味覺名片：</strong>來到福岡，沒吃過明太子就不算來過。Ganso Hakata Mentaiju 是全日本第一間明太子料理專門店。其招牌的「元祖博多明太重」，是將整條經過昆布精心醃漬入味的明太子，鋪在淋有特製醬汁的熱騰騰白飯上。</p>
+                            <p>
+                                <strong>福岡的味覺名片：</strong>來到福岡，沒吃過明太子就不算來過。Ganso Hakata Mentaiju 是全日本第一間明太子料理專門店。其招牌的「元祖博多明太重」，是將整條經過昆布精心醃漬入味的明太子，鋪在淋有特製醬汁的熱騰騰白飯上。
+                            </p>
                             <p>店內優雅的木質裝潢彷彿高級料亭，讓這份源自庶民的美味展現出極致的儀式感。鹹香微辣的滋味在口中化開，是開啟博多一天的最奢華方式。</p>
                         </div>
                     </div>
@@ -668,10 +731,14 @@
                     <div class="time">10:23</div>
                     <div class="event">
                         <span class="tag history">⛩️ 文化</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=櫛田神社" target="_blank" class="loc-link">櫛田神社 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=櫛田神社" target="_blank" class="loc-link">櫛田神社 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>博多的總鎮守：</strong>被當地人親切稱為「櫛田樣」，擁有超過千年的歷史。這裡最知名的便是每年七月舉辦的「博多祇園山笠」祭典，充滿了熱血與魄力。</p>
+                            <p>
+                                <strong>博多的總鎮守：</strong>被當地人親切稱為「櫛田樣」，擁有超過千年的歷史。這裡最知名的便是每年七月舉辦的「博多祇園山笠」祭典，充滿了熱血與魄力。
+                            </p>
                             <p>即便不是祭典期間，境內常年展示著巨大的「裝飾山笠」，工藝精湛且氣勢磅礡，讓人能隨時感受祭典的氛圍。此外，別忘了去看看那棵傳說能保佑長壽的千年銀杏樹。</p>
                         </div>
                     </div>
@@ -680,10 +747,14 @@
                     <div class="time">11:33</div>
                     <div class="event">
                         <span class="tag food">🍡 點心</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=もち吉+博多本店" target="_blank" class="loc-link">もち吉 (Mochikichi) 博多本店 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=もち吉+博多本店" target="_blank" class="loc-link">もち吉 (Mochikichi) 博多本店 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>90年老舖的滋味：</strong>起源於福岡直方市的米果名店，堅持使用頂級日本國產米與天然純淨水製作。來到本店必試「稻荷麻糬（いなりあげもち）」，將軟糯的麻糬塞入微甜多汁的油炸豆皮中，微波加熱後更是美味，口感層次豐富，是極受歡迎的在地點心。</p>
+                            <p>
+                                <strong>90年老舖的滋味：</strong>起源於福岡直方市的米果名店，堅持使用頂級日本國產米與天然純淨水製作。來到本店必試「稻荷麻糬（いなりあげもち）」，將軟糯的麻糬塞入微甜多汁的油炸豆皮中，微波加熱後更是美味，口感層次豐富，是極受歡迎的在地點心。
+                            </p>
                         </div>
                     </div>
                 </li>
@@ -691,7 +762,9 @@
                     <div class="time">12:46</div>
                     <div class="event">
                         <span class="tag food">🛍️ 伴手禮</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=味之明太子+福屋+中洲總店" target="_blank" class="loc-link">味之明太子 福屋 中洲總店 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=味之明太子+福屋+中洲總店" target="_blank" class="loc-link">味之明太子 福屋 中洲總店 📍</a>
+                        </h3>
                         <p>明太子的創始店，適合購買各式明太子相關土產。</p>
                     </div>
                 </li>
@@ -699,7 +772,9 @@
                     <div class="time">13:54</div>
                     <div class="event">
                         <span class="tag park">🚗 取車</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=Ecolo+Park+Zonkuhoterunakasu" target="_blank" class="loc-link">Ecolo Park 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Ecolo+Park+Zonkuhoterunakasu" target="_blank" class="loc-link">Ecolo Park 📍</a>
+                        </h3>
                         <p>取車前往下一個景點。</p>
                     </div>
                 </li>
@@ -707,7 +782,9 @@
                     <div class="time">14:12</div>
                     <div class="event">
                         <span class="tag park">🅿️ 停車</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=Algo+Park+Sanno" target="_blank" class="loc-link">Algo Park Sanno 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Algo+Park+Sanno" target="_blank" class="loc-link">Algo Park Sanno 📍</a>
+                        </h3>
                         <p>抵達山王公園周邊停車場。</p>
                     </div>
                 </li>
@@ -715,10 +792,14 @@
                     <div class="time">14:26</div>
                     <div class="event">
                         <span class="tag food">🍜 午餐</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=葉隱烏龍麵" target="_blank" class="loc-link">葉隱烏龍麵 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=葉隱烏龍麵" target="_blank" class="loc-link">葉隱烏龍麵 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>博多烏龍的代表：</strong>米其林推薦名店。博多烏龍麵以口感柔軟聞名，搭配酥脆的牛蒡天婦羅與清澈高湯，簡單卻美味。</p>
+                            <p>
+                                <strong>博多烏龍的代表：</strong>米其林推薦名店。博多烏龍麵以口感柔軟聞名，搭配酥脆的牛蒡天婦羅與清澈高湯，簡單卻美味。
+                            </p>
                         </div>
                     </div>
                 </li>
@@ -726,7 +807,9 @@
                     <div class="time">15:40</div>
                     <div class="event">
                         <span class="tag view">🌸 賞櫻</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=山王公園+福岡" target="_blank" class="loc-link">山王公園 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=山王公園+福岡" target="_blank" class="loc-link">山王公園 📍</a>
+                        </h3>
                         <p>福岡市民的賞櫻休憩地，在寬廣的草地上享受午後春光。</p>
                     </div>
                 </li>
@@ -734,17 +817,23 @@
                     <div class="time">16:44</div>
                     <div class="event">
                         <span class="tag park">🚗 取車</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=Algo+Park+Sanno" target="_blank" class="loc-link">Algo Park Sanno 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Algo+Park+Sanno" target="_blank" class="loc-link">Algo Park Sanno 📍</a>
+                        </h3>
                         <p>取車前往購物中心。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">16:56</div>
                     <div class="event">
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=LaLaport+福岡" target="_blank" class="loc-link">LaLaport 福岡 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=LaLaport+福岡" target="_blank" class="loc-link">LaLaport 福岡 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>鋼彈迷聖地：</strong>這裡最顯眼的地標莫過於戶外聳立的 1:1 實體大「RX-93ff ν 鋼彈」。這是全日本最高的一座鋼彈立像，右手的遠程浮游砲是其獨有特徵。整點時會有頭部與手部活動的聲光演出，震撼力十足，是結合現代科技與動漫文化的福岡新地標。</p>
+                            <p>
+                                <strong>鋼彈迷聖地：</strong>這裡最顯眼的地標莫過於戶外聳立的 1:1 實體大「RX-93ff ν 鋼彈」。這是全日本最高的一座鋼彈立像，右手的遠程浮游砲是其獨有特徵。整點時會有頭部與手部活動的聲光演出，震撼力十足，是結合現代科技與動漫文化的福岡新地標。
+                            </p>
                         </div>
                     </div>
                 </li>
@@ -752,7 +841,9 @@
                     <div class="time">19:57</div>
                     <div class="event">
                         <span class="tag food">🧂 採買</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=久原本家+LaLaport福岡店" target="_blank" class="loc-link">久原本家 LaLaport福岡店 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=久原本家+LaLaport福岡店" target="_blank" class="loc-link">久原本家 LaLaport福岡店 📍</a>
+                        </h3>
                         <p>以「茅乃舍高湯」聞名，是主婦們最愛的精緻日式調味料。</p>
                     </div>
                 </li>
@@ -760,7 +851,9 @@
                     <div class="time">21:16</div>
                     <div class="event">
                         <span class="tag stay">🏨 住宿</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a>
+                        </h3>
                         <p>返回飯店休息。</p>
                     </div>
                 </li>
@@ -779,7 +872,9 @@
                     <div class="time">08:30</div>
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a>
+                        </h3>
                         <p>早晨出發，準備前往六本松品嚐福岡超人氣的在地朝食。</p>
                     </div>
                 </li>
@@ -787,20 +882,37 @@
                     <div class="time">09:00</div>
                     <div class="event">
                         <span class="tag food">🐟 朝食</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=Robata+no+Ito+Okashi" target="_blank" class="loc-link">炉端ノいとおかし (Robata no Ito Okashi) 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Robata+no+Ito+Okashi" target="_blank" class="loc-link">炉端ノいとおかし (Robata no Ito Okashi) 📍</a>
+                        </h3>
                         <p>超人氣預約制福岡爐端燒早餐！圍著炭火烤爐，享受現烤銀鮭魚定食與晶瑩剔透的土鍋白飯。</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">餐點特色與預約提醒</button>
                         <div class="detail-content">
-                            <p><strong>🔥 必點推薦：</strong>現烤銀鮭魚定食 (2,200日圓)。以炭火慢烤的鮭魚外皮香脆、肉質軟嫩，搭配土鍋現煮、充滿米香的白飯（可免費續一碗）與溫潤的味噌湯，一早吃非常暖胃。</p>
-                            <p><strong style="color:#d32f2f;">⚠️ 用餐與服裝提醒：</strong></p>
+                            <p>
+                                <strong>🔥 必點推薦：</strong>現烤銀鮭魚定食 (2,200日圓)。以炭火慢烤的鮭魚外皮香脆、肉質軟嫩，搭配土鍋現煮、充滿米香的白飯（可免費續一碗）與溫潤的味噌湯，一早吃非常暖胃。
+                            </p>
+                            <p>
+                                <strong style="color:#d32f2f;">⚠️ 用餐與服裝提醒：</strong>
+                            </p>
                             <ul style="padding-left:15px; font-size:0.85rem; margin-bottom: 10px;">
-                                <li><strong>煙味警告：</strong>店內排煙效果較弱，吃完身上與頭髮會有非常濃厚的炭火燒烤味，建議穿著不怕染味或方便換洗的衣物。</li>
-                                <li><strong>現金支付：</strong>預約時雖需綁定信用卡付訂金，但<strong>現場結帳僅接受現金支付 (Cash Only)</strong>，請備妥日圓。</li>
+                                <li>
+                                    <strong>煙味警告：</strong>店內排煙效果較弱，吃完身上與頭髮會有非常濃厚的炭火燒烤味，建議穿著不怕染味或方便換洗的衣物。
+                                </li>
+                                <li>
+                                    <strong>現金支付：</strong>預約時雖需綁定信用卡付訂金，但
+                                    <strong>現場結帳僅接受現金支付 (Cash Only)</strong>，請備妥日圓。
+                                </li>
                             </ul>
-                            <p><strong>🔗 TableCheck 預約連結：</strong></p>
+                            <p>
+                                <strong>🔗 TableCheck 預約連結：</strong>
+                            </p>
                             <ul style="padding-left:15px; font-size:0.85rem;">
-                                <li><a href="https://www.tablecheck.com/ja/reservation/FX9NTH" target="_blank">訂位查詢連結一</a></li>
-                                <li><a href="https://www.tablecheck.com/ja/reservation/DZK7NY?utm_source=tablecheck_portal" target="_blank">訂位查詢連結二</a></li>
+                                <li>
+                                    <a href="https://www.tablecheck.com/ja/reservation/FX9NTH" target="_blank">訂位查詢連結一</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.tablecheck.com/ja/reservation/DZK7NY?utm_source=tablecheck_portal" target="_blank">訂位查詢連結二</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -809,10 +921,14 @@
                     <div class="time">11:18</div>
                     <div class="event">
                         <span class="tag view">🌸 名所</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=西公園" target="_blank" class="loc-link">西公園 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=西公園" target="_blank" class="loc-link">西公園 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>櫻花百選之地：</strong>西公園是福岡縣內唯一入選「日本櫻花名所100選」的地點。這座位於丘陵地上的公園，種植了約1300株櫻花，盛開時整個山頭彷彿被染成了淡粉色。</p>
+                            <p>
+                                <strong>櫻花百選之地：</strong>西公園是福岡縣內唯一入選「日本櫻花名所100選」的地點。這座位於丘陵地上的公園，種植了約1300株櫻花，盛開時整個山頭彷彿被染成了淡粉色。
+                            </p>
                             <p>這裡不僅是賞櫻勝地，從公園內的展望台還能遠眺博多灣、志賀島與能古島的壯麗海景。園內的光雲神社祭祀著福岡藩祖黑田官兵衛與長政父子，在櫻花樹下散步，能同時感受到歷史的厚重與自然的柔美。</p>
                         </div>
                     </div>
@@ -821,10 +937,14 @@
                     <div class="time">12:20</div>
                     <div class="event">
                         <span class="tag food">🍔 傳奇</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=今屋漢堡+西公園本店" target="_blank" class="loc-link">今屋漢堡 西公園本店 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=今屋漢堡+西公園本店" target="_blank" class="loc-link">今屋漢堡 西公園本店 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>老爺爺的職人魂：</strong>這不僅僅是一個熱狗堡，而是一段超過半世紀的堅持。年近80歲的老爺爺，彎著腰在小小的黃色餐車裡，專注地烤著每一個麵包。</p>
+                            <p>
+                                <strong>老爺爺的職人魂：</strong>這不僅僅是一個熱狗堡，而是一段超過半世紀的堅持。年近80歲的老爺爺，彎著腰在小小的黃色餐車裡，專注地烤著每一個麵包。
+                            </p>
                             <p>這裡的漢堡曾獲選全日本第三名，外皮酥脆的麵包夾著肉排與混合了特製醬汁的炒高麗菜，滋味樸實卻令人驚艷。雖然經常需要排隊兩小時，但看著爺爺一生懸命製作料理的身影，那份感動絕對值得等待。</p>
                         </div>
                     </div>
@@ -833,10 +953,14 @@
                     <div class="time">13:08</div>
                     <div class="event">
                         <span class="tag food">😋 預約</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=だしいなり海木" target="_blank" class="loc-link">だしいなり海木 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=だしいなり海木" target="_blank" class="loc-link">だしいなり海木 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>會爆汁的豆皮壽司：</strong>這裡的豆皮壽司被譽為藝術品。選用熊本縣南關町特產的「南關揚」炸豆皮，這種豆皮質地細緻，能吸飽滿滿的高湯。</p>
+                            <p>
+                                <strong>會爆汁的豆皮壽司：</strong>這裡的豆皮壽司被譽為藝術品。選用熊本縣南關町特產的「南關揚」炸豆皮，這種豆皮質地細緻，能吸飽滿滿的高湯。
+                            </p>
                             <p>一口咬下，充滿鰹魚與昆布香氣的湯汁在口中迸發，與醋飯的酸甜達成完美平衡。由於製作工序繁複，每日產量有限，往往開店不久便完售，是需要運氣或預約才能嚐到的極致美味。</p>
                         </div>
                     </div>
@@ -845,7 +969,9 @@
                     <div class="time">14:21</div>
                     <div class="event">
                         <span class="tag history">🏯 古蹟</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=福岡城跡" target="_blank" class="loc-link">福岡城 (舞鶴城) 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=福岡城跡" target="_blank" class="loc-link">福岡城 (舞鶴城) 📍</a>
+                        </h3>
                         <p>漫步於黑田官兵衛所築的名城遺跡，欣賞石牆與櫻花的絕美構圖。</p>
                     </div>
                 </li>
@@ -853,10 +979,14 @@
                     <div class="time">15:23</div>
                     <div class="event">
                         <span class="tag view">🌸 絕景</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=舞鶴公園" target="_blank" class="loc-link">舞鶴公園 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=舞鶴公園" target="_blank" class="loc-link">舞鶴公園 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>城牆下的櫻花隧道：</strong>緊鄰福岡城的舞鶴公園，是福岡市區最具代表性的賞櫻熱點。園內種植了多達19種、約1000株的櫻花。</p>
+                            <p>
+                                <strong>城牆下的櫻花隧道：</strong>緊鄰福岡城的舞鶴公園，是福岡市區最具代表性的賞櫻熱點。園內種植了多達19種、約1000株的櫻花。
+                            </p>
                             <p>最迷人的景色莫過於櫻花倒映在護城河水面上的姿態，以及落花時形成的粉紅花筏。這裡是市民野餐的首選之地，充滿了春日的歡笑與生機。</p>
                         </div>
                     </div>
@@ -865,7 +995,9 @@
                     <div class="time">16:25</div>
                     <div class="event">
                         <span class="tag view">🏞️ 散步</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=大濠公園" target="_blank" class="loc-link">大濠公園 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=大濠公園" target="_blank" class="loc-link">大濠公園 📍</a>
+                        </h3>
                         <p>仿西湖設計的水景公園，湖面波光粼粼，是散步放鬆的好去處。</p>
                     </div>
                 </li>
@@ -873,22 +1005,43 @@
                     <div class="time">17:30</div>
                     <div class="event">
                         <span class="tag food">🥩 晚餐</span>
-                        <h3><a href="https://tabelog.com/tw/fukuoka/A4001/A400103/40001661/" target="_blank" class="loc-link">燒肉 慶州 春吉店 📍</a></h3>
+                        <h3>
+                            <a href="https://tabelog.com/tw/fukuoka/A4001/A400103/40001661/" target="_blank" class="loc-link">燒肉 慶州 春吉店 📍</a>
+                        </h3>
                         <p>在那珂川畔的絕佳位置，一邊欣賞中洲璀璨的夜景，一邊品嚐頂級的 A5 黑毛和牛。店內以厚切牛舌與極致的油花聞名，絕對是賞櫻後最棒的味蕾享受！</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">預約與推薦介紹</button>
                         <div class="detail-content" style="font-size: 0.9rem;">
-                            <p><strong>🔥 推薦必點：</strong>厚切特上牛舌（極致軟嫩）、黑毛和牛特選五花肉、橫膈膜，以及作為完美解膩收尾的韓式冷麵。</p>
-                            <p><strong>✅ 預約已確認 (Visa 秘書服務)</strong></p>
+                            <p>
+                                <strong>🔥 推薦必點：</strong>厚切特上牛舌（極致軟嫩）、黑毛和牛特選五花肉、橫膈膜，以及作為完美解膩收尾的韓式冷麵。
+                            </p>
+                            <p>
+                                <strong>✅ 預約已確認 (Visa 秘書服務)</strong>
+                            </p>
                             <ul style="padding-left:15px; margin-top:5px; margin-bottom:10px; line-height: 1.8;">
-                                <li><strong>預訂姓名：</strong>チェンさん (CHENG)</li>
-                                <li><strong>用餐人數：</strong>6 位成人、1 位小孩 (3歲)</li>
-                                <li><strong>座位安排：</strong>二樓包廂座位 (附絕佳河畔夜景，帶小孩非常舒適)</li>
-                                <li><strong>聯絡電話：</strong>+81 92-736-3411</li>
+                                <li>
+                                    <strong>預訂姓名：</strong>チェンさん (CHENG)
+                                </li>
+                                <li>
+                                    <strong>用餐人數：</strong>6 位成人、1 位小孩 (3歲)
+                                </li>
+                                <li>
+                                    <strong>座位安排：</strong>二樓包廂座位 (附絕佳河畔夜景，帶小孩非常舒適)
+                                </li>
+                                <li>
+                                    <strong>聯絡電話：</strong>+81 92-736-3411
+                                </li>
                             </ul>
-                            <p><strong>🌟 Tabelog 餐廳資訊 (評分：3.55 很好)</strong></p>
+                            <p>
+                                <strong>🌟 Tabelog 餐廳資訊 (評分：3.55 很好)</strong>
+                            </p>
                             <ul style="padding-left:15px; margin-top:5px; line-height: 1.8;">
-                                <li><strong>營業時間：</strong>17:00 - 04:00</li>
-                                <li><strong>付款方式：</strong>可刷卡 (VISA, Master, JCB 等)，<span style="color:#d32f2f;">不支援電子支付或 QR Code</span>。</li>
+                                <li>
+                                    <strong>營業時間：</strong>17:00 - 04:00
+                                </li>
+                                <li>
+                                    <strong>付款方式：</strong>可刷卡 (VISA, Master, JCB 等)，
+                                    <span style="color:#d32f2f;">不支援電子支付或 QR Code</span>。
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -905,10 +1058,14 @@
                     <div class="time">21:00</div>
                     <div class="event">
                         <span class="tag food">🍢 宵夜</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=小金ちゃん" target="_blank" class="loc-link">屋臺名店 小金ちゃん 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=小金ちゃん" target="_blank" class="loc-link">屋臺名店 小金ちゃん 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>炒拉麵的發源地：</strong>來到福岡，怎能不體驗屋台（路邊攤）文化？小金ちゃん是天神地區最超人氣的排隊名店。</p>
+                            <p>
+                                <strong>炒拉麵的發源地：</strong>來到福岡，怎能不體驗屋台（路邊攤）文化？小金ちゃん是天神地區最超人氣的排隊名店。
+                            </p>
                             <p>這裡首創的「炒拉麵」，將煮過的拉麵與特製醬汁、豚骨湯頭在鐵板上快炒，香氣逼人，口感濕潤濃郁。做為賞完夜櫻後的宵夜，在狹小的空間裡感受博多夜晚最溫暖的風景。</p>
                         </div>
                     </div>
@@ -917,7 +1074,9 @@
                     <div class="time">22:00</div>
                     <div class="event">
                         <span class="tag stay">🏨 住宿</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a>
+                        </h3>
                         <p>結束充實的一天，返回飯店休息。</p>
                     </div>
                 </li>
@@ -937,7 +1096,9 @@
                     <div class="time">09:30</div>
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a>
+                        </h3>
                         <p>早晨出發，準備探訪私房賞櫻景點。</p>
                     </div>
                 </li>
@@ -945,10 +1106,14 @@
                     <div class="time">09:54</div>
                     <div class="event">
                         <span class="tag view">🌸 秘境</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=一本松川緑道" target="_blank" class="loc-link">一本松川綠道櫻並木 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=一本松川緑道" target="_blank" class="loc-link">一本松川綠道櫻並木 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>在地人的私藏景點：</strong>相較於舞鶴公園的人聲鼎沸，位於城南區住宅街的一本松川綠道，是福岡人不想公開的賞櫻秘境。</p>
+                            <p>
+                                <strong>在地人的私藏景點：</strong>相較於舞鶴公園的人聲鼎沸，位於城南區住宅街的一本松川綠道，是福岡人不想公開的賞櫻秘境。
+                            </p>
                             <p>沿著蜿蜒的小河，兩旁種滿了密集的櫻花樹。盛開時，沈甸甸的枝頭會向河面傾斜，形成一座天然的粉紅隧道。當花瓣飄落在緩緩流動的水面上，交織成夢幻的「櫻花河」。這裡是遠離塵囂、能安靜聽見風聲與水聲的漫步首選。</p>
                         </div>
                     </div>
@@ -957,7 +1122,9 @@
                     <div class="time">11:17</div>
                     <div class="event">
                         <span class="tag food">🥖 名店</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=Full+Full+Fukuoka" target="_blank" class="loc-link">Full Full 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Full+Full+Fukuoka" target="_blank" class="loc-link">Full Full 📍</a>
+                        </h3>
                         <p>福岡超人氣烘焙坊，必買招牌「明太子法國麵包」，外酥內軟充滿鮮味。</p>
                     </div>
                 </li>
@@ -965,10 +1132,14 @@
                     <div class="time">12:13</div>
                     <div class="event">
                         <span class="tag food">🍜 始祖</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=久留米大砲ラーメン" target="_blank" class="loc-link">大砲拉麵 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=久留米大砲ラーメン" target="_blank" class="loc-link">大砲拉麵 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>濃厚豚骨的源頭：</strong>大砲拉麵起源於久留米市，被視為濃厚豚骨拉麵的奠基者之一。這家老店以獨門的「呼戻し」（Yobidashi）技法聞名。</p>
+                            <p>
+                                <strong>濃厚豚骨的源頭：</strong>大砲拉麵起源於久留米市，被視為濃厚豚骨拉麵的奠基者之一。這家老店以獨門的「呼戻し」（Yobidashi）技法聞名。
+                            </p>
                             <p>這是一種絕不熄火、在熬煮新湯時保留部分陳年舊湯的技法，讓湯頭呈現出極致深邃、帶有骨髓精華的濃郁香氣。與博多拉麵相比，久留米拉麵的個性更加鮮明且狂野，是尋求純正豚骨靈魂的饕客必經之地。</p>
                         </div>
                     </div>
@@ -977,10 +1148,14 @@
                     <div class="time">13:19</div>
                     <div class="event">
                         <span class="tag stay">🛍️ 購物</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=天神地下街" target="_blank" class="loc-link">天神地下街 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=天神地下街" target="_blank" class="loc-link">天神地下街 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>地下的歐風長廊：</strong>天神地下街是九州最大的地下購物網絡，全長約 600 公尺。其設計靈感來自 19 世紀的歐洲，採用石磚地板、蔓藤花紋的鐵鑄天花板與彩繪玻璃。</p>
+                            <p>
+                                <strong>地下的歐風長廊：</strong>天神地下街是九州最大的地下購物網絡，全長約 600 公尺。其設計靈感來自 19 世紀的歐洲，採用石磚地板、蔓藤花紋的鐵鑄天花板與彩繪玻璃。
+                            </p>
                             <p>這裡連接了各大百貨公司與地鐵站，兩旁林立著各式服飾、流行雜貨與咖啡廳。走在這裡，不僅能躲避日曬雨淋，那股神祕且優雅的氛圍，更讓人有種置身歐洲古堡迴廊的錯覺。</p>
                         </div>
                     </div>
@@ -988,14 +1163,18 @@
                 <li class="timeline-item">
                     <div class="time">15:22</div>
                     <div class="event">
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=YOU+MORE+福岡天神地下街店" target="_blank" class="loc-link">YOU+MORE! 福岡天神地下街店 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=YOU+MORE+福岡天神地下街店" target="_blank" class="loc-link">YOU+MORE! 福岡天神地下街店 📍</a>
+                        </h3>
                         <p>Felissimo 旗下品牌，專賣令人會心一笑的療癒系動物雜貨。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">16:25</div>
                     <div class="event">
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=mills+by+Truffle+Bakery+福岡" target="_blank" class="loc-link">mills by Truffle Bakery 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=mills+by+Truffle+Bakery+福岡" target="_blank" class="loc-link">mills by Truffle Bakery 📍</a>
+                        </h3>
                         <p>東京排隊名店，這裡的「白松露鹽可頌」香氣奢華，是下午茶的最佳點心。</p>
                     </div>
                 </li>
@@ -1003,7 +1182,9 @@
                     <div class="time">16:48</div>
                     <div class="event">
                         <span class="tag food">📸 打卡</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=博多あかちょこべ" target="_blank" class="loc-link">茶壺烏龍麵 博多あかちょこべ 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=博多あかちょこべ" target="_blank" class="loc-link">茶壺烏龍麵 博多あかちょこべ 📍</a>
+                        </h3>
                         <p>以復古的黃色水燒茶壺裝盛烏龍麵，沾著高湯食用，造型獨特又美味。</p>
                     </div>
                 </li>
@@ -1011,10 +1192,14 @@
                     <div class="time">17:51</div>
                     <div class="event">
                         <span class="tag view">⛲ 地標</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=博多運河城" target="_blank" class="loc-link">博多運河城 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=博多運河城" target="_blank" class="loc-link">博多運河城 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>都市中的運河劇場：</strong>這是一座圍繞著人工運河而建的大型複合商城。鮮豔的弧形建築色彩與流動的水景是其最大特色。</p>
+                            <p>
+                                <strong>都市中的運河劇場：</strong>這是一座圍繞著人工運河而建的大型複合商城。鮮豔的弧形建築色彩與流動的水景是其最大特色。
+                            </p>
                             <p>中央的太陽廣場每半小時會有音樂水舞秀，晚間更結合光雕投影（3D Mapping），帶來震撼的視覺宴。這裡是福岡展現現代都市魅力與娛樂性的代表性地標。</p>
                         </div>
                     </div>
@@ -1023,7 +1208,9 @@
                     <div class="time">20:17</div>
                     <div class="event">
                         <span class="tag stay">🏨 住宿</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a>
+                        </h3>
                         <p>返回旅宿，整理戰利品。</p>
                     </div>
                 </li>
@@ -1042,7 +1229,9 @@
                     <div class="time">09:30</div>
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a>
+                        </h3>
                         <p>從福岡出發前往大分縣，開啟由布院悠閒一日遊。</p>
                     </div>
                 </li>
@@ -1058,13 +1247,20 @@
                     <div class="time">11:15</div>
                     <div class="event">
                         <span class="tag park">🅿️ 停車</span>
-                        <h3>車站前停車 & 餐廳登記</h3>
-                        <p>導覽至 <strong>Times 由布院站前第 2</strong>。停妥後先步行至對面「由布まぶし 心」門口登記。</p>
+                        <h3>
+                            <a href="https://maps.app.goo.gl/cmyhbY4tMyPdQNcU9" target="_blank" class="loc-link">車站前停車 & 餐廳登記 📍</a>
+                        </h3>
+                        <p>
+                            導覽至
+                            <strong>Times 由布院站前第 2</strong>。停妥後先步行至對面「由布まぶし 心」門口登記。
+                        </p>
                         <button class="detail-btn" onclick="toggleDetail(this)">精選停車場</button>
                         <div class="detail-content" style="font-size: 0.85rem;">
-                            <strong>🅿️ 推薦：タイムズ由布院駅前第２</strong><br>
-                            通常料金：30分 200円 / 最大料金：700円 (24時迄)<br>
-                            <a href="https://share.google/kUrgtM5SBE0JxwfSL" target="_blank" class="loc-link">Google Maps 導航</a>
+                            <strong>🅿️ 推薦：タイムズ由布院駅前第２</strong>
+                            <br>
+                            通常料金：30分 200円 / 最大料金：700円 (24時迄)
+                            <br>
+                            <a href="https://maps.app.goo.gl/cmyhbY4tMyPdQNcU9" target="_blank" class="loc-link">Google Maps 導航</a>
                         </div>
                     </div>
                 </li>
@@ -1072,11 +1268,15 @@
                     <div class="time">11:30</div>
                     <div class="event">
                         <span class="tag food">🥩 午餐</span>
-                        <h3>由布まぶし 心 (由布院站前支店) 📍</h3>
+                        <h3>
+                            <a href="https://maps.app.goo.gl/LsT8QR3ZE2d1swbw6" target="_blank" class="loc-link">由布まぶし 心 (由布院站前支店) 📍</a>
+                        </h3>
                         <p>品嚐著名的豐後牛釜飯三吃。站前店翻桌率較快，且吃飽後可將不需要的物品留在車上，輕裝出發逛街。</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>豐後牛釜飯三吃：</strong>這是由布院最具代表性的美食。選用大分縣特產的豐後牛，肉質軟嫩多汁。第一口先品嚐原味，感受炭火薰香與肉質鮮甜；第二口加入柚子胡椒、醃漬小物調整風味；最後倒入高湯，連同土鍋底部的鍋巴一起做成茶泡飯享用，每一口都是極致享受。</p>
+                            <p>
+                                <strong>豐後牛釜飯三吃：</strong>這是由布院最具代表性的美食。選用大分縣特產的豐後牛，肉質軟嫩多汁。第一口先品嚐原味，感受炭火薰香與肉質鮮甜；第二口加入柚子胡椒、醃漬小物調整風味；最後倒入高湯，連同土鍋底部的鍋巴一起做成茶泡飯享用，每一口都是極致享受。
+                            </p>
                         </div>
                     </div>
                 </li>
@@ -1084,7 +1284,9 @@
                     <div class="time">13:00</div>
                     <div class="event">
                         <span class="tag food">🍰 甜點</span>
-                        <h3>B SPEAK 📍</h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=B+SPEAK+由布院" target="_blank" class="loc-link">B SPEAK 📍</a>
+                        </h3>
                         <p>由布院最知名的瑞士捲蛋糕。以純粹的鮮奶油與鬆軟的蛋糕體聞名。由於非常熱門，建議看到有貨就先買。</p>
                     </div>
                 </li>
@@ -1092,7 +1294,9 @@
                     <div class="time">13:30</div>
                     <div class="event">
                         <span class="tag view">🛍️ 散策</span>
-                        <h3>湯之坪街道 📍</h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=湯之坪街道" target="_blank" class="loc-link">湯之坪街道 📍</a>
+                        </h3>
                         <p>由布院最熱鬧的商店街。街道兩旁充滿了各式特色伴手禮店、手工藝品與在地小吃，非常適合邊走邊逛。</p>
                     </div>
                 </li>
@@ -1100,7 +1304,9 @@
                     <div class="time">14:30</div>
                     <div class="event">
                         <span class="tag food">🍵 午茶</span>
-                        <h3>SNOOPY茶屋 由布院店 📍</h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=SNOOPY茶屋+由布院店" target="_blank" class="loc-link">SNOOPY茶屋 由布院店 📍</a>
+                        </h3>
                         <p>全球第一家 SNOOPY 和風茶屋。除了有可愛的史努比造型餐點與飲品，還融合了大分縣在地的食材，是粉絲必朝聖的景點。</p>
                     </div>
                 </li>
@@ -1108,7 +1314,9 @@
                     <div class="time">15:15</div>
                     <div class="event">
                         <span class="tag view">🏘️ 童話</span>
-                        <h3>Yufuin Floral Village 📍</h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Yufuin+Floral+Village" target="_blank" class="loc-link">Yufuin Floral Village 📍</a>
+                        </h3>
                         <p>充滿歐洲童話風格的聚落。彷彿走入哈利波特或彼得兔的世界，低矮的石造建築佈滿花草，每個角落都非常好拍。</p>
                     </div>
                 </li>
@@ -1116,7 +1324,9 @@
                     <div class="time">16:00</div>
                     <div class="event">
                         <span class="tag view">🖼️ 秘境</span>
-                        <h3>金鱗湖 📍</h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=金鱗湖" target="_blank" class="loc-link">金鱗湖 📍</a>
+                        </h3>
                         <p>由布院最具代表性的景點。下午的陽光照在湖面上波光粼粼，遠眺由布岳的壯麗倒影，是拍照的最佳時機。</p>
                     </div>
                 </li>
@@ -1124,7 +1334,9 @@
                     <div class="time">16:45</div>
                     <div class="event">
                         <span class="tag move">🚶 取車</span>
-                        <h3>散步回車站 & 停車場取車</h3>
+                        <h3>
+                            <a href="https://maps.app.goo.gl/cmyhbY4tMyPdQNcU9" target="_blank" class="loc-link">散步回車站 & 停車場取車 📍</a>
+                        </h3>
                         <p>結束由布院的行程，沿著平緩的下坡路段散步回「Times 由布院站前第 2」停車場（約步行 15-20 分鐘），準備開車回程。</p>
                     </div>
                 </li>
@@ -1132,7 +1344,9 @@
                     <div class="time">18:45</div>
                     <div class="event">
                         <span class="tag stay">🏨 住宿</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a>
+                        </h3>
                         <p>開車返回福岡市區，回到熟悉的飯店休息，結束豐富的大分一日遊。</p>
                     </div>
                 </li>
@@ -1152,7 +1366,9 @@
                     <div class="time">09:30</div>
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=梅の由竹諾屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=梅の由竹諾屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a>
+                        </h3>
                         <p>出發前往充滿歷史風情的朝倉市秋月地區。</p>
                     </div>
                 </li>
@@ -1160,10 +1376,14 @@
                     <div class="time">10:08</div>
                     <div class="event">
                         <span class="tag view">🌸 名所</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=杉の馬場" target="_blank" class="loc-link">杉之馬場 (Sugi no Baba) 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=杉の馬場" target="_blank" class="loc-link">杉之馬場 (Sugi no Baba) 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>昔日武士的櫻花道：</strong>這條長約 500 公尺的大道，是通往秋月城的登城道。在江戶時代，道路兩旁種植了杉樹，曾是藩士們練習馬術的場所，因此得名「杉之馬場」。</p>
+                            <p>
+                                <strong>昔日武士的櫻花道：</strong>這條長約 500 公尺的大道，是通往秋月城的登城道。在江戶時代，道路兩旁種植了杉樹，曾是藩士們練習馬術的場所，因此得名「杉之馬場」。
+                            </p>
                             <p>到了明治時代，為了紀念日俄戰爭勝利，改植了約 200 株染井吉野櫻。如今每到春天，盛開的櫻花會在頭頂交織成一座壯觀的粉紅隧道。兩旁保留著古樸的茶屋與葛粉店，漫步其中，彷彿能聽見昔日馬蹄聲與今日賞花人的讚嘆聲交疊。</p>
                         </div>
                     </div>
@@ -1172,10 +1392,14 @@
                     <div class="time">11:15</div>
                     <div class="event">
                         <span class="tag history">🏯 古蹟</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=秋月城跡" target="_blank" class="loc-link">秋月城跡 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=秋月城跡" target="_blank" class="loc-link">秋月城跡 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>筑前的小京都：</strong>秋月城曾是福岡藩黑田氏的分家領地。雖然城堡主體已不復存在，但象徵昔日威嚴的「黑門」與「長屋門」仍完整保留。</p>
+                            <p>
+                                <strong>筑前的小京都：</strong>秋月城曾是福岡藩黑田氏的分家領地。雖然城堡主體已不復存在，但象徵昔日威嚴的「黑門」與「長屋門」仍完整保留。
+                            </p>
                             <p>特別是原本作為正門的黑門，其厚重的深色木造結構與周圍鮮豔的櫻花、楓葉形成強烈的視覺對比。這裡被列為國家重要傳統建築群保存地區，其「枯淡」且幽靜的氣氛，完美體現了日式侘寂美學，是攝影愛好者不可錯過的絕景。</p>
                         </div>
                     </div>
@@ -1184,7 +1408,9 @@
                     <div class="time">13:02</div>
                     <div class="event">
                         <span class="tag view">🌸 倒影</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=甘木公園" target="_blank" class="loc-link">甘木公園 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=甘木公園" target="_blank" class="loc-link">甘木公園 📍</a>
+                        </h3>
                         <p>以丸山池為中心的賞櫻名所，寬闊的湖面倒映著櫻花，適合悠閒散步。</p>
                     </div>
                 </li>
@@ -1192,7 +1418,9 @@
                     <div class="time">14:15</div>
                     <div class="event">
                         <span class="tag view">🌸 秘境</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=流川の桜" target="_blank" class="loc-link">流川之櫻 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=流川の桜" target="_blank" class="loc-link">流川之櫻 📍</a>
+                        </h3>
                         <p>位於巨瀨川沿岸，延綿約 2 公里的櫻花並木宛如一條粉紅巨龍，景色壯觀。</p>
                     </div>
                 </li>
@@ -1200,7 +1428,9 @@
                     <div class="time">16:09</div>
                     <div class="event">
                         <span class="tag stay">🏨 住宿</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=梅の由竹諾屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=梅の由竹諾屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a>
+                        </h3>
                         <p>返回溫暖的居所，回味一日的古都風情。</p>
                     </div>
                 </li>
@@ -1219,7 +1449,9 @@
                     <div class="time">09:30</div>
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
-                        <h3><a href="https://maps.google.com/?q=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a>
+                        </h3>
                         <p>前往北九州，開啟小倉一日遊。</p>
                     </div>
                 </li>
@@ -1227,10 +1459,14 @@
                     <div class="time">10:31</div>
                     <div class="event">
                         <span class="tag view">🌸 在地</span>
-                        <h3><a href="https://maps.google.com/?q=志井川の桜並木" target="_blank" class="loc-link">志井川櫻並木 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=志井川の桜並木" target="_blank" class="loc-link">志井川櫻並木 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>北九州人的私房賞櫻點：</strong>志井川是流經小倉南區的一條靜謐河流。沿著河岸種植了數百株櫻花，每到春天，繁花盛開與流水交織成一幅純淨的風景。</p>
+                            <p>
+                                <strong>北九州人的私房賞櫻點：</strong>志井川是流經小倉南區的一條靜謐河流。沿著河岸種植了數百株櫻花，每到春天，繁花盛開與流水交織成一幅純淨的風景。
+                            </p>
                             <p>這裡相較於市中心的名所，少了一份喧囂，多了一份屬於在地生活的愜意。清晨在河畔散步，看著花瓣飄落在清澈的水面，是體驗北九州自然之美的最佳方式。</p>
                         </div>
                     </div>
@@ -1239,7 +1475,9 @@
                     <div class="time">12:20</div>
                     <div class="event">
                         <span class="tag park">🅿️ 停車</span>
-                        <h3><a href="https://maps.google.com/?q=ASAHI+PARK+紺屋町第3" target="_blank" class="loc-link">ASAHI PARK 紺屋町第3 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=ASAHI+PARK+紺屋町第3" target="_blank" class="loc-link">ASAHI PARK 紺屋町第3 📍</a>
+                        </h3>
                         <p>停妥車輛，準備步行前往午餐地點。</p>
                     </div>
                 </li>
@@ -1247,10 +1485,14 @@
                     <div class="time">12:30</div>
                     <div class="event">
                         <span class="tag food">😋 必吃</span>
-                        <h3><a href="https://maps.google.com/?q=小倉鉄なべ+総本店" target="_blank" class="loc-link">小倉鐵鍋煎餃 總本店 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=小倉鉄なべ+総本店" target="_blank" class="loc-link">小倉鐵鍋煎餃 總本店 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>熱騰騰的庶民靈魂：</strong>鐵鍋煎餃（鉄なべ）是源自北九州的獨特吃法。與一般的煎餃不同，這裡的餃子是直接在厚重的鐵鍋上整齊排列後煎烤，最後連同滾燙的鐵鍋直接端上桌。</p>
+                            <p>
+                                <strong>熱騰騰的庶民靈魂：</strong>鐵鍋煎餃（鉄なべ）是源自北九州的獨特吃法。與一般的煎餃不同，這裡的餃子是直接在厚重的鐵鍋上整齊排列後煎烤，最後連同滾燙的鐵鍋直接端上桌。
+                            </p>
                             <p>餃子皮被煎得金黃酥脆，滋滋作響，一口咬下飽滿多汁。鐵鍋的餘溫確保你吃到最後一顆餃子都是熱騰騰的，搭配特製的辣油與柚子胡椒，風味更是一絕。</p>
                         </div>
                     </div>
@@ -1259,10 +1501,14 @@
                     <div class="time">13:34</div>
                     <div class="event">
                         <span class="tag history">🐟 市場</span>
-                        <h3><a href="https://maps.google.com/?q=旦過市場" target="_blank" class="loc-link">旦過市場 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=旦過市場" target="_blank" class="loc-link">旦過市場 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>北九州的廚房：</strong>擁有超過百年的歷史，這條木造的拱廊市場散發著濃濃的昭和復古氛圍。這裡販售著各種鮮魚、蔬果與在地熟食。</p>
+                            <p>
+                                <strong>北九州的廚房：</strong>擁有超過百年的歷史，這條木造的拱廊市場散發著濃濃的昭和復古氛圍。這裡販售著各種鮮魚、蔬果與在地熟食。
+                            </p>
                             <p>其中最有名的便是「糠味噌炊」（ぬか炊き），這是一種使用發酵米糠醬燉煮沙丁魚或鯖魚的鄉土料理，展現了北九州深厚的美食底蘊。即便經歷過火災考驗，旦過市場依然展現出堅韌的生命力，是感受城市脈動的最佳去處。</p>
                         </div>
                     </div>
@@ -1271,7 +1517,9 @@
                     <div class="time">14:35</div>
                     <div class="event">
                         <span class="tag food">🍵 喫茶</span>
-                        <h3><a href="https://maps.google.com/?q=KOKURA堂" target="_blank" class="loc-link">KOKURA堂 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=KOKURA堂" target="_blank" class="loc-link">KOKURA堂 📍</a>
+                        </h3>
                         <p>在復古街道中享受片刻的下午茶時光。</p>
                     </div>
                 </li>
@@ -1279,7 +1527,9 @@
                     <div class="time">15:48</div>
                     <div class="event">
                         <span class="tag view">🌳 散策</span>
-                        <h3><a href="https://maps.google.com/?q=勝山公園" target="_blank" class="loc-link">勝山公園 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=勝山公園" target="_blank" class="loc-link">勝山公園 📍</a>
+                        </h3>
                         <p>圍繞著小倉城的都市綠洲，擁有約 300 株櫻花，是市民休憩的好去處。</p>
                     </div>
                 </li>
@@ -1287,10 +1537,14 @@
                     <div class="time">17:28</div>
                     <div class="event">
                         <span class="tag history">🏯 名城</span>
-                        <h3><a href="https://maps.google.com/?q=小倉城" target="_blank" class="loc-link">小倉城 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=小倉城" target="_blank" class="loc-link">小倉城 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>獨特的唐造天守：</strong>小倉城由細川忠興所建，其天守閣採用獨特的「唐造」風格，也就是第五層比第四層面積還要大，外觀上屋簷沒有瓦片，視覺效果極具個性。</p>
+                            <p>
+                                <strong>獨特的唐造天守：</strong>小倉城由細川忠興所建，其天守閣採用獨特的「唐造」風格，也就是第五層比第四層面積還要大，外觀上屋簷沒有瓦片，視覺效果極具個性。
+                            </p>
                             <p>這裡也是宮本武藏與佐佐木小次郎決鬥傳說的相關之地。春季時，雪白的天守閣漂浮在粉紅色的櫻花海之上，展現出一種莊嚴而優雅的戰國遺風。</p>
                         </div>
                     </div>
@@ -1299,7 +1553,9 @@
                     <div class="time">19:26</div>
                     <div class="event">
                         <span class="tag stay">🛍️ 購物</span>
-                        <h3><a href="https://maps.google.com/?q=THE+OUTLETS+KITAKYUSHU" target="_blank" class="loc-link">THE OUTLETS KITAKYUSHU 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=THE+OUTLETS+KITAKYUSHU" target="_blank" class="loc-link">THE OUTLETS KITAKYUSHU 📍</a>
+                        </h3>
                         <p>造訪北九州最新、最大規模的複合式購物商場，享受夜間購物樂趣。</p>
                     </div>
                 </li>
@@ -1307,7 +1563,9 @@
                     <div class="time">21:26</div>
                     <div class="event">
                         <span class="tag stay">🏨 住宿</span>
-                        <h3><a href="https://maps.google.com/?q=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a>
+                        </h3>
                         <p>返回飯店休息。</p>
                     </div>
                 </li>
@@ -1327,7 +1585,9 @@
                     <div class="time">09:30</div>
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
-                        <h3><a href="https://maps.google.com/?q=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=梅の由竹ノ屋" target="_blank" class="loc-link">梅の由竹ノ屋 📍</a>
+                        </h3>
                         <p>退房出發，前往太宰府。</p>
                     </div>
                 </li>
@@ -1335,7 +1595,9 @@
                     <div class="time">09:35</div>
                     <div class="event">
                         <span class="tag park">🅿️ 停車</span>
-                        <h3><a href="https://maps.google.com/?q=Seiwa+Park+太宰府" target="_blank" class="loc-link">Seiwa Park Dazaifu 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=Seiwa+Park+太宰府" target="_blank" class="loc-link">Seiwa Park Dazaifu 📍</a>
+                        </h3>
                         <p>停妥車輛，步行進入表參道。</p>
                     </div>
                 </li>
@@ -1343,10 +1605,14 @@
                     <div class="time">09:52</div>
                     <div class="event">
                         <span class="tag history">⛩️ 傳說</span>
-                        <h3><a href="https://maps.google.com/?q=太宰府天満宮" target="_blank" class="loc-link">太宰府天滿宮 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=太宰府天満宮" target="_blank" class="loc-link">太宰府天滿宮 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>考生的聖地與飛梅傳說：</strong>這裡是全日本三千多座天滿宮的總本山，祭祀著平安時代的學者與政治家「菅原道真公」，被尊為學問之神。</p>
+                            <p>
+                                <strong>考生的聖地與飛梅傳說：</strong>這裡是全日本三千多座天滿宮的總本山，祭祀著平安時代的學者與政治家「菅原道真公」，被尊為學問之神。
+                            </p>
                             <p>本殿旁最著名的一棵梅樹名為「飛梅」。傳說中，當道真公被貶謫至太宰府時，這棵他深愛的梅樹因思念主人，竟從京都一夜之間飛越千里來到此地紮根。這裡的建築風格華麗而莊嚴，春季時梅花與櫻花交替綻放，不僅是祈求金榜題名的聖地，更是欣賞日本古典建築美學的殿堂。</p>
                         </div>
                     </div>
@@ -1355,10 +1621,14 @@
                     <div class="time">10:54</div>
                     <div class="event">
                         <span class="tag view">⛩️ 結緣</span>
-                        <h3><a href="https://maps.google.com/?q=竈門神社" target="_blank" class="loc-link">竈門神社 (Kamado Shrine) 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=竈門神社" target="_blank" class="loc-link">竈門神社 (Kamado Shrine) 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>動漫迷的朝聖地：</strong>位於寶滿山麓的竈門神社，自古以來便以祈求良緣（結緣）聞名。近年因其名字與超人氣動漫《鬼滅之刃》主角竈門炭治郎同姓，且該地曾是修驗道的靈場，被許多粉絲視為聖地。</p>
+                            <p>
+                                <strong>動漫迷的朝聖地：</strong>位於寶滿山麓的竈門神社，自古以來便以祈求良緣（結緣）聞名。近年因其名字與超人氣動漫《鬼滅之刃》主角竈門炭治郎同姓，且該地曾是修驗道的靈場，被許多粉絲視為聖地。
+                            </p>
                             <p>神社經過翻修，其社務所由知名建築師設計，融合了粉嫩的戀愛色彩與現代極簡風格，玻璃帷幕映照著周圍的櫻花與楓紅，氛圍寧靜而優雅，顛覆了傳統神社的印象。</p>
                         </div>
                     </div>
@@ -1367,7 +1637,9 @@
                     <div class="time">11:59</div>
                     <div class="event">
                         <span class="tag food">☕ 建築</span>
-                        <h3><a href="https://maps.google.com/?q=スターバックスコーヒー+太宰府天満宮表参道店" target="_blank" class="loc-link">星巴克 太宰府天滿宮表參道店 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=スターバックスコーヒー+太宰府天満宮表参道店" target="_blank" class="loc-link">星巴克 太宰府天滿宮表參道店 📍</a>
+                        </h3>
                         <p>由建築大師隈研吾設計，運用 2000 根木條交織出獨特的幾何空間，是著名的概念店。</p>
                     </div>
                 </li>
@@ -1375,10 +1647,14 @@
                     <div class="time">12:10</div>
                     <div class="event">
                         <span class="tag food">😋 名物</span>
-                        <h3><a href="https://maps.google.com/?q=太宰府+梅ヶ枝餅+やす武" target="_blank" class="loc-link">梅枝餅 安武 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=太宰府+梅ヶ枝餅+やす武" target="_blank" class="loc-link">梅枝餅 安武 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>老婆婆的溫暖心意：</strong>梅枝餅的由來相當感人。相傳道真公遭貶至大宰府時生活窮困，一位好心的老婆婆為了安慰他，將栗子餅繞在梅花枝上送給他吃，這便成了梅枝餅的起源。</p>
+                            <p>
+                                <strong>老婆婆的溫暖心意：</strong>梅枝餅的由來相當感人。相傳道真公遭貶至大宰府時生活窮困，一位好心的老婆婆為了安慰他，將栗子餅繞在梅花枝上送給他吃，這便成了梅枝餅的起源。
+                            </p>
                             <p>參道上的「安武」是傳承已久的老店。剛烤好的餅皮表面微焦酥脆，內部軟糯Q彈，包裹著熱騰騰的紅豆餡，樸實的米香與豆香交織，每一口都是溫暖滋味。</p>
                         </div>
                     </div>
@@ -1387,10 +1663,14 @@
                     <div class="time">14:26</div>
                     <div class="event">
                         <span class="tag view">🚣 體驗</span>
-                        <h3><a href="https://maps.google.com/?q=柳川観光開発株式会社+松月乗船場" target="_blank" class="loc-link">柳川觀光開發(株)松月乘船場 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=柳川観光開発株式会社+松月乗船場" target="_blank" class="loc-link">柳川觀光開發(株)松月乘船場 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>水鄉澤國的搖櫓船：</strong>柳川市內運河縱橫，被譽為「九州的威尼斯」。來到這裡最棒的體驗便是乘坐名為「どんこ舟」的傳統手搖船。</p>
+                            <p>
+                                <strong>水鄉澤國的搖櫓船：</strong>柳川市內運河縱橫，被譽為「九州的威尼斯」。來到這裡最棒的體驗便是乘坐名為「どんこ舟」的傳統手搖船。
+                            </p>
                             <p>船夫熟練地用一根長篙控制方向，載著旅客穿梭在狹窄的水道與古老的紅磚倉庫間。當小船緩緩滑過低垂的柳樹與盛開的櫻花時，船夫會哼唱起古老民謠，悠揚的歌聲在水面上迴盪，讓人忘卻時間的流逝。</p>
                         </div>
                     </div>
@@ -1399,7 +1679,9 @@
                     <div class="time">18:37</div>
                     <div class="event">
                         <span class="tag stay">🏨 住宿</span>
-                        <h3><a href="https://maps.google.com/?q=熊本ホテルキャッスル" target="_blank" class="loc-link">熊本城飯店 📍</a></h3>
+                        <h3>
+                            <a href="https://maps.google.com/?q=熊本ホテルキャッスル" target="_blank" class="loc-link">熊本城飯店 📍</a>
+                        </h3>
                         <p>移動至熊本市區並辦理入住，準備迎接明日的城堡巡禮。</p>
                     </div>
                 </li>
@@ -1418,7 +1700,9 @@
                     <div class="time">09:30</div>
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=熊本城飯店" target="_blank" class="loc-link">熊本城飯店 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=熊本城飯店" target="_blank" class="loc-link">熊本城飯店 📍</a>
+                        </h3>
                         <p>就在城堡旁醒來，準備探索熊本象徵。</p>
                     </div>
                 </li>
@@ -1426,10 +1710,14 @@
                     <div class="time">09:32</div>
                     <div class="event">
                         <span class="tag history">🏯 名城</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=熊本城" target="_blank" class="loc-link">熊本城 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=熊本城" target="_blank" class="loc-link">熊本城 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>難攻不落的銀杏城：</strong>熊本城由戰國名將加藤清正於 1607 年建造，與姬路城、名古屋城並列為日本三大名城。它最令人震撼的是被稱為「武者返」的石牆，這種石牆下緩上陡，連矯健的忍者也難以翻越。</p>
+                            <p>
+                                <strong>難攻不落的銀杏城：</strong>熊本城由戰國名將加藤清正於 1607 年建造，與姬路城、名古屋城並列為日本三大名城。它最令人震撼的是被稱為「武者返」的石牆，這種石牆下緩上陡，連矯健的忍者也難以翻越。
+                            </p>
                             <p>即便經歷過 2016 年強震的重創，熊本城仍以驚人的速度復原，天守閣已重新對外開放，展現了熊本人的韌性。當櫻花盛開時，深黑色的城堡外牆與粉嫩的櫻花交相輝映，展現出一種莊嚴而淒美的戰國遺風。</p>
                         </div>
                     </div>
@@ -1438,10 +1726,14 @@
                     <div class="time">10:48</div>
                     <div class="event">
                         <span class="tag food">🍡 散策</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=櫻之馬場+城彩苑" target="_blank" class="loc-link">櫻之馬場 城彩苑 櫻之小路 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=櫻之馬場+城彩苑" target="_blank" class="loc-link">櫻之馬場 城彩苑 櫻之小路 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>江戶風情的味覺探險：</strong>位於熊本城下的「城彩苑」，是一處重現江戶時代城下町風情的複合式設施。其中的「櫻之小路」集結了 20 多家熊本代表性的伴手禮店與餐飲店。</p>
+                            <p>
+                                <strong>江戶風情的味覺探險：</strong>位於熊本城下的「城彩苑」，是一處重現江戶時代城下町風情的複合式設施。其中的「櫻之小路」集結了 20 多家熊本代表性的伴手禮店與餐飲店。
+                            </p>
                             <p>您可以在這條充滿木造建築美感的街道上，品嚐到現做的「いきなり團子」（一種包著紅豆餡與蕃薯的糰子）或是著名的熊本生馬肉刺身，是感受熊本美食與購買在地土產的絕佳停靠站。</p>
                         </div>
                     </div>
@@ -1450,10 +1742,14 @@
                     <div class="time">11:57</div>
                     <div class="event">
                         <span class="tag food">🍜 必吃</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=黑亭拉麵" target="_blank" class="loc-link">黑亭拉麵 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=黑亭拉麵" target="_blank" class="loc-link">黑亭拉麵 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>焦香蒜油的衝擊：</strong>黑亭拉麵是熊本拉麵界的傳奇代表。與博多拉麵最大的不同在於，熊本湯頭加入了大量的「焦香蒜油」（麻油）與烘烤過的蒜粒。</p>
+                            <p>
+                                <strong>焦香蒜油的衝擊：</strong>黑亭拉麵是熊本拉麵界的傳奇代表。與博多拉麵最大的不同在於，熊本湯頭加入了大量的「焦香蒜油」（麻油）與烘烤過的蒜粒。
+                            </p>
                             <p>黑亭自昭和 32 年創業以來，便堅持手工熬煮豬骨湯頭，其濃郁卻不油膩的滋味，配上特製的中粗麵條與兩顆生蛋黃，在入口瞬間便能感受到強烈的熊本個性。</p>
                         </div>
                     </div>
@@ -1462,10 +1758,14 @@
                     <div class="time">13:12</div>
                     <div class="event">
                         <span class="tag view">🌳 名園</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=水前寺成趣園" target="_blank" class="loc-link">水前寺成趣園 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=水前寺成趣園" target="_blank" class="loc-link">水前寺成趣園 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>濃縮的東海道五十三次：</strong>成趣園是一座代表江戶時代美學的「大名庭園」，由熊本藩主細川忠利創建。這座迴遊式庭園最獨特之處在於它引進了阿蘇山的伏流水，湖水清澈見底。</p>
+                            <p>
+                                <strong>濃縮的東海道五十三次：</strong>成趣園是一座代表江戶時代美學的「大名庭園」，由熊本藩主細川忠利創建。這座迴遊式庭園最獨特之處在於它引進了阿蘇山的伏流水，湖水清澈見底。
+                            </p>
                             <p>庭園內的築山景觀模擬了「東海道五十三次」的景色，其中最著名的便是那一座形狀完美、象徵「富士山」的小山丘。漫步在翠綠的草坪與清邊，彷彿置身於縮小的日本地圖之中。</p>
                         </div>
                     </div>
@@ -1474,10 +1774,14 @@
                     <div class="time">14:17</div>
                     <div class="event">
                         <span class="tag view">🏴‍☠️ 打卡</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=魯夫雕像+熊本縣廳" target="_blank" class="loc-link">海賊王魯夫雕像 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=魯夫雕像+熊本縣廳" target="_blank" class="loc-link">海賊王魯夫雕像 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">景點深度故事</button>
                         <div class="detail-content">
-                            <p><strong>通往新世界的船長：</strong>這尊 1:1 等身大的魯夫銅像立於熊本縣廳前，是為了感謝漫畫家尾田榮一郎對家鄉熊本的貢獻。</p>
+                            <p>
+                                <strong>通往新世界的船長：</strong>這尊 1:1 等身大的魯夫銅像立於熊本縣廳前，是為了感謝漫畫家尾田榮一郎對家鄉熊本的貢獻。
+                            </p>
                             <p>在 2016 年強震後，身為熊本人的尾田老師以魯夫的名義捐款並啟動「海賊王熊本復興計畫」。這尊雕像象徵著草帽海賊團成員們來到熊本各災區協助重建，是動漫文化與地方情感緊密結合的溫馨地標。</p>
                         </div>
                     </div>
@@ -1486,7 +1790,9 @@
                     <div class="time">14:46</div>
                     <div class="event">
                         <span class="tag stay">🏨 住宿</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=熊本城飯店" target="_blank" class="loc-link">熊本城飯店 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=熊本城飯店" target="_blank" class="loc-link">熊本城飯店 📍</a>
+                        </h3>
                         <p>返回飯店，整理這十天來的滿滿收穫。</p>
                     </div>
                 </li>
@@ -1506,7 +1812,9 @@
                     <div class="time">08:00</div>
                     <div class="event">
                         <span class="tag stay">🏨 退房</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=熊本城飯店" target="_blank" class="loc-link">熊本城飯店 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=熊本城飯店" target="_blank" class="loc-link">熊本城飯店 📍</a>
+                        </h3>
                         <p>辦理退房手續，告別這座美麗的城市。</p>
                     </div>
                 </li>
@@ -1514,10 +1822,14 @@
                     <div class="time">08:35</div>
                     <div class="event">
                         <span class="tag move">🛫 機場</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=阿蘇熊本機場" target="_blank" class="loc-link">熊本機場 📍</a></h3>
+                        <h3>
+                            <a href="https://www.google.com/maps/search/?api=1&query=阿蘇熊本機場" target="_blank" class="loc-link">熊本機場 📍</a>
+                        </h3>
                         <button class="detail-btn" onclick="toggleDetail(this)">最後的旅程提醒</button>
                         <div class="detail-content">
-                            <p><strong>再見，九州：</strong>新建成的熊本機場充滿現代感，也是最後衝刺伴手禮的好地方。別忘了帶上一盒「陣太鼓」或是阿蘇澤西牛奶製作的甜點。</p>
+                            <p>
+                                <strong>再見，九州：</strong>新建成的熊本機場充滿現代感，也是最後衝刺伴手禮的好地方。別忘了帶上一盒「陣太鼓」或是阿蘇澤西牛奶製作的甜點。
+                            </p>
                             <p>在這十天的旅程中，我們從福岡的熱鬧街道走到了熊本的壯麗古城，看遍了櫻花盛開的感動。帶著這些美好的回憶與相機裡的照片，平安返程。</p>
                         </div>
                     </div>
@@ -1549,11 +1861,16 @@
             <div style="background: #fff; padding: 15px; border-radius: 10px; border: 1px dashed #fbc02d;">
                 <h3 style="font-size: 1.1rem; color: #d32f2f; margin-bottom: 8px;">🆘 緊急救命卡</h3>
                 <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.8;">
-                    <li><strong>報警 (車禍/遺失)：</strong>110</li>
-                    <li><strong>救護車/火警：</strong>119</li>
+                    <li>
+                        <strong>報警 (車禍/遺失)：</strong>110
+                    </li>
+                    <li>
+                        <strong>救護車/火警：</strong>119
+                    </li>
                     <li>
                         <strong>台北駐福岡辦事處：</strong>
-                        <a href="tel:+81927342810" style="color: #d32f2f; font-weight: bold;">092-734-2810</a><br>
+                        <a href="tel:+81927342810" style="color: #d32f2f; font-weight: bold;">092-734-2810</a>
+                        <br>
                         <span style="font-size: 0.8rem; color: #666;">(福岡市中央區櫻坂 3-12-42)</span>
                     </li>
                     <li>
@@ -1568,18 +1885,29 @@
                 <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 10px;">
                     <div style="background: #d32f2f; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">紅</div>
                     <div>
-                        <strong style="color: #d32f2f;">Regular (レギュラー)</strong><br>
+                        <strong style="color: #d32f2f;">Regular (レギュラー)</strong>
+                        <br>
                         <span style="font-size: 0.85rem;">加這個！普通汽油 (92/95)</span>
                     </div>
                 </div>
                 <button class="detail-btn" onclick="toggleDetail(this)" style="background: #388e3c;">加油站常用日文</button>
                 <div class="detail-content">
                     <ul style="padding-left: 15px;">
-                        <li><strong>加滿：</strong>満タン (Man-tan)</li>
-                        <li><strong>現金支付：</strong>現金 (Gen-kin)</li>
-                        <li><strong>刷卡：</strong>クレジットカード (Credit Card)</li>
-                        <li><strong>收據：</strong>レシート (Re-shi-to) / 領収書 (Ryo-shu-sho)</li>
-                        <li><strong>輪胎沒氣：</strong>パンク (Panku - Puncture)</li>
+                        <li>
+                            <strong>加滿：</strong>満タン (Man-tan)
+                        </li>
+                        <li>
+                            <strong>現金支付：</strong>現金 (Gen-kin)
+                        </li>
+                        <li>
+                            <strong>刷卡：</strong>クレジットカード (Credit Card)
+                        </li>
+                        <li>
+                            <strong>收據：</strong>レシート (Re-shi-to) / 領収書 (Ryo-shu-sho)
+                        </li>
+                        <li>
+                            <strong>輪胎沒氣：</strong>パンク (Panku - Puncture)
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -1587,10 +1915,22 @@
             <div style="background: #fff; padding: 15px; border-radius: 10px; border: 1px dashed #fbc02d;">
                 <h3 style="font-size: 1.1rem; color: #e91e63; margin-bottom: 8px;">🛍️ 購物與退稅提醒</h3>
                 <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.8;">
-                    <li><strong>門檻：</strong>單日單店未稅滿 <strong>5,000 日圓</strong> (含稅 5,500)。</li>
-                    <li><strong>消耗品 (藥妝/零食)：</strong>會被裝入「紅/透明封條袋」，<span style="color: #d32f2f; font-weight: bold;">在日本境內不可拆封</span>，否則出境被查到要補稅。</li>
-                    <li><strong>一般物品 (衣服/電器)：</strong>可以立刻拆用 (除非與消耗品合併計算)。</li>
-                    <li><strong>超市貼紙：</strong>晚上 7-8 點後留意 <span style="background: yellow; color: red; padding: 0 4px; font-weight: bold;">半額</span> (半價) 或 <span style="background: yellow; color: red; padding: 0 4px; font-weight: bold;">20%引</span> (打8折) 貼紙。</li>
+                    <li>
+                        <strong>門檻：</strong>單日單店未稅滿
+                        <strong>5,000 日圓</strong> (含稅 5,500)。
+                    </li>
+                    <li>
+                        <strong>消耗品 (藥妝/零食)：</strong>會被裝入「紅/透明封條袋」，
+                        <span style="color: #d32f2f; font-weight: bold;">在日本境內不可拆封</span>，否則出境被查到要補稅。
+                    </li>
+                    <li>
+                        <strong>一般物品 (衣服/電器)：</strong>可以立刻拆用 (除非與消耗品合併計算)。
+                    </li>
+                    <li>
+                        <strong>超市貼紙：</strong>晚上 7-8 點後留意
+                        <span style="background: yellow; color: red; padding: 0 4px; font-weight: bold;">半額</span> (半價) 或
+                        <span style="background: yellow; color: red; padding: 0 4px; font-weight: bold;">20%引</span> (打8折) 貼紙。
+                    </li>
                 </ul>
             </div>
 
@@ -1671,7 +2011,7 @@
             });
         });
 
-                        // --- C. 一鍵解鎖所有 PNR 密碼功能 ---
+        // --- C. 一鍵解鎖所有 PNR 密碼功能 ---
         let isAllUnlocked = false; // 紀錄是否已經解鎖過
 
         function unlockAllPNR() {
@@ -1679,17 +2019,17 @@
             if (isAllUnlocked) return;
 
             let passcode = prompt("請輸入家族通關密語，以顯示機票代號");
-            
+
             if (passcode === "0326") {
                 // 找出畫面上所有帶有 'locked-pnr' class 的標籤
                 let lockedElements = document.querySelectorAll('.locked-pnr');
-                
+
                 // 迴圈將每一個標籤解碼並顯示
-                lockedElements.forEach(function(el) {
+                lockedElements.forEach(function (el) {
                     let hiddenData = el.getAttribute('data-hidden');
                     let prefix = el.getAttribute('data-prefix');
-                    
-                    if(hiddenData) {
+
+                    if (hiddenData) {
                         el.innerText = prefix + ": " + atob(hiddenData); // 解碼 Base64
                         el.style.color = "#d65db1"; // 換回亮粉色
                         el.style.background = "#fdf2f8";
@@ -1697,7 +2037,7 @@
                         el.style.cursor = "default"; // 取消手指游標
                     }
                 });
-                
+
                 isAllUnlocked = true; // 標記為已解鎖
             } else if (passcode !== null) {
                 // 密碼錯誤且不是按取消
@@ -1705,7 +2045,7 @@
             }
         }
 
-        
+
 
     </script>
 
