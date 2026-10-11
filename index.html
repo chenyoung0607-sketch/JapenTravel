@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>2027 初春東京近郊自駕行 - 櫻花與溫泉的交響曲</title>
+    <title>2027 初春東京近郊賞櫻行 - 河津櫻與富士山的交響曲</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
@@ -20,51 +20,47 @@
         .airport-info { text-align: center; flex: 1; }
         .airport-code { font-size: 1.6rem; font-weight: 700; line-height: 1; }
         .airport-name { font-size: 0.75rem; color: #888; }
-        .flight-path { flex: 1; text-align: center; position: relative; color: var(--primary-pink); font-size: 1.2rem; }
+        .flight-path { flex: 1; text-align: center; position: relative; color: var(--primary-color); font-size: 1.2rem; }
         .flight-path::after { content: "✈️"; display: block; font-size: 1rem; }
         .pnr-box { margin-top: 15px; display: flex; flex-wrap: wrap; gap: 10px; }
-        .pnr-tag { background: #fff0e6; border: 1px solid var(--soft-pink); padding: 2px 8px; border-radius: 5px; font-size: 0.8rem; font-family: monospace; color: var(--btn-color); }
         .progress-container { position: fixed; top: 0; z-index: 2000; width: 100%; height: 6px; background: transparent; }
-        .progress-bar { height: 6px; background: linear-gradient(to right, var(--soft-pink), var(--primary-pink)); width: 0%; border-radius: 0 3px 3px 0; box-shadow: 0 0 8px rgba(233, 30, 99, 0.5); }
+        .progress-bar { height: 6px; background: linear-gradient(to right, var(--soft-color), var(--primary-color)); width: 0%; border-radius: 0 3px 3px 0; box-shadow: 0 0 8px rgba(216, 27, 96, 0.5); }
 
         :root {
-            --bg-color: #fff9fa;
+            --bg-color: #fdfbf7;
             --text-color: #5d5d5d;
-            --primary-pink: #e91e63; /* 櫻花粉紅 */
-            --sky-blue: #a1c4fd;
-            --soft-pink: #f8bbd0; /* 柔和櫻花粉 */
-            --accent-green: #a8e6cf;
+            --primary-color: #d81b60; /* 櫻花深粉 */
+            --soft-color: #f8bbd0; /* 櫻花淺粉 */
             --paper-white: #ffffff;
-            --btn-color: #c2185b; /* 深櫻桃紅 */
+            --btn-color: #ad1457; /* 按鈕深櫻色 */
             --shadow: 4px 4px 0px rgba(0,0,0,0.1);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; scroll-padding-top: 110px; }
-        body { font-family: 'Zen Maru Gothic', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.7; background-image: radial-gradient(var(--soft-pink) 0.5px, transparent 0.5px); background-size: 20px 20px; }
+        body { font-family: 'Zen Maru Gothic', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.7; background-image: radial-gradient(var(--soft-color) 0.5px, transparent 0.5px); background-size: 20px 20px; }
         header { text-align: center; padding: 70px 20px 40px; background: linear-gradient(180deg, #fce4ec 0%, var(--bg-color) 100%); }
-        h1 { font-size: 2.3rem; background: linear-gradient(45deg, #e91e63 0%, #ff4081 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; letter-spacing: 2px; filter: drop-shadow(2px 2px 0px rgba(255, 255, 255, 1)) drop-shadow(4px 4px 5px rgba(233, 30, 99, 0.2)); font-weight: 900; }
-        .subtitle { font-size: 1rem; background: linear-gradient(135deg, #f8bbd0 0%, #fce4ec 100%); display: inline-block; padding: 8px 22px; border-radius: 30px; color: #c2185b; font-weight: bold; box-shadow: 0 4px 10px rgba(233, 30, 99, 0.2); letter-spacing: 1px; }
-        .summary-box { background: #fff; max-width: 650px; margin: 30px auto; padding: 25px; border: 2px dashed var(--primary-pink); border-radius: 15px; position: relative; text-align: left; box-shadow: var(--shadow); }
-        .summary-box::before { content: '🌸 旅程精華摘要'; position: absolute; top: -14px; left: 20px; background: var(--primary-pink); color: white; padding: 2px 12px; font-size: 0.85rem; border-radius: 10px; font-weight: bold; }
-        .nav-scroller { display: flex; overflow-x: auto; padding: 15px 20px; gap: 12px; position: sticky; top: 0; background: rgba(255, 249, 250, 0.98); z-index: 1000; border-bottom: 2px dashed #ddd; scrollbar-width: none; }
+        h1 { font-size: 2.3rem; background: linear-gradient(45deg, #d81b60 0%, #ec407a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; letter-spacing: 2px; filter: drop-shadow(2px 2px 0px rgba(255, 255, 255, 1)) drop-shadow(4px 4px 5px rgba(216, 27, 96, 0.2)); font-weight: 900; }
+        .subtitle { font-size: 1rem; background: linear-gradient(135deg, #f8bbd0 0%, #fce4ec 100%); display: inline-block; padding: 8px 22px; border-radius: 30px; color: #ad1457; font-weight: bold; box-shadow: 0 4px 10px rgba(236, 64, 122, 0.3); letter-spacing: 1px; }
+        .summary-box { background: #fff; max-width: 650px; margin: 30px auto; padding: 25px; border: 2px dashed var(--primary-color); border-radius: 15px; position: relative; text-align: left; box-shadow: var(--shadow); }
+        .summary-box::before { content: '🌸 旅程精華摘要'; position: absolute; top: -14px; left: 20px; background: var(--primary-color); color: white; padding: 2px 12px; font-size: 0.85rem; border-radius: 10px; font-weight: bold; }
+        .nav-scroller { display: flex; overflow-x: auto; padding: 15px 20px; gap: 12px; position: sticky; top: 0; background: rgba(253, 251, 247, 0.98); z-index: 1000; border-bottom: 2px dashed #ddd; scrollbar-width: none; }
         .nav-scroller::-webkit-scrollbar { display: none; }
         .nav-item { flex: 0 0 auto; padding: 8px 20px; background: white; border: 2px solid #5d5d5d; border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; text-decoration: none; color: var(--text-color); font-size: 0.95rem; font-weight: bold; transition: all 0.3s ease; }
-        .nav-item.active { background: var(--primary-pink); color: white; border-color: var(--btn-color); transform: scale(1.05); box-shadow: 0 2px 8px rgba(233, 30, 99, 0.4); }
+        .nav-item.active { background: var(--primary-color); color: white; border-color: var(--btn-color); transform: scale(1.05); box-shadow: 0 2px 8px rgba(216, 27, 96, 0.4); }
         main { padding: 20px; max-width: 800px; margin: 0 auto; }
         .day-card { background: var(--paper-white); margin-bottom: 50px; padding: 25px; border: 3px solid #5d5d5d; border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; box-shadow: var(--shadow); position: relative; }
         .day-header { display: flex; align-items: center; margin-bottom: 25px; border-bottom: 2px dashed #eee; padding-bottom: 15px; }
-        .day-badge { background: var(--primary-pink); color: white; padding: 10px 18px; font-weight: bold; font-size: 1.1rem; border-radius: 50% 40% 60% 50% / 50% 60% 40% 50%; margin-right: 15px; transform: rotate(-5deg); border: 2px solid #5d5d5d; }
+        .day-badge { background: var(--primary-color); color: white; padding: 10px 18px; font-weight: bold; font-size: 1.1rem; border-radius: 50% 40% 60% 50% / 50% 60% 40% 50%; margin-right: 15px; transform: rotate(-5deg); border: 2px solid #5d5d5d; }
         .day-title h2 { font-size: 1.4rem; color: var(--btn-color); margin: 0; }
-        .day-date { font-size: 0.85rem; color: #888; margin-top: 5px; }
+        .day-date { font-size: 0.85rem; color: #888; margin-top: 5px; font-weight: bold; }
         .timeline { list-style: none; padding-left: 5px; }
         .timeline-item { display: flex; margin-bottom: 30px; position: relative; }
         .time { flex: 0 0 65px; font-weight: bold; color: #888; font-size: 0.9rem; padding-top: 5px; }
-        .event { padding-left: 20px; border-left: 3px solid var(--soft-pink); width: 100%; padding-bottom: 10px; }
+        .event { padding-left: 20px; border-left: 3px solid var(--soft-color); width: 100%; padding-bottom: 10px; }
         .event h3 { font-size: 1.15rem; color: #444; margin: 0 0 5px 0; }
         .event p { margin: 0; font-size: 0.95rem; color: #666; }
         .tag { display: inline-block; font-size: 0.75rem; padding: 3px 10px; border-radius: 12px; margin-right: 8px; color: white; vertical-align: middle; font-weight: bold; margin-bottom: 5px; }
-        .tag.park { background-color: #999; }
         .tag.food { background-color: #ff9800; }
         .tag.stay { background-color: #ffd97d; color: #555; }
         .tag.view { background-color: #4caf50; }
@@ -83,10 +79,10 @@
         <div class="progress-bar" id="myBar"></div>
     </div>
     <header>
-        <h1>🌸 2027 初春東京近郊自駕行 🌸</h1>
-        <div class="subtitle">🚗 成田進 ‧ 羽田出 🚗</div>
+        <h1>🌸 2027 初春東京近郊賞櫻行 🌸</h1>
+        <div class="subtitle">🚗 成田進 ‧ 羽田出 ‧ 滿載而歸 🚗</div>
         <div class="summary-box">
-            <p>這是一場為 6 位大人量身打造的初春自駕之旅。我們以「箱根」與「埼玉川口 Airbnb」為雙基地，全程自駕免去頻繁搬運行李的疲勞。行程完美融合了伊豆半島的粉色河津櫻、箱根富士五湖的絕景、量產型服飾大採買，以及豐富的高CP值燒肉與街邊小吃，打造最輕鬆享受的櫻花季回憶。</p>
+            <p>這是一場為 6 位大人量身打造的初春自駕之旅。我們以「箱根」與「東京灣區」為雙基地，享受大自然與血拚的雙重樂趣。行程完美融合了河津櫻、富士山絕景、老街小吃與東京市區購物，利用精準的動線規劃與行李分流，打造最輕鬆流暢的春日回憶。</p>
         </div>
     </header>
 
@@ -105,30 +101,30 @@
 
     <main>
         <section class="flight-dashboard">
-            <div style="text-align:center; margin-bottom:10px; color:#888; font-size:0.9rem;">🎫 航班與成員資訊</div>
-            <div class="ticket-card" style="border-top: 5px solid var(--primary-pink);">
+            <div style="text-align:center; margin-bottom:10px; color:#888; font-size:0.9rem;">🎫 航班與成員查驗</div>
+            <div class="ticket-card" style="border-top: 5px solid var(--primary-color);">
                 <div class="ticket-header">
                     <div>
-                        <div class="flight-no">2027.02.26 - 2027.03.07</div>
-                        <div class="day-date">去程 ‧ 台北 (TPE) ➔ 成田 (NRT) | 回程 ‧ 羽田 (HND) ➔ 台北 (TPE)</div>
+                        <div class="flight-no">初春賞櫻特急 / 自駕自由行</div>
+                        <div class="day-date">去程 ‧ 台北 (TPE) ➔ 成田 (NRT) <br> 回程 ‧ 羽田 (HND) ➔ 台北 (TPE)</div>
                     </div>
                 </div>
                 <div class="ticket-body">
                     <div class="airport-info">
-                        <div class="airport-code">NRT</div>
+                        <div class="airport-code">TPE</div>
                     </div>
                     <div class="flight-path">➔</div>
                     <div class="airport-info">
-                        <div class="airport-code">HND</div>
+                        <div class="airport-code">TYO</div>
                     </div>
                 </div>
                 <button class="detail-btn" onclick="toggleDetail(this)">旅客名單 (6位大人)</button>
                 <div class="detail-content">
-                    <p><strong>旅遊成員：</strong></p>
+                    <p><strong>成員包含：</strong></p>
                     <ul style="padding-left:15px; font-size:0.85rem; line-height: 1.8;">
-                        <li>• 6 位大人</li>
-                        <li>• 交通方式：10 人座微型巴士（如 Toyota Hiace）全程自駕</li>
-                        <li>• 行李規劃：戰利品全部上車，發揮自駕最大優勢！</li>
+                        <li>• 駕駛組與核心成員</li>
+                        <li>• 暘、志明、元</li>
+                        <li>• 以及同行親友，共計 6 位大人</li>
                     </ul>
                 </div>
             </div>
@@ -139,8 +135,8 @@
             <div class="day-header">
                 <div class="day-badge">Day 1</div>
                 <div class="day-title">
-                    <h2>抵達日本、直奔箱根溫泉鄉</h2>
-                    <div class="day-date">成田機場 → 箱根</div>
+                    <h2>抵達日本與直奔箱根</h2>
+                    <div class="day-date">2027/02/26 (五) • 成田機場 → 箱根</div>
                 </div>
             </div>
             <ul class="timeline">
@@ -149,31 +145,31 @@
                     <div class="event">
                         <span class="tag move">🛬 抵達</span>
                         <h3>成田機場 (NRT) 📍</h3>
-                        <p>抵達成田機場，提領行李並步行至機場營業所，辦理 10 人座大型車輛租車手續。</p>
+                        <p>抵達機場，全家領取行李並辦理 8 人座休旅車租車手續。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">14:30</div>
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
-                        <h3>驅車前往箱根 📍</h3>
-                        <p>行李全程放車上，行經首都高與東名高速。下午時段市區易塞車，副駕駛請協助確認導航路線。</p>
+                        <h3>驅車前往箱根須雲川 📍</h3>
+                        <p>行駛首都高與東名高速。下午時段易遇車多壅塞，留意行車安全。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">17:30</div>
                     <div class="event">
                         <span class="tag stay">🏨 入住</span>
-                        <h3>箱根溫泉飯店 (連住4晚) 📍</h3>
-                        <p>抵達箱根，將車輛停妥並辦理入住。以這裡為接下來四天的溫泉與賞櫻基地。</p>
+                        <h3>SMART VILLA 箱根須雲川 Riverside 📍</h3>
+                        <p>抵達箱根，將車輛停放於別墅免費車位，辦理連住 7 晚的入住手續。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">18:30</div>
                     <div class="event">
                         <span class="tag food">😋 晚餐</span>
-                        <h3>飯店內晚餐與泡湯 📍</h3>
-                        <p>箱根多數餐廳極早打烊，第一晚在飯店內享用豐盛晚餐與露天溫泉，洗去搭機疲勞。</p>
+                        <h3>別墅晚餐與休息 📍</h3>
+                        <p>箱根餐廳多數較早打烊，建議提前查詢或於沿途超市採買食材回別墅享用。</p>
                     </div>
                 </li>
             </ul>
@@ -184,8 +180,8 @@
             <div class="day-header">
                 <div class="day-badge">Day 2</div>
                 <div class="day-title">
-                    <h2>熱海梅園、站前老街小吃與巨大抹茶布丁</h2>
-                    <div class="day-date">箱根 ↔ 熱海 / 伊豆高原</div>
+                    <h2>熱海梅園與巨大抹茶布丁</h2>
+                    <div class="day-date">2027/02/27 (六) • 箱根 ↔ 熱海 / 伊豆</div>
                 </div>
             </div>
             <ul class="timeline">
@@ -193,71 +189,52 @@
                     <div class="time">09:30</div>
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
-                        <h3>從箱根出發往南 📍</h3>
-                        <p>走箱根新道下山往熱海方向。</p>
+                        <h3>從別墅出發 📍</h3>
+                        <p>經箱根新道往熱海方向輕鬆駛去。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">10:15</div>
                     <div class="event">
-                        <span class="tag view">🌸 絕景</span>
+                        <span class="tag view">🌸 賞梅</span>
                         <h3>熱海梅園梅花祭 📍</h3>
                         <p>欣賞多品種梅花與小橋流水，適合植物特寫拍照。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
-                    <div class="time">11:45</div>
-                    <div class="event">
-                        <span class="tag move">🚗 移動</span>
-                        <h3>驅車前往熱海站前 📍</h3>
-                        <p>距離梅園非常近，請導航至站前周邊的戶外平面停車場。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
                     <div class="time">12:00</div>
                     <div class="event">
-                        <span class="tag food">😋 午餐</span>
-                        <h3>平和通商店街 & 仲見世商店街 📍</h3>
-                        <p>兩條街相連，買現蒸的溫泉饅頭、吃烤海鮮串與魚板。午餐直接在這裡用豐富的小吃解決！</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">14:00</div>
-                    <div class="event">
-                        <span class="tag move">🚗 移動</span>
-                        <h3>驅車前往伊豆高原 📍</h3>
-                        <p>沿著相模灣海岸線往南行駛。</p>
+                        <span class="tag food">😋 小吃</span>
+                        <h3>平和通與仲見世商店街 📍</h3>
+                        <p>午餐在此解決。盡情品嚐溫泉饅頭、海鮮串與魚板等豐富老街小吃。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">15:00</div>
                     <div class="event">
-                        <span class="tag view">🚠 景觀</span>
-                        <h3>大室山 (搭乘纜車) 📍</h3>
-                        <p>激似巨大抹茶布丁，搭乘纜車登頂，火山口步道全景極好拍。</p>
+                        <span class="tag view">🚠 絕景</span>
+                        <h3>大室山 📍</h3>
+                        <p>搭乘纜車登上激似巨大抹茶布丁的大室山，拍攝火山口步道全景。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">16:30</div>
                     <div class="event">
                         <span class="tag move">🚗 回程</span>
-                        <h3>驅車返回箱根飯店 📍</h3>
-                        <p>傍晚沿著海岸線與山路返回箱根，結束豐富的一天。</p>
+                        <h3>返回箱根別墅 📍</h3>
+                        <p>傍晚沿著海岸線與山路安全返回箱根休息。</p>
                     </div>
                 </li>
             </ul>
-            <div class="detail-content" style="display: block; margin-top: 15px;">
-                <p><strong>📍 當日重點與備選：</strong>熱海站前周邊非常熱鬧，若駕駛 10 人座微型巴士，請導航至站前周邊的「戶外平面停車場」（平置き駐車場），避免進入室內或機械車位。附近備選景點可前往「熱海布丁」，是超人氣網美甜點店。</p>
-            </div>
         </section>
 
         <!-- Day 3 -->
-        <section id="day3" class="day-card">
+        <section id="day3" class="day-card" style="border-color: #e91e63;">
             <div class="day-header">
-                <div class="day-badge">Day 3</div>
+                <div class="day-badge" style="background: #e91e63;">Day 3</div>
                 <div class="day-title">
-                    <h2>雙重櫻花饗宴 (河津櫻與油菜花)</h2>
-                    <div class="day-date">箱根 ↔ 河津 / 南伊豆</div>
+                    <h2 style="color: #e91e63;">雙重櫻花饗宴</h2>
+                    <div class="day-date">2027/02/28 (日) • 箱根 ↔ 河津 / 南伊豆</div>
                 </div>
             </div>
             <ul class="timeline">
@@ -265,32 +242,32 @@
                     <div class="time">09:00</div>
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
-                        <h3>準時出發前往河津 📍</h3>
-                        <p>今日車程最長，務必提早出發避開賞櫻車潮。</p>
+                        <h3>提早出發 📍</h3>
+                        <p>今日車程最長，務必準時出發以避開週末南下賞櫻車潮。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">11:00</div>
                     <div class="event">
-                        <span class="tag view">🌸 絕景</span>
+                        <span class="tag view">🌸 賞櫻</span>
                         <h3>河津櫻祭 📍</h3>
-                        <p>抵達河津！沿著河岸散步，盡情拍攝滿開的粉嫩河津櫻，午餐直接在沿路的豐富屋台小吃解決。</p>
+                        <p>沿著河岸散步，欣賞粉嫩河津櫻。沿路有大量屋台小吃，午餐直接在此解決並瘋狂拍照。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">14:30</div>
                     <div class="event">
-                        <span class="tag view">🌸 絕景</span>
-                        <h3>南伊豆「櫻花與油菜花祭」 📍</h3>
-                        <p>轉往南伊豆，青野川沿岸粉紅櫻花與鮮黃油菜花交織出的絕美對比，是必拍的明信片等級畫面。</p>
+                        <span class="tag view">🌼 絕景</span>
+                        <h3>南伊豆櫻花與油菜花祭 📍</h3>
+                        <p>繼續往南，拍攝粉紅櫻花與鮮黃油菜花相映成趣的絕美對比。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">16:30</div>
                     <div class="event">
                         <span class="tag move">🚗 回程</span>
-                        <h3>驅車返回箱根 📍</h3>
-                        <p>心滿意足地踏上歸途。若在河津外圍看到臨時停車場指標，別忘了回程也要提早切入車道。</p>
+                        <h3>返回箱根別墅 📍</h3>
+                        <p>長途駕駛後，回到舒適的別墅放鬆。</p>
                     </div>
                 </li>
             </ul>
@@ -302,7 +279,7 @@
                 <div class="day-badge">Day 4</div>
                 <div class="day-title">
                     <h2>箱根火山與御殿場血拚</h2>
-                    <div class="day-date">箱根 ↔ 御殿場</div>
+                    <div class="day-date">2027/03/01 (一) • 箱根 ↔ 御殿場</div>
                 </div>
             </div>
             <ul class="timeline">
@@ -310,16 +287,16 @@
                     <div class="time">09:30</div>
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
-                        <h3>從箱根飯店出發 📍</h3>
-                        <p>就在同一個區域，今日車程非常輕鬆。</p>
+                        <h3>從別墅出發 📍</h3>
+                        <p>今日行程都在箱根周邊，車程極短。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">10:00</div>
                     <div class="event">
-                        <span class="tag view">🌋 景觀</span>
-                        <h3>箱根 大湧谷 📍</h3>
-                        <p>觀賞壯觀火山地貌，吃名物黑玉子（黑雞蛋）。</p>
+                        <span class="tag view">🌋 地貌</span>
+                        <h3>大湧谷 📍</h3>
+                        <p>觀賞壯觀的火山地貌，必吃名物黑玉子（黑雞蛋）。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
@@ -327,47 +304,36 @@
                     <div class="event">
                         <span class="tag shop">🛍️ 購物</span>
                         <h3>御殿場 Premium Outlets 📍</h3>
-                        <p>邊看富士山邊逛街！午餐直接在園區內解決。</p>
+                        <p>邊看富士山邊逛街！午餐於園區內解決，戰利品買完直接放車上。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">16:30</div>
                     <div class="event">
                         <span class="tag move">🚗 回程</span>
-                        <h3>驅車返回箱根飯店 📍</h3>
-                        <p>戰利品直接放車上回飯店，超級便利。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">17:30</div>
-                    <div class="event">
-                        <span class="tag food">😋 晚餐</span>
-                        <h3>飯店內晚餐與休息 📍</h3>
-                        <p>享受在箱根的最後一晚溫泉。</p>
+                        <h3>返回箱根別墅 📍</h3>
+                        <p>帶著滿滿的戰利品返回別墅。</p>
                     </div>
                 </li>
             </ul>
-            <div class="detail-content" style="display: block; margin-top: 15px;">
-                <p><strong>📍 當日重點與備選：</strong>御殿場 Outlets 腹地極大，請務必記下停車區的「英文字母與顏色」，以免買完找不到車。附近備選景點可順遊箱根神社與水上鳥居。</p>
-            </div>
         </section>
 
         <!-- Day 5 -->
-        <section id="day5" class="day-card" style="border-color: #6a1b9a;">
+        <section id="day5" class="day-card" style="border-color: #2196f3;">
             <div class="day-header">
-                <div class="day-badge" style="background: #6a1b9a;">Day 5</div>
+                <div class="day-badge" style="background: #2196f3;">Day 5</div>
                 <div class="day-title">
-                    <h2 style="color: #6a1b9a;">櫻花、山中湖與忍野八海神路線</h2>
-                    <div class="day-date">箱根 → 富士五湖 → 埼玉川口</div>
+                    <h2 style="color: #2196f3;">富士山絕景神路線</h2>
+                    <div class="day-date">2027/03/02 (二) • 箱根 ↔ 富士五湖</div>
                 </div>
             </div>
             <ul class="timeline">
                 <li class="timeline-item">
                     <div class="time">09:30</div>
                     <div class="event">
-                        <span class="tag stay">🏨 退房</span>
-                        <h3>辦理退房，開車出發 📍</h3>
-                        <p>告別箱根，將所有行李與戰利品上車，準備走一條最完美的順路風景線。</p>
+                        <span class="tag move">🚗 出發</span>
+                        <h3>一路向北 📍</h3>
+                        <p>這是一條完全順路的向北延伸自駕路線。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
@@ -375,45 +341,34 @@
                     <div class="event">
                         <span class="tag view">🌸 絕景</span>
                         <h3>松田櫻花祭 (西平畑公園) 📍</h3>
-                        <p>拍攝「河津櫻、油菜花與富士山」同框的極致美景。</p>
+                        <p>拍攝河津櫻、油菜花與富士山同框的絕美畫面。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">12:30</div>
                     <div class="event">
-                        <span class="tag view">🗻 景觀</span>
-                        <h3>山中湖 (平野之濱) 📍</h3>
-                        <p>往北進入富士五湖區。拍攝富士山倒影與天鵝。</p>
+                        <span class="tag view">🗻 湖景</span>
+                        <h3>山中湖 平野之濱 📍</h3>
+                        <p>進入富士五湖區，拍攝富士山倒影與天鵝。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">14:00</div>
                     <div class="event">
-                        <span class="tag history">⛩️ 散步</span>
-                        <h3>忍野八海與周邊午餐 📍</h3>
-                        <p>拍攝清澈湧泉，吃草餅、烤魚與山梨名物餺飥麵。</p>
+                        <span class="tag history">⛩️ 文化</span>
+                        <h3>忍野八海 📍</h3>
+                        <p>拍攝清澈湧泉，吃草餅、烤魚與山梨名物餺飥麵當作午餐。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">16:30</div>
                     <div class="event">
-                        <span class="tag move">🚗 移動</span>
-                        <h3>驅車前往埼玉川口 📍</h3>
-                        <p>行駛中央自動車道直達埼玉川口（連住 5 晚）。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">18:30</div>
-                    <div class="event">
-                        <span class="tag stay">🏠 入住</span>
-                        <h3>抵達川口民宿、周邊晚餐 📍</h3>
-                        <p>入住 <strong>Rise Haven Lodge</strong>，將車停妥民宿專屬車位後，在周邊輕鬆吃晚餐。</p>
+                        <span class="tag move">🚗 回程</span>
+                        <h3>返回箱根別墅 📍</h3>
+                        <p>結束富士山巡禮，開車返回溫暖的別墅。</p>
                     </div>
                 </li>
             </ul>
-            <div class="detail-content" style="display: block; margin-top: 15px;">
-                <p><strong>📍 當日重點與備選：</strong>松田櫻花祭可能有車輛管制，需停放於山下指定停車場搭接駁車。進市區時請留意導航與路況。附近備選景點為長池親水公園（另一個山中湖拍富士山的絕佳點）。</p>
-            </div>
         </section>
 
         <!-- Day 6 -->
@@ -421,88 +376,8 @@
             <div class="day-header">
                 <div class="day-badge">Day 6</div>
                 <div class="day-title">
-                    <h2>妖怪茶屋、名物蕎麥麵與吉祥寺炸肉餅</h2>
-                    <div class="day-date">川口 ↔ 調布 / 深大寺 / 吉祥寺</div>
-                </div>
-            </div>
-            <ul class="timeline">
-                <li class="timeline-item">
-                    <div class="time">09:30</div>
-                    <div class="event">
-                        <span class="tag move">🚗 出發</span>
-                        <h3>從川口民宿出發 📍</h3>
-                        <p>往調布市方向行駛。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">10:10</div>
-                    <div class="event">
-                        <span class="tag history">⛩️ 散步</span>
-                        <h3>調布 天神通商店街與鬼太郎茶屋 📍</h3>
-                        <p>將車停在調布站周邊的停車場。尋找街上的妖怪雕像，並造訪全新搬遷的鬼太郎茶屋。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">11:10</div>
-                    <div class="event">
-                        <span class="tag move">🚗 移動</span>
-                        <h3>驅車前往深大寺 📍</h3>
-                        <p>距離極近，車程約 10 餘分鐘。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">11:25</div>
-                    <div class="event">
-                        <span class="tag food">😋 午餐</span>
-                        <h3>深大寺午餐：名物「手打蕎麥麵」 📍</h3>
-                        <p>將車停於深大寺周邊。參拜古老寺廟後，在參道品嚐清爽彈牙的湧泉蕎麥麵與現烤草餅。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">13:25</div>
-                    <div class="event">
-                        <span class="tag move">🚗 移動</span>
-                        <h3>驅車前往吉祥寺 📍</h3>
-                        <p>車程約 30 分鐘。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">13:55</div>
-                    <div class="event">
-                        <span class="tag shop">🛍️ 購物</span>
-                        <h3>吉祥寺必吃：排隊「Satou 炸肉餅」與商圈 📍</h3>
-                        <p>將車停於吉祥寺外圍大型停車場。直奔商圈買肉汁滿滿的黑毛和牛炸肉餅，接著充裕地採買藥妝。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">16:55</div>
-                    <div class="event">
-                        <span class="tag view">🚶 散步</span>
-                        <h3>口琴橫丁 (Harmonica Yokocho) 📍</h3>
-                        <p>穿梭於充滿戰後復古氣息的迷宮小巷，拍攝點燈後的氛圍街景並在此吃晚餐。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">18:25</div>
-                    <div class="event">
-                        <span class="tag move">🚗 回程</span>
-                        <h3>驅車返回川口民宿 📍</h3>
-                        <p>回程結束充滿小吃與驚喜的一天。</p>
-                    </div>
-                </li>
-            </ul>
-            <div class="detail-content" style="display: block; margin-top: 15px;">
-                <p><strong>📍 當日重點：</strong>天神通商店街為行人徒步區與單行道混合，請停在車站附近的停車場。吉祥寺巷弄狹窄人潮洶湧，請避免將車開進小巷，直接停放外圍。</p>
-            </div>
-        </section>
-
-        <!-- Day 7 -->
-        <section id="day7" class="day-card">
-            <div class="day-header">
-                <div class="day-badge">Day 7</div>
-                <div class="day-title">
-                    <h2>江之島晨間海景、植物攝影與鎌倉老街小吃</h2>
-                    <div class="day-date">川口 ↔ 江之島 / 鎌倉</div>
+                    <h2>江之島晨間海景與鎌倉小吃</h2>
+                    <div class="day-date">2027/03/03 (三) • 箱根 ↔ 湘南海岸 / 鎌倉</div>
                 </div>
             </div>
             <ul class="timeline">
@@ -510,112 +385,138 @@
                     <div class="time">09:00</div>
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
-                        <h3>從川口民宿出發 📍</h3>
-                        <p>走首都高接第三京濱道路前往湘南海岸。</p>
+                        <h3>行駛西湘 Bypass 📍</h3>
+                        <p>出發前往湘南海岸，沿途欣賞美麗的海岸線。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">10:30</div>
                     <div class="event">
-                        <span class="tag view">🌅 景觀</span>
+                        <span class="tag view">⛩️ 海景</span>
                         <h3>江之島 📍</h3>
-                        <p>趁早將車停在江之島上停車場避開客滿。漫步至江島神社，品嚐現烤海鮮與吻仔魚點心。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">13:00</div>
-                    <div class="event">
-                        <span class="tag food">😋 午餐</span>
-                        <h3>江之島周邊或沿途午餐 📍</h3>
-                        <p>可在江之島享用海鮮丼，或沿著海岸線尋找景觀餐廳。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">14:00</div>
-                    <div class="event">
-                        <span class="tag move">🚗 移動</span>
-                        <h3>驅車沿海岸線行駛 📍</h3>
-                        <p>行駛 134 號國道，沿途欣賞湘南海岸風光。</p>
+                        <p>趁早將車停在江之島上避開客滿。漫步至江島神社，品嚐現烤海鮮與吻仔魚點心。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">14:30</div>
                     <div class="event">
-                        <span class="tag history">⛩️ 散步</span>
+                        <span class="tag history">🌿 庭園</span>
                         <h3>長谷寺 📍</h3>
-                        <p>拍攝傳統日式庭園內的豐富植物與花草生態，也能登高眺望海景。</p>
+                        <p>沿著 134 號國道行駛抵達長谷寺，拍攝傳統日式庭園植物生態與眺望海景。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">15:45</div>
                     <div class="event">
-                        <span class="tag shop">🛍️ 購物</span>
+                        <span class="tag food">😋 老街</span>
                         <h3>鎌倉 鶴岡八幡宮與小町通 📍</h3>
-                        <p>將車停在八幡宮周邊停車場。把握商店打烊前的時間，品嚐抹茶冰淇淋、大佛雞蛋糕與仙貝。</p>
+                        <p>把握商店打烊前，在小町通品嚐抹茶冰淇淋、大佛雞蛋糕等老街小吃。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">17:45</div>
                     <div class="event">
                         <span class="tag move">🚗 回程</span>
-                        <h3>驅車返回東京市區吃燒肉 📍</h3>
-                        <p>返回市中心。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">19:30</div>
-                    <div class="event">
-                        <span class="tag food">🥩 晚餐</span>
-                        <h3>高 CP 值燒肉晚餐 📍</h3>
-                        <p>推薦去吃「燒肉亭 六歌仙」或「燒肉房家」，飽餐後再開車返回川口民宿。</p>
+                        <h3>返回箱根別墅 📍</h3>
+                        <p>結束豐富的鎌倉一日遊，返回別墅。</p>
                     </div>
                 </li>
             </ul>
-            <div class="detail-content" style="display: block; margin-top: 15px;">
-                <p><strong>📍 當日重點與備選：</strong>下午從江之島沿 134 號國道進入鎌倉市區時，部分路段可能會遇到小塞車。鎌倉市區建議導航時先設定 2-3 個備用停車場以防客滿。附近備選景點為鎌倉高校前平交道（從江之島前往長谷寺途中可直接在車上欣賞並拍照）。</p>
-            </div>
         </section>
 
-        <!-- Day 8 -->
-        <section id="day8" class="day-card" style="border-color: #e91e63;">
+        <!-- Day 7 -->
+        <section id="day7" class="day-card">
             <div class="day-header">
-                <div class="day-badge" style="background: #e91e63;">Day 8</div>
+                <div class="day-badge">Day 7</div>
                 <div class="day-title">
-                    <h2 style="color: #e91e63;">【主力購物日】量產型服飾大採買</h2>
-                    <div class="day-date">川口 ↔ 池袋 / 新宿</div>
+                    <h2>箱根在地悠閒與休息日</h2>
+                    <div class="day-date">2027/03/04 (四) • 箱根一日遊</div>
                 </div>
             </div>
             <ul class="timeline">
                 <li class="timeline-item">
+                    <div class="time">10:00</div>
+                    <div class="event">
+                        <span class="tag move">🚗 出發</span>
+                        <h3>輕鬆出發 📍</h3>
+                        <p>今日步調放慢，享受不趕行程的一天。</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
                     <div class="time">10:30</div>
                     <div class="event">
+                        <span class="tag history">⛩️ 參拜</span>
+                        <h3>箱根神社與平和鳥居 📍</h3>
+                        <p>抵達蘆之湖畔，拍攝著名的水上鳥居。</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="time">13:30</div>
+                    <div class="event">
+                        <span class="tag view">🚢 湖光</span>
+                        <h3>蘆之湖海賊船或周邊散步 📍</h3>
+                        <p>在湖畔享用午餐後，搭乘海賊船或悠閒散步，欣賞箱根的自然風光。</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="time">15:30</div>
+                    <div class="event">
+                        <span class="tag stay">🧳 準備</span>
+                        <h3>返回別墅整理行李 📍</h3>
+                        <p>為隔日的跨區移動做準備，將這幾天採買的戰利品與行李打包。</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Day 8 -->
+        <section id="day8" class="day-card" style="border-color: #6a1b9a;">
+            <div class="day-header">
+                <div class="day-badge" style="background: #6a1b9a;">Day 8</div>
+                <div class="day-title">
+                    <h2 style="color: #6a1b9a;">【移動日】妖怪茶屋與吉祥寺採買</h2>
+                    <div class="day-date">2027/03/05 (五) • 箱根 → 東京西郊 → 灣區</div>
+                </div>
+            </div>
+            <ul class="timeline">
+                <li class="timeline-item">
+                    <div class="time">09:00</div>
+                    <div class="event">
+                        <span class="tag move">🚗 轉移</span>
+                        <h3>退房與行李分流 📍</h3>
+                        <p>告別箱根！將大件行李交由行李專車或宅配，人員搭乘休旅車輕裝出發前往東京。</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="time">10:30</div>
+                    <div class="event">
+                        <span class="tag view">🍵 巡禮</span>
+                        <h3>調布 鬼太郎茶屋 📍</h3>
+                        <p>於天神通商店街尋找妖怪雕像，造訪全新搬遷的鬼太郎茶屋。</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="time">11:55</div>
+                    <div class="event">
+                        <span class="tag food">🍜 午餐</span>
+                        <h3>深大寺名物蕎麥麵 📍</h3>
+                        <p>參拜古老寺廟後，品嚐湧泉手打蕎麥麵與現烤草餅。</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="time">13:55</div>
+                    <div class="event">
                         <span class="tag shop">🛍️ 購物</span>
-                        <h3>池袋 Sunshine City / ALTA 📍</h3>
-                        <p>從川口出發前往池袋。這裡擁有最集中的「量產型／地雷系」服飾品牌，展開上半場的瘋狂血拚！</p>
+                        <h3>吉祥寺商圈與 Satou 炸肉餅 📍</h3>
+                        <p>將車停於外圍。直奔商圈買排隊名物炸肉餅，並於太陽道商店街採買。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
-                    <div class="time">14:00</div>
+                    <div class="time">17:30</div>
                     <div class="event">
-                        <span class="tag food">😋 午餐</span>
-                        <h3>池袋周邊午餐 📍</h3>
-                        <p>買完重物直接放回車上，這就是自駕購物的最大優勢！接著在池袋享用午餐。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">16:00</div>
-                    <div class="event">
-                        <span class="tag shop">🛍️ 購物</span>
-                        <h3>新宿 Lumine Est 採買 📍</h3>
-                        <p>驅車轉戰新宿（注意停車場限高）。這裡是年輕女性流行服飾指標，繼續補齊時尚清單。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">18:30</div>
-                    <div class="event">
-                        <span class="tag move">🚗 回程</span>
-                        <h3>滿載戰利品回民宿 📍</h3>
-                        <p>在新宿周邊吃完晚餐後，將滿滿的戰利品丟上車，輕鬆開回川口的溫暖民宿。</p>
+                        <span class="tag stay">🏨 入住</span>
+                        <h3>灣區飯店辦理入住 📍</h3>
+                        <p>經由首都高前往東京灣區，停入飯店平面停車場，晚上於飯店周邊或台場輕鬆用餐。</p>
                     </div>
                 </li>
             </ul>
@@ -626,96 +527,53 @@
             <div class="day-header">
                 <div class="day-badge">Day 9</div>
                 <div class="day-title">
-                    <h2>木場公園櫻花、咖啡街與最終補貨</h2>
-                    <div class="day-date">川口 ↔ 木場公園 ↔ 澀谷</div>
+                    <h2>【爆買日】木場公園櫻花與市區採買</h2>
+                    <div class="day-date">2027/03/06 (六) • 東京市區一日遊</div>
                 </div>
             </div>
             <ul class="timeline">
                 <li class="timeline-item">
-                    <div class="time">09:30</div>
-                    <div class="event">
-                        <span class="tag move">🚗 出發</span>
-                        <h3>從川口出發 📍</h3>
-                        <p>往東東京方向行駛。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">10:15</div>
+                    <div class="time">09:15</div>
                     <div class="event">
                         <span class="tag view">🌸 絕景</span>
                         <h3>木場公園與大橫川櫻花 📍</h3>
-                        <p>停於公園停車場。拍攝河津櫻、河面倒影與晴空塔同框。</p>
+                        <p>從灣區飯店出發極近。悠閒拍攝河津櫻與晴空塔同框，並於清澄白河區域喝咖啡。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
-                    <div class="time">12:15</div>
+                    <div class="time">13:25</div>
                     <div class="event">
-                        <span class="tag food">☕ 散步</span>
-                        <h3>清澄白河 咖啡與午餐 📍</h3>
-                        <p>享受靜謐的街區氛圍，找間特色咖啡廳吃午餐。</p>
+                        <span class="tag shop">👗 服飾</span>
+                        <h3>池袋 Sunshine City 📍</h3>
+                        <p>行駛首都高前往池袋。量產型服飾集中地，戰利品買完直接放回車上。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
-                    <div class="time">14:00</div>
+                    <div class="time">17:15</div>
                     <div class="event">
-                        <span class="tag move">🚗 移動</span>
-                        <h3>驅車前往澀谷 📍</h3>
-                        <p>停入澀谷宮下公園或 Hikarie 停車場。</p>
+                        <span class="tag shop">💊 藥妝</span>
+                        <h3>新宿商圈大掃貨 📍</h3>
+                        <p>於 Lumine Est 及東口大型藥妝店將清單一次買齊，做最後的血拚。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
-                    <div class="time">14:40</div>
+                    <div class="time">19:45</div>
                     <div class="event">
-                        <span class="tag view">🚶 散步</span>
-                        <h3>澀谷悠閒散步 📍</h3>
-                        <p>拍攝十字路口、忠犬八公，或逛宮下公園。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">16:40</div>
-                    <div class="event">
-                        <span class="tag move">🚗 回程</span>
-                        <h3>驅車返回川口民宿 📍</h3>
-                        <p>先將車子開回埼玉川口。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">17:10</div>
-                    <div class="event">
-                        <span class="tag shop">🛍️ 購物</span>
-                        <h3>藥妝大掃貨 📍</h3>
-                        <p>將車停妥於民宿後，在附近或順路的大型藥妝店將清單一次買齊。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">19:00</div>
-                    <div class="event">
-                        <span class="tag food">😋 晚餐</span>
-                        <h3>歡送晚餐 📍</h3>
-                        <p>安排一頓特別的聚餐為旅程畫下句點。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">21:00</div>
-                    <div class="event">
-                        <span class="tag stay">🏠 休息</span>
-                        <h3>返回民宿打包行李 📍</h3>
-                        <p>將所有戰利品裝箱，準備隔天上車。</p>
+                        <span class="tag food">🥩 慶祝</span>
+                        <h3>歡送晚餐：高CP值燒肉 📍</h3>
+                        <p>以美味的燒肉大餐為這趟完美的旅程畫下句點。餐後開車返回灣區飯店。</p>
                     </div>
                 </li>
             </ul>
-            <div class="detail-content" style="display: block; margin-top: 15px;">
-                <p><strong>📍 當日重點與備選：</strong>木場公園附設極大的第一與第二停車場，非常便利。附近備選景點為東京都現代美術館 (MOT)（位於木場公園北側，建築極具現代感）。</p>
-            </div>
         </section>
 
         <!-- Day 10 -->
-        <section id="day10" class="day-card" style="border-color: var(--primary-pink);">
+        <section id="day10" class="day-card" style="border-color: var(--primary-color);">
             <div class="day-header">
-                <div class="day-badge" style="background: var(--primary-pink);">Day 10</div>
+                <div class="day-badge" style="background: var(--primary-color);">Day 10</div>
                 <div class="day-title">
-                    <h2>滿載而歸、自駕直達機場</h2>
-                    <div class="day-date">川口 → 羽田機場</div>
+                    <h2>滿載而歸</h2>
+                    <div class="day-date">2027/03/07 (日) • 灣區 → 羽田機場</div>
                 </div>
             </div>
             <ul class="timeline">
@@ -723,8 +581,8 @@
                     <div class="time">09:30</div>
                     <div class="event">
                         <span class="tag stay">🏨 退房</span>
-                        <h3>悠閒早餐與民宿退房 📍</h3>
-                        <p>將 6 個大行李與滿滿的戰利品全部上車，準備出發。</p>
+                        <h3>退房與裝載行李 📍</h3>
+                        <p>將大行李與所有戰利品裝載上車，準備前往機場。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
@@ -732,23 +590,23 @@
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
                         <h3>驅車前往羽田機場 📍</h3>
-                        <p>行駛首都高直達羽田機場。一路吹著冷氣不用扛行李，完美體現全程自駕的終極便利！</p>
+                        <p>行駛首都高灣岸線，路幅寬廣不塞車，約 25 分鐘即可抵達。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
-                    <div class="time">11:30</div>
+                    <div class="time">11:00</div>
                     <div class="event">
-                        <span class="tag shop">🛍️ 購物</span>
-                        <h3>還車與免稅店最後採買 📍</h3>
-                        <p>辦理還車手續後，前往羽田機場江戶小路，將必買的伴手禮與點心一次購足。</p>
+                        <span class="tag move">🛫 還車</span>
+                        <h3>機場營業所還車 📍</h3>
+                        <p>檢查車輛並結算 ETC 通行費。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">13:30</div>
                     <div class="event">
-                        <span class="tag move">🛫 登機</span>
+                        <span class="tag move">✈️ 返國</span>
                         <h3>搭機返程 📍</h3>
-                        <p>帶著滿滿的櫻花回憶、美照與戰利品平安回家，期待下次旅程！</p>
+                        <p>在機場免稅店進行最後採買後，帶著滿滿的春日回憶與戰利品平安返回台灣！</p>
                     </div>
                 </li>
             </ul>
@@ -757,8 +615,8 @@
     </main>
 
     <footer>
-        <p>🌸 2027 Tokyo & Hakone Spring Trip 🌸</p>
-        <p style="margin-top:5px; opacity:0.6;">祝您全家自駕旅途平安愉快</p>
+        <p>🌸 2027 Tokyo Sakura Trip 🌸</p>
+        <p style="margin-top:5px; opacity:0.6;">祝您全家旅途平安愉快</p>
     </footer>
 
     <script>
