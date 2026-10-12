@@ -43,29 +43,39 @@
         .subtitle { font-size: 1rem; background: linear-gradient(135deg, #f8bbd0 0%, #fce4ec 100%); display: inline-block; padding: 8px 22px; border-radius: 30px; color: #ad1457; font-weight: bold; box-shadow: 0 4px 10px rgba(236, 64, 122, 0.3); letter-spacing: 1px; }
         .summary-box { background: #fff; max-width: 650px; margin: 30px auto; padding: 25px; border: 2px dashed var(--primary-color); border-radius: 15px; position: relative; text-align: left; box-shadow: var(--shadow); }
         .summary-box::before { content: '🌸 旅程精華摘要'; position: absolute; top: -14px; left: 20px; background: var(--primary-color); color: white; padding: 2px 12px; font-size: 0.85rem; border-radius: 10px; font-weight: bold; }
+        
+        /* --- 導覽列與卡片樣式 --- */
         .nav-scroller { display: flex; overflow-x: auto; padding: 15px 20px; gap: 12px; position: sticky; top: 0; background: rgba(253, 251, 247, 0.98); z-index: 1000; border-bottom: 2px dashed #ddd; scrollbar-width: none; }
         .nav-scroller::-webkit-scrollbar { display: none; }
         .nav-item { flex: 0 0 auto; padding: 8px 20px; background: white; border: 2px solid #5d5d5d; border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; text-decoration: none; color: var(--text-color); font-size: 0.95rem; font-weight: bold; transition: all 0.3s ease; }
         .nav-item.active { background: var(--primary-color); color: white; border-color: var(--btn-color); transform: scale(1.05); box-shadow: 0 2px 8px rgba(216, 27, 96, 0.4); }
+        
         main { padding: 20px; max-width: 800px; margin: 0 auto; }
         .day-card { background: var(--paper-white); margin-bottom: 50px; padding: 25px; border: 3px solid #5d5d5d; border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; box-shadow: var(--shadow); position: relative; }
-        .day-header { display: flex; align-items: center; margin-bottom: 25px; border-bottom: 2px dashed #eee; padding-bottom: 15px; }
-        .day-badge { background: var(--primary-color); color: white; padding: 10px 18px; font-weight: bold; font-size: 1.1rem; border-radius: 50% 40% 60% 50% / 50% 60% 40% 50%; margin-right: 15px; transform: rotate(-5deg); border: 2px solid #5d5d5d; }
-        .day-title h2 { font-size: 1.4rem; color: var(--btn-color); margin: 0; }
-        .day-date { font-size: 0.85rem; color: #888; margin-top: 5px; font-weight: bold; }
-        .timeline { list-style: none; padding-left: 5px; }
+        
+        .day-header { display: flex; align-items: flex-start; margin-bottom: 25px; border-bottom: 2px dashed #eee; padding-bottom: 15px; }
+        .day-badge { background: var(--primary-color); color: white; padding: 10px 18px; font-weight: bold; font-size: 1.1rem; border-radius: 50% 40% 60% 50% / 50% 60% 40% 50%; margin-right: 15px; transform: rotate(-5deg); border: 2px solid #5d5d5d; flex-shrink: 0; }
+        .day-title h2 { font-size: 1.4rem; color: var(--btn-color); margin: 0 0 5px 0; }
+        .day-date { font-size: 0.85rem; color: #888; font-weight: bold; }
+        
+        /* --- 車程預估標籤樣式 --- */
+        .day-driving-stats { background-color: #fff0f5; border-left: 4px solid var(--primary-color); padding: 6px 12px; margin-top: 8px; font-size: 0.85rem; color: #555; font-weight: bold; border-radius: 0 6px 6px 0; display: inline-block; box-shadow: 2px 2px 0px rgba(216, 27, 96, 0.1); }
+        
+        .timeline { list-style: none; padding-left: 5px; margin-top: 15px; }
         .timeline-item { display: flex; margin-bottom: 30px; position: relative; }
         .time { flex: 0 0 65px; font-weight: bold; color: #888; font-size: 0.9rem; padding-top: 5px; }
         .event { padding-left: 20px; border-left: 3px solid var(--soft-color); width: 100%; padding-bottom: 10px; }
         .event h3 { font-size: 1.15rem; color: #444; margin: 0 0 5px 0; }
         .event p { margin: 0; font-size: 0.95rem; color: #666; }
         .tag { display: inline-block; font-size: 0.75rem; padding: 3px 10px; border-radius: 12px; margin-right: 8px; color: white; vertical-align: middle; font-weight: bold; margin-bottom: 5px; }
+        
         .tag.food { background-color: #ff9800; }
         .tag.stay { background-color: #ffd97d; color: #555; }
         .tag.view { background-color: #4caf50; }
         .tag.move { background-color: #2196f3; }
         .tag.shop { background-color: #e91e63; }
         .tag.history { background-color: #6a1b9a; }
+        
         .detail-btn { background: var(--btn-color); color: white; border: none; padding: 6px 15px; border-radius: 20px; font-size: 0.8rem; cursor: pointer; font-family: inherit; margin-top: 10px; transition: all 0.2s; box-shadow: 2px 2px 0px rgba(0,0,0,0.1); }
         .detail-btn:hover { background: #880e4f; transform: translateY(-2px); }
         .detail-content { display: none; margin-top: 15px; background: #fce4ec; padding: 20px; border-radius: 15px; font-size: 0.95rem; color: #555; line-height: 1.8; border: 2px dashed var(--btn-color); }
@@ -136,6 +146,7 @@
                 <div class="day-title">
                     <h2>抵達日本與直奔伊豆</h2>
                     <div class="day-date">2027/02/26 (五) • 成田機場 → 伊東</div>
+                    <div class="day-driving-stats">🚗 總里程：約 180 km ｜ ⏳ 預估車程：約 3 小時 (視東京市區車流)</div>
                 </div>
             </div>
             <ul class="timeline">
@@ -181,6 +192,7 @@
                 <div class="day-title">
                     <h2>雙重櫻花饗宴</h2>
                     <div class="day-date">2027/02/27 (六) • 伊東 ↔ 河津 / 南伊豆</div>
+                    <div class="day-driving-stats">🚗 總里程：約 130 km ｜ ⏳ 預估車程：約 3.5 小時 (櫻花季易塞車)</div>
                 </div>
             </div>
             <ul class="timeline">
@@ -226,6 +238,7 @@
                 <div class="day-title">
                     <h2 style="color: #e91e63;">巨大抹茶布丁與老街小吃</h2>
                     <div class="day-date">2027/02/28 (日) • 伊東 ↔ 熱海 / 大室山</div>
+                    <div class="day-driving-stats">🚗 總里程：約 70 km ｜ ⏳ 預估車程：約 2 小時</div>
                 </div>
             </div>
             <ul class="timeline">
@@ -271,6 +284,7 @@
                 <div class="day-title">
                     <h2>江之島海景與鎌倉老街</h2>
                     <div class="day-date">2027/03/01 (一) • 伊東 ↔ 湘南海岸 / 鎌倉</div>
+                    <div class="day-driving-stats">🚗 總里程：約 162 km ｜ ⏳ 預估車程：約 4 小時</div>
                 </div>
             </div>
             <ul class="timeline">
@@ -279,7 +293,7 @@
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
                         <h3>驅車前往湘南海岸 📍</h3>
-                        <p>為了確保充裕的時間，今日提早出發。從伊東沿著相模灣海岸線往北行駛，沿路海景極佳，平日行駛能大幅避開塞車潮（這是推論）。</p>
+                        <p>為了確保充裕的時間，今日提早出發。從伊東沿著相模灣海岸線往北行駛，沿路海景極佳，平日行駛能大幅避開塞車潮。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
@@ -324,6 +338,7 @@
                 <div class="day-title">
                     <h2 style="color: #2196f3;">富士櫻花與御殿場血拚</h2>
                     <div class="day-date">2027/03/02 (二) • 伊東 → 御殿場 → 河口湖</div>
+                    <div class="day-driving-stats">🚗 總里程：約 125 km ｜ ⏳ 預估車程：約 2.5 小時</div>
                 </div>
             </div>
             <ul class="timeline">
@@ -369,6 +384,7 @@
                 <div class="day-title">
                     <h2>箱根火山與湖畔鳥居</h2>
                     <div class="day-date">2027/03/03 (三) • 河口湖 ↔ 箱根</div>
+                    <div class="day-driving-stats">🚗 總里程：約 105 km ｜ ⏳ 預估車程：約 2.5 小時</div>
                 </div>
             </div>
             <ul class="timeline">
@@ -414,6 +430,7 @@
                 <div class="day-title">
                     <h2>湧泉古村與湖畔逆富士</h2>
                     <div class="day-date">2027/03/04 (四) • 河口湖 ↔ 富士五湖周邊</div>
+                    <div class="day-driving-stats">🚗 總里程：約 50 km ｜ ⏳ 預估車程：約 1.5 小時</div>
                 </div>
             </div>
             <ul class="timeline">
@@ -459,6 +476,7 @@
                 <div class="day-title">
                     <h2 style="color: #ff9800;">海木高湯稻荷與新宿血拚</h2>
                     <div class="day-date">2027/03/05 (五) • 河口湖 → 日本橋 → 新宿 → 葛飾區</div>
+                    <div class="day-driving-stats">🚗 總里程：約 138 km ｜ ⏳ 預估車程：約 3 小時</div>
                 </div>
             </div>
             <ul class="timeline">
@@ -512,6 +530,7 @@
                 <div class="day-title">
                     <h2>味吟傳統稻荷與最終採買</h2>
                     <div class="day-date">2027/03/06 (六) • 葛飾 ↔ 木場公園 ↔ 市區</div>
+                    <div class="day-driving-stats">🚗 總里程：約 38 km ｜ ⏳ 預估車程：約 1.5 小時 (市區短程行駛)</div>
                 </div>
             </div>
             <ul class="timeline">
@@ -557,6 +576,7 @@
                 <div class="day-title">
                     <h2>滿載而歸</h2>
                     <div class="day-date">2027/03/07 (日) • 葛飾區立石 → 羽田機場</div>
+                    <div class="day-driving-stats">🚗 總里程：約 35 km ｜ ⏳ 預估車程：約 40 分鐘</div>
                 </div>
             </div>
             <ul class="timeline">
