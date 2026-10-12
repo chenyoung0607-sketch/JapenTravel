@@ -59,7 +59,9 @@
         .day-date { font-size: 0.85rem; color: #888; font-weight: bold; }
         
         /* --- 車程預估標籤樣式 --- */
-        .day-driving-stats { background-color: #fff0f5; border-left: 4px solid var(--primary-color); padding: 6px 12px; margin-top: 8px; font-size: 0.85rem; color: #555; font-weight: bold; border-radius: 0 6px 6px 0; display: inline-block; box-shadow: 2px 2px 0px rgba(216, 27, 96, 0.1); }
+        .day-driving-stats { background-color: #fff0f5; border-left: 4px solid var(--primary-color); padding: 8px 12px; margin-top: 8px; font-size: 0.85rem; color: #555; border-radius: 0 6px 6px 0; display: inline-block; box-shadow: 2px 2px 0px rgba(216, 27, 96, 0.1); line-height: 1.6; }
+        .stat-line { display: block; margin-bottom: 2px; }
+        .stat-label { font-weight: bold; color: var(--btn-color); display: inline-block; width: 45px; }
         
         .timeline { list-style: none; padding-left: 5px; margin-top: 15px; }
         .timeline-item { display: flex; margin-bottom: 30px; position: relative; }
@@ -91,7 +93,7 @@
         <h1>🌸 2027 初春東京近郊賞櫻行 🌸</h1>
         <div class="subtitle">🚗 成田進 ‧ 羽田出 ‧ 自駕跳島遊 🚗</div>
         <div class="summary-box">
-            <p>這是一場為 6 位大人打造的專屬自駕之旅。採用完美的節奏策略：「伊東 4 晚、河口湖 3 晚、葛飾區立石 2 晚」，將富士山的壯麗、鎌倉的湘南海岸與箱根溫泉從容結合。行程巧妙安排，將精緻高湯「海木」與在地傳統「味吟」兩間稻荷名店完美拆分至不同日期，確保都能在最佳時段買到，讓您細細品味截然不同的壽司工藝！</p>
+            <p>這是一場為 6 位大人打造的專屬自駕之旅。採用完美的節奏策略：「伊東 4 晚、河口湖 3 晚、葛飾區立石 2 晚」，將富士山的壯麗、鎌倉的湘南海岸與箱根溫泉從容結合。行程巧妙安排，將精緻高湯「海木」與在地傳統「味吟」完美拆分，並將賞櫻行程移至平日以確保最佳旅遊品質！</p>
         </div>
     </header>
 
@@ -146,7 +148,10 @@
                 <div class="day-title">
                     <h2>抵達日本與直奔伊豆</h2>
                     <div class="day-date">2027/02/26 (五) • 成田機場 → 伊東</div>
-                    <div class="day-driving-stats">🚗 總里程：約 180 km ｜ ⏳ 預估車程：約 3 小時 (視東京市區車流)</div>
+                    <div class="day-driving-stats">
+                        <span class="stat-line"><span class="stat-label">去程🚗</span> 成田機場 → 伊東飯店 ｜ 約 180 km ｜ ⏳ 約 3 小時 (視市區車流)</span>
+                        <span class="stat-line" style="color:#aaa;"><span class="stat-label">回程🏠</span> 今日無回程</span>
+                    </div>
                 </div>
             </div>
             <ul class="timeline">
@@ -190,34 +195,45 @@
             <div class="day-header">
                 <div class="day-badge">Day 2</div>
                 <div class="day-title">
-                    <h2>雙重櫻花饗宴</h2>
-                    <div class="day-date">2027/02/27 (六) • 伊東 ↔ 河津 / 南伊豆</div>
-                    <div class="day-driving-stats">🚗 總里程：約 130 km ｜ ⏳ 預估車程：約 3.5 小時 (櫻花季易塞車)</div>
+                    <h2>江之島海景與鎌倉老街</h2>
+                    <div class="day-date">2027/02/27 (六) • 伊東 ↔ 湘南海岸 / 鎌倉</div>
+                    <div class="day-driving-stats">
+                        <span class="stat-line"><span class="stat-label">去程🚗</span> 伊東 → 江之島 ｜ 約 75 km ｜ ⏳ 約 1.5 - 2 小時</span>
+                        <span class="stat-line"><span class="stat-label">回程🏠</span> 鎌倉 → 伊東 ｜ 約 87 km ｜ ⏳ 約 1.5 - 2 小時</span>
+                    </div>
                 </div>
             </div>
             <ul class="timeline">
                 <li class="timeline-item">
-                    <div class="time">09:00</div>
+                    <div class="time">08:30</div>
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
-                        <h3>提早出發 📍</h3>
-                        <p>今日適逢週末，為避開南下賞櫻的車潮，務必準時出發行駛 135 號國道。</p>
+                        <h3>驅車前往湘南海岸 📍</h3>
+                        <p>為了確保充裕的時間，今日提早出發。從伊東沿著相模灣海岸線往北行駛，沿路海景極佳。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">10:30</div>
                     <div class="event">
-                        <span class="tag view">🌸 賞櫻</span>
-                        <h3>河津櫻祭 📍</h3>
-                        <p>沿著河岸散步，欣賞粉嫩河津櫻。沿路有大量屋台小吃，午餐直接在此解決並瘋狂拍照。</p>
+                        <span class="tag view">⛩️ 海景</span>
+                        <h3>江之島 📍</h3>
+                        <p>趁早將車停在江之島上的大型停車場以避開客滿。漫步至江島神社，品嚐現烤海鮮與吻仔魚點心。</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="time">13:30</div>
+                    <div class="event">
+                        <span class="tag move">🚗 兜風</span>
+                        <h3>湘南海岸行駛 📍</h3>
+                        <p>離開江之島，沿 134 號國道往鎌倉市區行駛，途經鎌倉高校前平交道時，可於車上欣賞經典海景。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">14:00</div>
                     <div class="event">
-                        <span class="tag view">🌼 絕景</span>
-                        <h3>南伊豆櫻花與油菜花祭 📍</h3>
-                        <p>繼續往南至青野川沿岸，拍攝粉紅櫻花與鮮黃油菜花相映成趣的絕美對比。</p>
+                        <span class="tag food">😋 老街</span>
+                        <h3>鎌倉 鶴岡八幡宮與小町通 📍</h3>
+                        <p>將車停於八幡宮周邊停車場。把握下午時光，在老街品嚐抹茶冰淇淋、大佛雞蛋糕與仙貝等經典小吃。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
@@ -225,7 +241,7 @@
                     <div class="event">
                         <span class="tag move">🚗 回程</span>
                         <h3>返回伊東 📍</h3>
-                        <p>長途駕駛後，回到舒適的伊東泡溫泉放鬆。</p>
+                        <p>傍晚行駛西湘 Bypass 等快速道路南下返回伊東飯店，結束充實的海岸公路一日遊。</p>
                     </div>
                 </li>
             </ul>
@@ -238,7 +254,10 @@
                 <div class="day-title">
                     <h2 style="color: #e91e63;">巨大抹茶布丁與老街小吃</h2>
                     <div class="day-date">2027/02/28 (日) • 伊東 ↔ 熱海 / 大室山</div>
-                    <div class="day-driving-stats">🚗 總里程：約 70 km ｜ ⏳ 預估車程：約 2 小時</div>
+                    <div class="day-driving-stats">
+                        <span class="stat-line"><span class="stat-label">去程🚗</span> 伊東 → 熱海 ｜ 約 25 km ｜ ⏳ 約 40 分鐘</span>
+                        <span class="stat-line"><span class="stat-label">回程🏠</span> 大室山 → 伊東 ｜ 約 15 km ｜ ⏳ 約 30 分鐘</span>
+                    </div>
                 </div>
             </div>
             <ul class="timeline">
@@ -282,42 +301,37 @@
             <div class="day-header">
                 <div class="day-badge">Day 4</div>
                 <div class="day-title">
-                    <h2>江之島海景與鎌倉老街</h2>
-                    <div class="day-date">2027/03/01 (一) • 伊東 ↔ 湘南海岸 / 鎌倉</div>
-                    <div class="day-driving-stats">🚗 總里程：約 162 km ｜ ⏳ 預估車程：約 4 小時</div>
+                    <h2>雙重櫻花饗宴 (平日避開車潮)</h2>
+                    <div class="day-date">2027/03/01 (一) • 伊東 ↔ 河津 / 南伊豆</div>
+                    <div class="day-driving-stats">
+                        <span class="stat-line"><span class="stat-label">去程🚗</span> 伊東 → 河津 ｜ 約 45 km ｜ ⏳ 約 1 小時 (平日順暢)</span>
+                        <span class="stat-line"><span class="stat-label">回程🏠</span> 南伊豆 → 伊東 ｜ 約 65 km ｜ ⏳ 約 1.5 小時</span>
+                    </div>
                 </div>
             </div>
             <ul class="timeline">
                 <li class="timeline-item">
-                    <div class="time">08:30</div>
+                    <div class="time">09:00</div>
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
-                        <h3>驅車前往湘南海岸 📍</h3>
-                        <p>為了確保充裕的時間，今日提早出發。從伊東沿著相模灣海岸線往北行駛，沿路海景極佳，平日行駛能大幅避開塞車潮。</p>
+                        <h3>平日悠閒出發 📍</h3>
+                        <p>將賞櫻安排在平日是明智的選擇，能大幅避開週末 135 號國道的嚴重塞車。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">10:30</div>
                     <div class="event">
-                        <span class="tag view">⛩️ 海景</span>
-                        <h3>江之島 📍</h3>
-                        <p>趁早將車停在江之島上的大型停車場以避開客滿。漫步至江島神社，品嚐現烤海鮮與吻仔魚點心。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">13:30</div>
-                    <div class="event">
-                        <span class="tag move">🚗 兜風</span>
-                        <h3>湘南海岸行駛 📍</h3>
-                        <p>離開江之島，沿 134 號國道往鎌倉市區行駛，途經鎌倉高校前平交道時，可於車上欣賞經典海景。</p>
+                        <span class="tag view">🌸 賞櫻</span>
+                        <h3>河津櫻祭 📍</h3>
+                        <p>沿著河岸散步，欣賞粉嫩河津櫻。沿路有大量屋台小吃，午餐直接在此解決並瘋狂拍照。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="time">14:00</div>
                     <div class="event">
-                        <span class="tag food">😋 老街</span>
-                        <h3>鎌倉 鶴岡八幡宮與小町通 📍</h3>
-                        <p>將車停於八幡宮周邊停車場。把握下午時光，在老街品嚐抹茶冰淇淋、大佛雞蛋糕與仙貝等經典小吃。</p>
+                        <span class="tag view">🌼 絕景</span>
+                        <h3>南伊豆櫻花與油菜花祭 📍</h3>
+                        <p>繼續往南至青野川沿岸，拍攝粉紅櫻花與鮮黃油菜花相映成趣的絕美對比。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
@@ -325,7 +339,7 @@
                     <div class="event">
                         <span class="tag move">🚗 回程</span>
                         <h3>返回伊東 📍</h3>
-                        <p>傍晚行駛西湘 Bypass 等快速道路南下返回伊東飯店，結束充實的海岸公路一日遊，並整理行李準備隔日退房。</p>
+                        <p>長途駕駛後，回到舒適的伊東飯店整理行李，準備隔日退房。</p>
                     </div>
                 </li>
             </ul>
@@ -338,7 +352,10 @@
                 <div class="day-title">
                     <h2 style="color: #2196f3;">富士櫻花與御殿場血拚</h2>
                     <div class="day-date">2027/03/02 (二) • 伊東 → 御殿場 → 河口湖</div>
-                    <div class="day-driving-stats">🚗 總里程：約 125 km ｜ ⏳ 預估車程：約 2.5 小時</div>
+                    <div class="day-driving-stats">
+                        <span class="stat-line"><span class="stat-label">去程🚗</span> 伊東 → 御殿場 ｜ 約 85 km ｜ ⏳ 約 1.5 小時</span>
+                        <span class="stat-line"><span class="stat-label">回程🏠</span> 御殿場 → 河口湖 ｜ 約 40 km ｜ ⏳ 約 1 小時</span>
+                    </div>
                 </div>
             </div>
             <ul class="timeline">
@@ -384,7 +401,10 @@
                 <div class="day-title">
                     <h2>箱根火山與湖畔鳥居</h2>
                     <div class="day-date">2027/03/03 (三) • 河口湖 ↔ 箱根</div>
-                    <div class="day-driving-stats">🚗 總里程：約 105 km ｜ ⏳ 預估車程：約 2.5 小時</div>
+                    <div class="day-driving-stats">
+                        <span class="stat-line"><span class="stat-label">去程🚗</span> 河口湖 → 箱根大湧谷 ｜ 約 50 km ｜ ⏳ 約 1 小時</span>
+                        <span class="stat-line"><span class="stat-label">回程🏠</span> 箱根蘆之湖 → 河口湖 ｜ 約 55 km ｜ ⏳ 約 1 小時 10 分鐘</span>
+                    </div>
                 </div>
             </div>
             <ul class="timeline">
@@ -393,7 +413,7 @@
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
                         <h3>從樂天住宿飯店出發 📍</h3>
-                        <p>從河口湖開車前往箱根僅需不到 1 小時，是非常輕鬆的一日遊。</p>
+                        <p>從河口湖開車前往箱根是非常輕鬆的一日遊。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
@@ -430,7 +450,10 @@
                 <div class="day-title">
                     <h2>湧泉古村與湖畔逆富士</h2>
                     <div class="day-date">2027/03/04 (四) • 河口湖 ↔ 富士五湖周邊</div>
-                    <div class="day-driving-stats">🚗 總里程：約 50 km ｜ ⏳ 預估車程：約 1.5 小時</div>
+                    <div class="day-driving-stats">
+                        <span class="stat-line"><span class="stat-label">去程🚗</span> 河口湖 → 忍野八海 ｜ 約 15 km ｜ ⏳ 約 25 分鐘</span>
+                        <span class="stat-line"><span class="stat-label">回程🏠</span> 大石公園 → 河口湖 ｜ 約 10 km ｜ ⏳ 約 15 分鐘</span>
+                    </div>
                 </div>
             </div>
             <ul class="timeline">
@@ -476,7 +499,10 @@
                 <div class="day-title">
                     <h2 style="color: #ff9800;">海木高湯稻荷與新宿血拚</h2>
                     <div class="day-date">2027/03/05 (五) • 河口湖 → 日本橋 → 新宿 → 葛飾區</div>
-                    <div class="day-driving-stats">🚗 總里程：約 138 km ｜ ⏳ 預估車程：約 3 小時</div>
+                    <div class="day-driving-stats">
+                        <span class="stat-line"><span class="stat-label">去程🚗</span> 河口湖 → 日本橋 ｜ 約 110 km ｜ ⏳ 約 1.5 - 2 小時</span>
+                        <span class="stat-line"><span class="stat-label">回程🏠</span> 新宿 → 葛飾民宿 ｜ 約 25 km ｜ ⏳ 約 40 分鐘</span>
+                    </div>
                 </div>
             </div>
             <ul class="timeline">
@@ -530,7 +556,10 @@
                 <div class="day-title">
                     <h2>味吟傳統稻荷與最終採買</h2>
                     <div class="day-date">2027/03/06 (六) • 葛飾 ↔ 木場公園 ↔ 市區</div>
-                    <div class="day-driving-stats">🚗 總里程：約 38 km ｜ ⏳ 預估車程：約 1.5 小時 (市區短程行駛)</div>
+                    <div class="day-driving-stats">
+                        <span class="stat-line"><span class="stat-label">去程🚗</span> 葛飾民宿 → 木場公園 ｜ 約 12 km ｜ ⏳ 約 25 分鐘</span>
+                        <span class="stat-line"><span class="stat-label">回程🏠</span> 上野/錦糸町 → 葛飾 ｜ 約 10 km ｜ ⏳ 約 20 分鐘</span>
+                    </div>
                 </div>
             </div>
             <ul class="timeline">
@@ -576,7 +605,10 @@
                 <div class="day-title">
                     <h2>滿載而歸</h2>
                     <div class="day-date">2027/03/07 (日) • 葛飾區立石 → 羽田機場</div>
-                    <div class="day-driving-stats">🚗 總里程：約 35 km ｜ ⏳ 預估車程：約 40 分鐘</div>
+                    <div class="day-driving-stats">
+                        <span class="stat-line"><span class="stat-label">去程🚗</span> 葛飾民宿 → 羽田機場 ｜ 約 35 km ｜ ⏳ 約 40 分鐘</span>
+                        <span class="stat-line" style="color:#aaa;"><span class="stat-label">回程🏠</span> 準備搭機回國</span>
+                    </div>
                 </div>
             </div>
             <ul class="timeline">
@@ -593,7 +625,7 @@
                     <div class="event">
                         <span class="tag move">🚗 出發</span>
                         <h3>驅車前往羽田機場 📍</h3>
-                        <p>行駛首都高中央環狀線接灣岸線，約 30-40 分鐘即可順暢抵達。</p>
+                        <p>行駛首都高中央環狀線接灣岸線，路況寬敞順暢。</p>
                     </div>
                 </li>
                 <li class="timeline-item">
