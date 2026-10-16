@@ -81,6 +81,7 @@
         .tag.move { background-color: #2196f3; }
         .tag.shop { background-color: #e91e63; }
         .tag.history { background-color: #6a1b9a; }
+        .tag.backup { background-color: #607d8b; }
         
         .detail-btn { background: var(--btn-color); color: white; border: none; padding: 6px 15px; border-radius: 20px; font-size: 0.8rem; cursor: pointer; font-family: inherit; margin-top: 10px; transition: all 0.2s; box-shadow: 2px 2px 0px rgba(0,0,0,0.1); }
         .detail-btn:hover { background: #880e4f; transform: translateY(-2px); }
@@ -102,7 +103,7 @@
         <h1>🌸 2027 初春東京近郊賞櫻 11 日行 🌸</h1>
         <div class="subtitle">🚗 成田進 ‧ 羽田出 ‧ 富士河津櫻與稻荷雙絕 🚗</div>
         <div class="summary-box">
-            <p>這是一場為 6 位大人量身打造的 11 天 10 夜初春自駕之旅（2/25–3/7）。採用「橫濱關內 1 晚 ➔ 天使森林伊豆高原別墅 4 晚 ➔ 河口湖 Rakuten STAY 3 晚 ➔ 葛飾區高砂 2 晚」的四據點順向佈局。行程完美涵蓋鎌倉湘南海岸、平日河津櫻、富士山與箱根絕景，更於回程順路造訪深大寺與吉祥寺，並分開品嚐日本橋「海木」與高砂「味吟」兩大稻荷壽司名店！<br><small style="color:#ad1457; font-weight:bold;">💡 提示：點擊任何景點名稱（含 📍 圖示）即可直接開啟 Google Maps 導航！</small></p>
+            <p>這是一場為 6 位大人量身打造的 11 天 10 夜初春自駕之旅（2/25–3/7）。採用「橫濱關內 1 晚 ➔ 天使森林伊豆高原別墅 4 晚 ➔ 河口湖 Rakuten STAY 3 晚 ➔ 葛飾區高砂 2 晚」的四據點順向佈局。行程涵蓋鎌倉湘南海岸、熱海布丁與熱海奶油庵、平日河津櫻、箱根九十九自然薯蕎麥麵、深大寺與吉祥寺，並分開品嚐日本橋「海木」與高砂「味吟」兩大稻荷壽司名店！<br><small style="color:#ad1457; font-weight:bold;">💡 提示：點擊任何景點名稱（含 📍 或 🔗 圖示）即可直接開啟 Google Maps 或 Tabelog 頁面！</small></p>
         </div>
         <div class="global-ctrl">
             <button class="global-btn" id="toggleAllBtn" onclick="toggleAllDetails()">📖 一鍵展開全部「小故事與建議事項」</button>
@@ -121,6 +122,7 @@
         <a href="#day9" class="nav-item">D9 (3/5)</a>
         <a href="#day10" class="nav-item">D10 (3/6)</a>
         <a href="#day11" class="nav-item">D11 (3/7)</a>
+        <a href="#backup" class="nav-item">📋 備用名單</a>
     </nav>
 
     <main>
@@ -300,7 +302,7 @@
             <div class="day-header">
                 <div class="day-badge" style="background: #e91e63;">Day 3</div>
                 <div class="day-title">
-                    <h2 style="color: #e91e63;">熱海梅園、雙老街小吃與大室山</h2>
+                    <h2 style="color: #e91e63;">熱海梅園、奶油庵、熱海布丁與大室山</h2>
                     <div class="day-date">2027/02/27 (六) • 伊豆高原 ↔ 熱海 / 大室山</div>
                     <div class="day-driving-stats">
                         <span class="stat-line"><span class="stat-label">去程🚗</span> 天使森林別墅 → 熱海梅園 ｜ 約 35 km ｜ ⏳ 約 55 分鐘</span>
@@ -325,13 +327,15 @@
                 <li class="timeline-item">
                     <div class="time">12:00</div>
                     <div class="event">
-                        <span class="tag food">😋 小吃</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=熱海平和通り商店街" target="_blank" class="loc-link">熱海站前 平和通與仲見世商店街 📍</a></h3>
-                        <p>午餐在此解決！穿梭於相連的兩條昭和風拱廊老街，品嚐現蒸溫泉饅頭、烤海鮮串、磯揚魚板與超人氣「熱海布丁」。</p>
+                        <span class="tag food">🍮 甜點</span>
+                        <h3><a href="https://www.google.com/maps/search/?api=1&query=熱海ばたーあん" target="_blank" class="loc-link">熱海雙老街小吃：「熱海奶油庵 (熱海ばたーあん)」&「熱海布丁」 📍</a></h3>
+                        <p>穿梭於相連的「平和通」與「仲見世」兩條商店街，享用現蒸溫泉饅頭、烤海鮮串與魚板，並一次攻略兩大超人氣排隊甜點：<a href="https://tabelog.com/tw/shizuoka/A2205/A220502/22038505/" target="_blank" class="loc-link"><strong>熱海奶油庵 🔗</strong></a> 與 <a href="https://www.google.com/maps/search/?api=1&query=熱海プリン+1号店" target="_blank" class="loc-link"><strong>熱海布丁 📍</strong></a>！（若事前搶到湯河原「飯田商店」預約，則於此時段驅車前往用餐）。</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
-                            <p><strong>📖 景點小故事：</strong>依據熱海歷史記載，「熱海（Atami）」之名源於海中湧出熱水使海水滾燙（阿多美）。德川家康曾於 1597 年親臨泡湯，並命人以木桶將熱海溫泉水專程運回江戶城供將軍沐浴，促成了熱海作為幕府御用溫泉街的繁榮。</p>
-                            <p><strong>💡 建議事項：</strong>週六中午熱海站前人潮眾多，建議將 8 人座休旅車停放於熱海站外圍或市營東停車場等大型車位，再步行逛老街（這是推論）。</p>
+                            <p><strong>📖 名店小故事：</strong><br>
+                            • <strong>熱海奶油庵（熱海ばたーあん）：</strong>依據店家資料，該店位於仲見世商店街內（熱海市田原本町 5-11），與明治 4 年（1871 年）創業的靜岡和菓子老舖「又一庵」合作，將傳統職人熬製的北海道紅豆粒餡，結合充滿西洋復古風情的濃郁鹹奶油，推出招牌「熱海奶油紅豆麵包（熱海ばたーあんパン）」，出爐即秒殺。<br>
+                            • <strong>熱海布丁（熱海プリン）：</strong>以溫泉澡堂常見的「復古玻璃牛奶瓶」與喜歡泡澡的「河馬」為標誌，搭配微苦焦糖醬，成為熱海代表性伴手禮。</p>
+                            <p><strong>💡 建議事項：</strong>「熱海奶油庵」位於仲見世商店街中段，「熱海布丁 1 號店」則位於隔壁平和通商店街出口轉角，兩間店相距僅約 100 公尺，建議抵達後可分頭排隊購買，效率最高（這是推論）。</p>
                         </div>
                     </div>
                 </li>
@@ -343,7 +347,7 @@
                         <p>驅車返回伊豆高原，搭乘纜車登上外型激似「巨大抹茶布丁」的大室山，漫步火山口環山步道拍攝 360 度全景。</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
-                            <p><strong>📖 景點小故事：</strong>依據伊豆半島世界地質公園資料，大室山是約 4,000 年前噴發形成的單成火山（標高 580 公尺），整座山被指定為國家天然紀念物。為保護地表植被，禁止徒步登山，且每年 2 月會舉行延續 700 多年的傳統「燒山儀式（山焼き）」。（註：2 月底燒山後山體會呈現獨特的焦糖黑褐色，宛如烤布蕾！）</p>
+                            <p><strong>📖 景點小故事：</strong>依據伊豆半島世界地質公園資料，大室山是約 4,000 年前噴發形成的單成火山（標高 580 公尺），整座山被指定為國家天然紀念物。為保護地表植被，禁止徒步登山，且每年 2 月會舉行延續 700 多年的傳統「燒山儀式（山焼き）」。</p>
                             <p><strong>💡 建議事項：</strong>山頂火山口步道一圈約 1 公里（約 25 分鐘），毫無遮蔽物且風力強勁，請務必戴穩帽子並穿著防風外套；下山後開車回「天使森林伊豆高原」別墅僅需約 12 分鐘（這是推論）。</p>
                         </div>
                     </div>
@@ -353,11 +357,7 @@
                     <div class="event">
                         <span class="tag stay">♨️ 放鬆</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=エンゼルフォレスト伊豆高原" target="_blank" class="loc-link">返回天使森林別墅享受桑拿與溫泉 📍</a></h3>
-                        <p>提早返回別墅，充分利用房內的私人三溫暖桑拿與溫泉，消除旅途疲勞。</p>
-                        <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
-                        <div class="detail-content">
-                            <p><strong>💡 建議事項：</strong>可在別墅的木質露臺舉辦海景 BBQ 燒烤晚餐，或前往伊豆高原周邊的海鮮餐廳享用金目鯛料理（這是推論）。</p>
-                        </div>
+                        <p>返回別墅享受私人三溫暖桑拿與溫泉，並搭配中午在熱海買回來的布丁與奶油紅豆麵包當點心！</p>
                     </div>
                 </li>
             </ul>
@@ -526,17 +526,17 @@
             <div class="day-header">
                 <div class="day-badge">Day 7</div>
                 <div class="day-title">
-                    <h2>箱根大湧谷火山與蘆之湖水上鳥居</h2>
-                    <div class="day-date">2027/03/03 (三) • 河口湖 ↔ 箱根</div>
+                    <h2>【排法B】大湧谷、箱根九十九蕎麥麵與水上鳥居</h2>
+                    <div class="day-date">2027/03/03 (三) • 河口湖 ↔ 箱根仙石原 / 蘆之湖</div>
                     <div class="day-driving-stats">
-                        <span class="stat-line"><span class="stat-label">去程🚗</span> 河口湖 → 箱根大湧谷 ｜ 約 50 km ｜ ⏳ 約 1 小時</span>
-                        <span class="stat-line"><span class="stat-label">回程🏠</span> 箱根蘆之湖 → 河口湖 ｜ 約 55 km ｜ ⏳ 約 1 小時 10 分鐘</span>
+                        <span class="stat-line"><span class="stat-label">去程🚗</span> 河口湖 → 箱根大湧谷 → 仙石原 ｜ 約 50 km ｜ ⏳ 約 1 小時</span>
+                        <span class="stat-line"><span class="stat-label">回程🏠</span> 蘆之湖 → 河口湖 (OGINO超市) ｜ 約 55 km ｜ ⏳ 約 1 小時 10 分鐘</span>
                     </div>
                 </div>
             </div>
             <ul class="timeline">
                 <li class="timeline-item">
-                    <div class="time">10:30</div>
+                    <div class="time">10:15</div>
                     <div class="event">
                         <span class="tag view">🌋 地貌</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=大涌谷" target="_blank" class="loc-link">箱根 大湧谷 📍</a></h3>
@@ -544,16 +544,29 @@
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
                             <p><strong>📖 景點小故事：</strong>依據箱根地質公園記載，大湧谷是約 3,000 年前箱根火山最後一次水蒸氣噴發形成的爆裂火口，江戶時代因其荒涼景象被稱為「地獄谷」，直到 1873 年明治天皇伉儷造訪前夕才改名為「大湧谷」。當地的「黑玉子」源自平安時代弘法大師所創的延命地藏尊信仰，相傳吃一顆能延壽 7 年。</p>
-                            <p><strong>💡 建議事項：</strong>大湧谷山頂停車場在接近中午時容易排隊，09:30 從河口湖出發、10:30 抵達能較快進場；山頂海拔超過 1,000 公尺，風大寒冷請備妥毛帽與外套（這是推論）。</p>
+                            <p><strong>💡 建議事項：</strong>大湧谷山頂停車場在接近中午時容易排隊，09:15 從河口湖出發、10:15 抵達能較快進場（這是推論）。</p>
                         </div>
                     </div>
                 </li>
                 <li class="timeline-item">
-                    <div class="time">12:30</div>
+                    <div class="time">12:00</div>
+                    <div class="event">
+                        <span class="tag food">🍜 午餐</span>
+                        <h3><a href="https://www.google.com/maps/search/?api=1&query=じねんじょ蕎麦+箱根+九十九" target="_blank" class="loc-link">仙石原午餐：じねんじょ蕎麦 箱根 九十九 (或 麺や 菊壱) 📍</a></h3>
+                        <p>【排法 B 精選午餐】下山前往仙石原，於裝潢有如大正浪漫洋館的「箱根 九十九」享用營養濃郁的野生山藥泥（自然薯）手打蕎麥麵！（若想改吃濃郁勾芡擔擔麵，可於車程 3 分鐘外的「麺や 菊壱」二選一）。</p>
+                        <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
+                        <div class="detail-content">
+                            <p><strong>📖 名店特色：</strong>依據箱根導覽網資訊，「箱根 九十九（Tsukumo）」地址為箱根町仙石原 917-11，嚴選契約農家栽培的「自然薯（日本原生種山藥，黏性極高）」與北海道產蕎麥粉，招牌為「自然薯山藥泥麥飯御膳」與「自然薯咖哩蕎麥麵」。店鋪附設多達 46 個免費停車位，內部空間挑高寬敞。</p>
+                            <p><strong>💡 備案說明（麺や 菊壱）：</strong>同在仙石原的「<a href="https://tabelog.com/tw/kanagawa/A1410/A141001/14031004/" target="_blank" class="loc-link">麺や 菊壱 🔗</a>」（仙石原 23-1，週三正常營業）以蒜香濃郁的勾芡風「菊壱擔擔麵」聞名，附設 5 個車位。6 人大車優先推薦車位充足的「箱根 九十九」（這是推論）。</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="time">13:45</div>
                     <div class="event">
                         <span class="tag history">⛩️ 湖景</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=箱根神社+平和の鳥居" target="_blank" class="loc-link">蘆之湖畔午餐 & 箱根神社 (平和鳥居) 📍</a></h3>
-                        <p>下山前往蘆之湖畔享用午餐，隨後參拜古木參天的箱根神社，拍攝佇立於湖水中的朱紅色「平和鳥居」。</p>
+                        <h3><a href="https://www.google.com/maps/search/?api=1&query=箱根神社+平和の鳥居" target="_blank" class="loc-link">蘆之湖畔散步 & 箱根神社 (平和鳥居) 📍</a></h3>
+                        <p>吃飽後前往蘆之湖畔，參拜古木參天的箱根神社，拍攝佇立於湖水中的朱紅色「平和鳥居」。</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
                             <p><strong>📖 景點小故事：</strong>依據神社史料，箱根神社建於西元 757 年，源賴朝舉兵討伐平家時曾在此祈願並獲勝，此後成為歷代武將崇敬的開運厄除神社。湖面上的「平和鳥居」則建於 1952 年，為紀念日本簽署舊金山和平條約獨立及今上天皇（當時為皇太子）立太子禮而建。</p>
@@ -565,8 +578,8 @@
                     <div class="time">16:30</div>
                     <div class="event">
                         <span class="tag shop">🛒 採買</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=オギノ河口湖店" target="_blank" class="loc-link">返回河口湖 & OGINO 超市採買 📍</a></h3>
-                        <p>返回河口湖，順路前往當地大型超市採買山梨縣產草莓、信州牛與熟食，回 Rakuten STAY 享受溫馨聚餐。</p>
+                        <h3><a href="https://www.google.com/maps/search/?api=1&query=オギノ河口湖店" target="_blank" class="loc-link">返回河口湖 & OGINO 超市採買晚餐 📍</a></h3>
+                        <p>【排法 B 晚餐安排】返回河口湖，順路前往當地大型超市採買山梨縣產草莓、信州牛與熟食，回 Rakuten STAY 享受溫馨自煮聚餐。</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
                             <p><strong>💡 建議事項：</strong>河口湖餐廳在冬季與初春多半於 19:00–20:00 早早打烊，利用 Rakuten STAY 的完善餐廳與廚房空間，在超市買高級和牛與在地紅酒回房內享用既划算又自在（這是推論）。</p>
@@ -759,7 +772,7 @@
                     <div class="event">
                         <span class="tag shop">👗 血拚</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=ルミネエスト新宿" target="_blank" class="loc-link">新宿 Lumine Est 與東口商圈大採買 📍</a></h3>
-                        <p>下午開車前往新宿，集中火力進攻 Lumine Est 的量產型與地雷系服飾品牌，並於東口商圈補齊所有藥妝與伴手禮，重物買完直接放回車上！</p>
+                        <p>下午開車前往新宿（途中若想買頂級高湯包，可順路停靠港區的「高湯 Okume 麻布台 Hills 店」），集中火力進攻 Lumine Est 的量產型與地雷系服飾品牌，重物買完直接放回車上！</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
                             <p><strong>📖 街區小故事：</strong>依據新宿區史記載，1698 年甲州街道因宿場距離過遠，由淺草商人內藤氏獻地新設宿場，稱為「內藤新宿」，即為新宿名稱由來。如今新宿站每日上下車人次超過 300 萬，獲得金氏世界紀錄認證為世界最繁忙車站，而東口直結的 Lumine Est 則是東京次文化與少女流行服飾的聖地。</p>
@@ -771,11 +784,11 @@
                     <div class="time">18:30</div>
                     <div class="event">
                         <span class="tag food">🥩 慶祝</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=やきにく亭+六歌仙+新宿" target="_blank" class="loc-link">歡送晚餐：高 CP 值和牛燒肉 📍</a></h3>
-                        <p>於新宿享用豐盛的和牛燒肉大餐（如「燒肉亭 六歌仙」或返回東東京上野享用「燒肉房家」），慶祝旅途圓滿成功，餐後開車返回葛飾高砂住宿打包行李。</p>
+                        <h3><a href="https://www.google.com/maps/search/?api=1&query=やきにく亭+六歌仙+新宿" target="_blank" class="loc-link">歡送晚餐：高 CP 值和牛燒肉 (或前往巢鴨備用名店) 📍</a></h3>
+                        <p>於新宿享用豐盛的和牛燒肉大餐（如「燒肉亭 六歌仙」，或改前往下方備用名單中的「巢鴨 Tokiwa 食堂＋Patisserie Yoshinori Asami」），餐後開車返回葛飾高砂住宿打包行李。</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
-                            <p><strong>💡 建議事項：</strong>週六晚間東京人氣燒肉店一位難求，強烈建議於出發前 1 個月透過網路完成 6 人訂位；駕駛請務必飲用無酒精飲料，日本對酒駕採零容忍嚴罰（這是推論）。</p>
+                            <p><strong>💡 建議事項：</strong>週六晚間東京人氣燒肉店一位難求，建議於出發前透過網路完成 6 人訂位；駕駛請務必飲用無酒精飲料，日本對酒駕採零容忍嚴罰（這是推論）。</p>
                         </div>
                     </div>
                 </li>
@@ -827,6 +840,78 @@
                         <span class="tag move">✈️ 返國</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=東京国際空港" target="_blank" class="loc-link">搭機返程 📍</a></h3>
                         <p>帶著河津櫻的粉紅記憶、富士山的壯麗照片與兩大稻荷壽司的美味回味，平安搭機返回台灣！</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Backup List -->
+        <section id="backup" class="day-card" style="border-color: #607d8b;">
+            <div class="day-header">
+                <div class="day-badge" style="background: #607d8b;">備用</div>
+                <div class="day-title">
+                    <h2 style="color: #455a64;">📋 旅途備用美食與口袋名單</h2>
+                    <div class="day-date">依所在區域分類 • 點擊名稱開啟 Google Maps 📍 或 Tabelog 🔗</div>
+                </div>
+            </div>
+            <ul class="timeline">
+                <li class="timeline-item">
+                    <div class="time">巢鴨區</div>
+                    <div class="event">
+                        <span class="tag backup">🍱 巢鴨雙名店組合</span>
+                        <h3><a href="https://www.google.com/maps/search/?api=1&query=巣鴨ときわ食堂+本店" target="_blank" class="loc-link">巢鴨 Tokiwa 食堂 本店 📍</a> ＆ <a href="https://www.google.com/maps/search/?api=1&query=パティスリーヨシノリアサミ+巣鴨" target="_blank" class="loc-link">Patisserie Yoshinori Asami 📍</a></h3>
+                        <p>• <a href="https://tabelog.com/tw/tokyo/A1322/A132201/13012336/" target="_blank" class="loc-link"><strong>巣鴨ときわ食堂 本店（媽媽做的家庭料理）🔗</strong></a>：位於東京都豐島區巢鴨 3-14-20。每日從市場直送新鮮魚貨、手工現做炸竹筴魚（アジフライ）與特大炸蝦定食，充滿溫暖的日本家庭料理風味。<br>
+                        • <a href="https://tabelog.com/tw/tokyo/A1323/A132301/13187756/" target="_blank" class="loc-link"><strong>Patisserie Yoshinori Asami（パティスリーヨシノリアサミ）🔗</strong></a>：位於東京都豐島區巢鴨 3-23-3，由曾任職法國名店並獲世界冰淇淋甜點大賽殊榮的主廚淺見欣則創立，招牌為精緻法式蛋糕與季節水果聖代。</p>
+                        <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
+                        <div class="detail-content">
+                            <p><strong>💡 順遊建議：</strong>依據地理位置，這兩間名店同在巢鴨地藏通商店街（被稱為「老人的原宿」）周邊，<strong>兩店步行距離僅約 1 至 2 分鐘（約 120 公尺）</strong>！若 Day 9 或 Day 10 想改走東京北側路線，只需在巢鴨停一次車，就能一次完成「Tokiwa 食堂定食正餐＋淺見主廚法式甜點聖代」的完美組合（這是推論）。</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="time">麻布台</div>
+                    <div class="event">
+                        <span class="tag backup">🐟 東京港區伴手禮</span>
+                        <h3><a href="https://www.google.com/maps/search/?api=1&query=だし尾粂+麻布台ヒルズ店" target="_blank" class="loc-link">高湯 Okume Azabudai Hills 店 (だし尾粂 麻布台ヒルズ店) 📍</a></h3>
+                        <p>• <a href="https://tabelog.com/tw/tokyo/A1307/A130704/13296850/" target="_blank" class="loc-link"><strong>Tabelog 店鋪頁面 (13296850) 🔗</strong></a>：位於東京都港區麻布台 Hills Market（麻布台ヒルズ ガーデンプラザC B1F）。</p>
+                        <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
+                        <div class="detail-content">
+                            <p><strong>📖 名店小故事：</strong>依據店家資料，「尾粂（Okume）」創業於明治 4 年（1871 年），原為日本橋魚河岸（後遷至築地與豐洲市場）的百年水產仲卸商。店內最著名的「客製化高湯包（オーダーメイドだしパック）」，提供 30 種以上的日本國產天然乾物原料（如鰹節、昆布、小魚乾、香菇等），由店員現場為客人研磨調配專屬風味的高湯包。</p>
+                            <p><strong>💡 順遊建議：</strong>麻布台 Hills 位於東京木場公園（東側）與新宿（西側）之間。若 Day 10 中午離開木場公園開往新宿途中想採買頂級料理伴手禮，可順路停靠麻布台 Hills 地下停車場前往選購（這是推論）。</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="time">祐天寺</div>
+                    <div class="event">
+                        <span class="tag backup">🍜 目黑預約制拉麵</span>
+                        <h3><a href="https://www.google.com/maps/search/?api=1&query=Ramen+Break+Beats+目黒" target="_blank" class="loc-link">Ramen Break Beats 📍</a></h3>
+                        <p>• <a href="https://tabelog.com/tw/tokyo/A1317/A131701/13267329/" target="_blank" class="loc-link"><strong>Tabelog 店鋪頁面 (13267329) 🔗</strong></a>：位於東京都目黑區目黑 4-21-19（東急東橫線祐天寺站步行約 10 分鐘）。</p>
+                        <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
+                        <div class="detail-content">
+                            <p><strong>📖 名店小故事：</strong>依據店家資料，主廚柳瀬拓郎曾任職超過 17 年的俱樂部 DJ，將音樂節奏感融入拉麵創作，於 2022 年開幕後迅速榮獲米其林指南東京必比登推介與 Tabelog 百名店。湯頭以鹿兒島縣產「黑薩摩雞」與九州生揚醬油熬製，層次深邃。</p>
+                            <p><strong>💡 預約提醒：</strong>本店採 <strong>TableCheck 網站事前完全預約制</strong>（需支付預約手續費並依指定時段入場），6 人團體若欲造訪，需於出發前分批上網搶訂同場次座位（這是推論）。</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="time">湯河原</div>
+                    <div class="event">
+                        <span class="tag backup">🍜 神奈川拉麵聖地</span>
+                        <h3><a href="https://www.google.com/maps/search/?api=1&query=らぁ麺+飯田商店+湯河原" target="_blank" class="loc-link">らぁ麺 飯田商店 (湯河原) 📍</a></h3>
+                        <p>• 位於神奈川縣足柄下郡湯河原町土肥 2-12-14（熱海北側車程約 15–20 分鐘）。日本拉麵界殿堂級名店，週日、週一、週二公休（行程中僅 Day 3 週六營業）。</p>
+                        <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
+                        <div class="detail-content">
+                            <p><strong>💡 預約提醒：</strong>依據飯田商店官網規定，採 <strong>OMAKASE 網站完全預約制</strong>（於每週日日本時間 16:00 開放下一週預約）。若出發前一週成功搶到 2/27（週六）席次，可直接納入 Day 3 中午行程（這是推論）。</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="time">仙石原</div>
+                    <div class="event">
+                        <span class="tag backup">🌶️ 箱根仙石原備案</span>
+                        <h3><a href="https://www.google.com/maps/search/?api=1&query=麺や+菊壱+箱根" target="_blank" class="loc-link">麺や 菊壱 (Kikuichi) 📍</a></h3>
+                        <p>• <a href="https://tabelog.com/tw/kanagawa/A1410/A141001/14031004/" target="_blank" class="loc-link"><strong>Tabelog 店鋪頁面 (14031004) 🔗</strong></a>：位於神奈川縣足柄下郡箱根町仙石原 23-1（週五公休，Day 7 週三正常營業）。距離「箱根 九十九」僅 3 分鐘車程，主打蒜香濃郁的勾芡風「小田原系擔擔麵」與煎餃，為 Day 7 午餐的同區第一替換備案。</p>
                     </div>
                 </li>
             </ul>
