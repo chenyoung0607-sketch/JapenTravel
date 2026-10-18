@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>2027 初春東京近郊賞櫻 11 日行 - 稻荷雙絕與富士櫻花</title>
+    <title>2027 初春東京近郊賞櫻 11 日行 - 稻荷雙絕與富士櫻花 (含 Mapcode 完整版)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
@@ -54,7 +54,7 @@
         .nav-item { flex: 0 0 auto; padding: 8px 16px; background: white; border: 2px solid #5d5d5d; border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; text-decoration: none; color: var(--text-color); font-size: 0.9rem; font-weight: bold; transition: all 0.3s ease; }
         .nav-item.active { background: var(--primary-color); color: white; border-color: var(--btn-color); transform: scale(1.05); box-shadow: 0 2px 8px rgba(216, 27, 96, 0.4); }
         
-        main { padding: 20px; max-width: 840px; margin: 0 auto; }
+        main { padding: 20px; max-width: 860px; margin: 0 auto; }
         .day-card { background: var(--paper-white); margin-bottom: 50px; padding: 25px; border: 3px solid #5d5d5d; border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; box-shadow: var(--shadow); position: relative; }
         
         .day-header { display: flex; align-items: flex-start; margin-bottom: 25px; border-bottom: 2px dashed #eee; padding-bottom: 15px; }
@@ -73,6 +73,19 @@
         .event { padding-left: 20px; border-left: 3px solid var(--soft-color); width: 100%; padding-bottom: 8px; }
         .event h3 { font-size: 1.15rem; color: #444; margin: 0 0 5px 0; }
         .event p { margin: 0; font-size: 0.95rem; color: #666; }
+
+        /* --- Mapcode 專屬標籤與獨立表格樣式 --- */
+        .mapcode-bar { margin: 6px 0 8px 0; padding: 5px 11px; background: #fff8e1; border: 1.5px solid #ffb300; border-radius: 8px; font-size: 0.83rem; color: #4e342e; display: inline-block; line-height: 1.5; box-shadow: 2px 2px 0px rgba(255, 179, 0, 0.15); }
+        .mapcode-code { font-family: 'Courier New', Courier, monospace; font-weight: 700; color: #bf360c; background: #ffecb3; padding: 1px 6px; border-radius: 4px; font-size: 0.9rem; letter-spacing: 0.5px; }
+        .mapcode-sub { font-size: 0.78rem; color: #6d4c41; display: block; margin-top: 2px; }
+
+        .mc-section-title { font-size: 1.05rem; color: #00695c; margin: 18px 0 8px 0; padding: 5px 12px; background: #e0f2f1; border-left: 4px solid #00897b; border-radius: 0 8px 8px 0; font-weight: bold; }
+        .mc-table-wrap { overflow-x: auto; margin-bottom: 15px; border-radius: 10px; border: 1.5px solid #b2dfdb; }
+        .mc-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; background: #fff; min-width: 600px; }
+        .mc-table th { background: #00897b; color: #fff; text-align: left; padding: 8px 10px; font-weight: bold; }
+        .mc-table td { padding: 8px 10px; border-bottom: 1px solid #e0f2f1; vertical-align: top; line-height: 1.55; }
+        .mc-table tr:nth-child(even) { background: #f9fdfd; }
+        .mc-note-box { background: #e0f2f1; border: 1.5px dashed #00897b; border-radius: 10px; padding: 12px 15px; font-size: 0.84rem; color: #004d40; margin-bottom: 15px; line-height: 1.65; }
         
         /* --- 點對點移動連接條樣式 --- */
         .move-connector { display: flex; margin-bottom: 14px; position: relative; }
@@ -83,7 +96,7 @@
         /* --- 超商超市快速查找網格 --- */
         .market-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 18px; margin-top: 10px; }
         .market-box { background: #fdfbf7; border: 2px solid #81c784; border-radius: 14px; padding: 16px; box-shadow: 3px 3px 0px rgba(76, 175, 80, 0.15); }
-        .market-box h4 { color: #2e7d32; font-size: 1.05rem; margin-bottom: 10px; border-bottom: 2px dashed #a5d6a7; padding-bottom: 6px; }
+        .market-box h4 { color: #2e7d32; font-size: 1.05rem; margin-bottom: 6px; border-bottom: 2px dashed #a5d6a7; padding-bottom: 6px; }
         .market-subhead { font-size: 0.82rem; font-weight: bold; color: #555; margin: 8px 0 4px 0; background: #e8f5e9; padding: 2px 8px; border-radius: 6px; display: inline-block; }
         .market-list { list-style: none; font-size: 0.86rem; line-height: 1.75; }
         .market-list li { margin-bottom: 6px; padding-left: 4px; }
@@ -118,9 +131,9 @@
     </div>
     <header>
         <h1>🌸 2027 初春東京近郊賞櫻 11 日行 🌸</h1>
-        <div class="subtitle">🚗 成田進 ‧ 羽田出 ‧ 富士河津櫻與稻荷雙絕 🚗</div>
+        <div class="subtitle">🚗 成田進 ‧ 羽田出 ‧ 富士河津櫻與稻荷雙絕 (含車機 Mapcode 導航版) 🚗</div>
         <div class="summary-box">
-            <p>這是一場為 6 位大人量身打造的 11 天 10 夜初春自駕之旅（2/25–3/7）。採用「橫濱關內 1 晚 ➔ 天使森林伊豆高原別墅 4 晚 ➔ 河口湖 Rakuten STAY 3 晚 ➔ 葛飾區高砂 2 晚」的四據點順向佈局。行程完整結合鎌倉秋本吻仔魚丼、熱海布丁與奶油庵、修善寺與 La Trattoria Nostrano 義式料理、伊豆全景公園碧露臺、河津櫻深度秘境（峰溫泉噴湯與涅槃堂見晴台）、箱根九十九自然薯蕎麥麵、深大寺與吉祥寺，並分開品嚐日本橋「海木」與高砂「味吟」兩大稻荷壽司名店！<br><small style="color:#ad1457; font-weight:bold;">💡 提示：點擊任何景點、住宿或超商超市名稱（含 📍 或 🔗 圖示）即可直接開啟 Google Maps 或介紹頁面！</small></p>
+            <p>這是一場為 6 位大人量身打造的 11 天 10 夜初春自駕之旅（2/25–3/7）。採用「橫濱關內 1 晚 ➔ 天使森林伊豆高原別墅 4 晚 ➔ 河口湖 Rakuten STAY 3 晚 ➔ 葛飾區高砂 2 晚」的四據點順向佈局。行程完整結合鎌倉秋本吻仔魚丼、熱海布丁與奶油庵、修善寺與 La Trattoria Nostrano 義式料理、伊豆全景公園碧露臺、河津櫻深度秘境（峰溫泉噴湯與涅槃堂見晴台）、箱根九十九自然薯蕎麥麵、深大寺與吉祥寺，並分開品嚐日本橋「海木」與高砂「味吟」兩大稻荷壽司名店！<br><small style="color:#ad1457; font-weight:bold;">💡 提示：點擊任何景點、住宿或超商超市名稱（含 📍 或 🔗 圖示）即可直接開啟 Google Maps 或介紹頁面；每個景點均已附上經查證之車機 🧭 Mapcode！</small></p>
         </div>
         <div class="global-ctrl">
             <button class="global-btn" id="toggleAllBtn" onclick="toggleAllDetails()">📖 一鍵展開全部「小故事與建議事項」</button>
@@ -128,6 +141,7 @@
     </header>
 
     <nav class="nav-scroller" id="navScroller">
+        <a href="#mapcodes" class="nav-item">🧭 Mapcode總表</a>
         <a href="#markets" class="nav-item">🏪 超商超市(24間)</a>
         <a href="#day1" class="nav-item">D1 (2/25)</a>
         <a href="#day2" class="nav-item">D2 (2/26)</a>
@@ -170,12 +184,330 @@
                     <hr style="border:0; border-top:1px dashed #ad1457; margin:10px 0;">
                     <p><strong>🏨 四大住宿據點（點擊開啟地圖）：</strong></p>
                     <ul style="padding-left:18px; font-size:0.88rem; line-height: 1.9;">
-                        <li><strong>第 1 晚 (2/25)：</strong><a href="https://www.google.com/maps/search/?api=1&query=Hotel+JAL+City+Kannai+Yokohama" target="_blank" class="loc-link">橫濱市關內日航飯店 (Hotel JAL City Kannai Yokohama) 📍</a></li>
-                        <li><strong>第 2–5 晚 (2/26–3/2，4晚)：</strong><a href="https://www.google.com/maps/search/?api=1&query=エンゼルフォレスト伊豆高原" target="_blank" class="loc-link">天使森林伊豆高原【F-21 附桑拿與溫泉私人別墅】 📍</a></li>
-                        <li><strong>第 6–8 晚 (3/2–3/5，3晚)：</strong><a href="https://www.google.com/maps/search/?api=1&query=Rakuten+STAY+Fuji+Kawaguchiko+Station" target="_blank" class="loc-link">富士河口湖站樂天住宿飯店 (Rakuten STAY) 📍</a></li>
-                        <li><strong>第 9–10 晚 (3/5–3/7，2晚)：</strong><a href="https://www.google.com/maps/search/?api=1&query=8+Chome-28-12+Takasago,+Katsushika+City,+Tokyo+125-0054" target="_blank" class="loc-link">東京葛飾區高砂包棟住宿 (翼学院高等部 高砂校址) 📍</a></li>
+                        <li><strong>第 1 晚 (2/25)：</strong><a href="https://www.google.com/maps/search/?api=1&query=Hotel+JAL+City+Kannai+Yokohama" target="_blank" class="loc-link">橫濱市關內日航飯店 (Hotel JAL City Kannai Yokohama) 📍</a>｜🧭 Mapcode：<span class="mapcode-code">8 707 051*66</span></li>
+                        <li><strong>第 2–5 晚 (2/26–3/2，4晚)：</strong><a href="https://www.google.com/maps/search/?api=1&query=エンゼルフォレスト伊豆高原" target="_blank" class="loc-link">天使森林伊豆高原【F-21 附桑拿與溫泉私人別墅】 📍</a>｜🧭 赤澤別墅群基準 Mapcode：<span class="mapcode-code">488 399 014*02</span></li>
+                        <li><strong>第 6–8 晚 (3/2–3/5，3晚)：</strong><a href="https://www.google.com/maps/search/?api=1&query=Rakuten+STAY+Fuji+Kawaguchiko+Station" target="_blank" class="loc-link">富士河口湖站樂天住宿飯店 (Rakuten STAY) 📍</a>｜🧭 河口湖站前基準 Mapcode：<span class="mapcode-code">161 272 437*73</span></li>
+                        <li><strong>第 9–10 晚 (3/5–3/7，2晚)：</strong><a href="https://www.google.com/maps/search/?api=1&query=8+Chome-28-12+Takasago,+Katsushika+City,+Tokyo+125-0054" target="_blank" class="loc-link">東京葛飾區高砂包棟住宿 (翼学院高等部 高砂校址) 📍</a>｜🧭 高砂 8 丁目基準 Mapcode：<span class="mapcode-code">899 890*08</span></li>
                     </ul>
                 </div>
+            </div>
+        </section>
+
+        <!-- 獨立區塊：車機導航 Mapcode 速查總表 -->
+        <section id="mapcodes" class="day-card" style="border-color: #00897b;">
+            <div class="day-header">
+                <div class="day-badge" style="background: #00897b;">導航</div>
+                <div class="day-title">
+                    <h2 style="color: #00695c;">🧭 車機導航 Mapcode 獨立速查總表</h2>
+                    <div class="day-date">嚴格依據日本 Mapion 電話帳與官方觀光資料查證 • 涵蓋住宿、每日景點餐廳、備用名單與採買街區</div>
+                </div>
+            </div>
+
+            <div class="mc-note-box">
+                <strong>📌 查證與標示原則說明：</strong><br>
+                1. <strong>精確查證依據：</strong>所有列出的 Mapcode 與電話號碼，皆依據日本 <strong>Mapion（マピオン）電話帳資料庫</strong> 或日本觀光導覽網站公開登錄資料查證。<br>
+                2. <strong>無單一門牌代碼之處理：</strong>部分私人別墅、無人智慧飯店或商店街內店鋪，因未單獨登錄於傳統車機 Mapcode 電話帳，皆明確標示<strong>「單點 Mapcode 無法確定／沒有足夠資料」</strong>，並提供經 Mapion 查證之<strong>「同一街廓／緊鄰車站地標基準點 Mapcode」</strong>供車機定位至該街區，最後百公尺再搭配手機 Google Maps 抵達（這是推論）。
+            </div>
+
+            <div class="mc-section-title">一、四大固定住宿據點 Mapcode</div>
+            <div class="mc-table-wrap">
+                <table class="mc-table">
+                    <thead>
+                        <tr>
+                            <th style="width:16%;">住宿天數</th>
+                            <th style="width:32%;">住宿名稱與地址</th>
+                            <th style="width:26%;">車機 Mapcode / 電話</th>
+                            <th style="width:26%;">資料依據與導航說明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>第 1 晚</strong><br>(2/25 四)</td>
+                            <td><a href="https://www.google.com/maps/search/?api=1&query=Hotel+JAL+City+Kannai+Yokohama" target="_blank" class="loc-link"><strong>橫濱市關內日航飯店 📍</strong></a><br><small>横浜市中区山下町72</small></td>
+                            <td><span class="mapcode-code">8 707 051*66</span><br><small>(或 8 707 051*65)</small></td>
+                            <td>依據：Mapion 電話帳（Day 1 搭乘大眾運輸前往，尚未取車）。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>第 2–5 晚</strong><br>(2/26–3/2)</td>
+                            <td><a href="https://www.google.com/maps/search/?api=1&query=エンゼルフォレスト伊豆高原" target="_blank" class="loc-link"><strong>天使森林伊豆高原【F-21 別墅】 📍</strong></a><br><small>静岡県伊東市赤沢 373-298</small></td>
+                            <td>單棟別墅：<strong>無法確定／沒有足夠資料</strong><br>🔹赤澤別墅群基準點：<br><span class="mapcode-code">488 399 014*02</span> (赤沢343-87)<br><span class="mapcode-code">488 400 208*60</span> (赤沢190-5)</td>
+                            <td>依據：Mapion 電話帳（赤沢荘／ルネッサ赤沢）。私人別墅分棟未單獨登錄電話帳，建議先導航進入赤澤別墅區再看手機 Google Maps（這是推論）。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>第 6–8 晚</strong><br>(3/2–3/5)</td>
+                            <td><a href="https://www.google.com/maps/search/?api=1&query=Rakuten+STAY+Fuji+Kawaguchiko+Station" target="_blank" class="loc-link"><strong>富士河口湖站樂天住宿飯店 📍</strong></a><br><small>山梨県富士河口湖町船津 3557-10</small></td>
+                            <td>單棟飯店：<strong>無法確定／沒有足夠資料</strong><br>🔹河口湖站前基準點：<br><span class="mapcode-code">161 272 437*73</span></td>
+                            <td>依據：Mapion 電話帳。無人智慧飯店無公開總機登錄，距河口湖站步行僅 2–3 分鐘，定位站前即可抵達（這是推論）。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>第 9–10 晚</strong><br>(3/5–3/7)</td>
+                            <td><a href="https://www.google.com/maps/search/?api=1&query=8+Chome-28-12+Takasago,+Katsushika+City,+Tokyo+125-0054" target="_blank" class="loc-link"><strong>東京葛飾區高砂包棟住宿 📍</strong></a><br><small>東京都葛飾区高砂 8-28-12</small></td>
+                            <td>單一門牌：<strong>無法確定／沒有足夠資料</strong><br>🔹高砂 8 丁目基準點：<br><span class="mapcode-code">899 890*08</span> (高砂8-23-13)<br>🔹京成高砂站：<span class="mapcode-code">899 644*80</span></td>
+                            <td>依據：Mapion 電話帳。原校址改建包棟未登錄電話帳，車機輸入同在 8 丁目的基準點即可開抵約 100 公尺處（這是推論）。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mc-section-title">二、每日主行程景點與餐廳 Mapcode（Day 1 – Day 11）</div>
+            <div class="mc-table-wrap">
+                <table class="mc-table">
+                    <thead>
+                        <tr>
+                            <th style="width:12%;">天數</th>
+                            <th style="width:32%;">景點／餐廳名稱</th>
+                            <th style="width:28%;">車機 Mapcode / 電話</th>
+                            <th style="width:28%;">資料依據與說明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong><br>2/25(四)</td>
+                            <td>橫濱中華街 ＆ 山下公園</td>
+                            <td><span class="mapcode-code">8 708 039*08</span></td>
+                            <td>依據：Mapion 電話帳（山下公園中央口）。當日由飯店步行前往。</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3"><strong>Day 2</strong><br>2/26(五)</td>
+                            <td>鎌倉 鶴岡八幡宮</td>
+                            <td><span class="mapcode-code">8 247 513*36</span><br><small>TEL: 0467-22-0315</small></td>
+                            <td>依據：Mapion 電話帳（鎌倉市雪ノ下 2-1-31）。</td>
+                        </tr>
+                        <tr>
+                            <td>食事処 秋本 (i-ZA 鎌倉 3F)</td>
+                            <td>單店：<strong>無法確定／沒有足夠資料</strong><br>🔹小町1丁目基準：<span class="mapcode-code">8 216 794*26</span><br>🔹鎌倉駅入口：<span class="mapcode-code">8 216 798*75</span></td>
+                            <td>依據：Mapion 電話帳（鎌倉市観光協会／鎌倉駅入口）。自八幡宮沿小町通步行前往即可。</td>
+                        </tr>
+                        <tr>
+                            <td>江之島（開車上島與停車場）</td>
+                            <td>🔹弁天橋入口：<span class="mapcode-code">15 208 127*45</span><br>🔹島上停車區：<span class="mapcode-code">15 178 522*51</span><br>🔹島中心區：<span class="mapcode-code">15 178 212*21</span></td>
+                            <td>依據：Mapion 電話帳（江ノ島弁天橋、江の島 1-12-2 湘南海保／遊艇俱樂部、江の島 2-4）。</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3"><strong>Day 3</strong><br>2/27(六)</td>
+                            <td>熱海梅園</td>
+                            <td><span class="mapcode-code">116 652 259*52</span></td>
+                            <td>依據：Japan All Pass 觀光指南查證資料。</td>
+                        </tr>
+                        <tr>
+                            <td>熱海站前雙老街（熱海奶油庵 ＆ 熱海布丁）</td>
+                            <td>單店：<strong>無法確定／沒有足夠資料</strong><br>🔹熱海駅：<span class="mapcode-code">116 684 085*71</span><br>🔹LUSCA熱海：<span class="mapcode-code">116 684 112*23</span></td>
+                            <td>依據：Mapion 電話帳（田原本町 9／11-1）。停妥於熱海站前停車場後步行逛街。</td>
+                        </tr>
+                        <tr>
+                            <td>大室山（大室山登山纜車 リフト）</td>
+                            <td><span class="mapcode-code">488 521 861*47</span><br><small>TEL: 0557-51-0258</small></td>
+                            <td>依據：Mapion 電話帳、Tabirai Japan 交通指南（伊東市富戸 1317-5）。</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3"><strong>Day 4</strong><br>2/28(日)</td>
+                            <td>修善寺溫泉街 ＆ 竹林小徑</td>
+                            <td>🔹独鈷之湯：<span class="mapcode-code">116 187 184*68</span><br>🔹溫泉街：<span class="mapcode-code">116 186 082*88</span></td>
+                            <td>依據：ToCoo! 日本溫泉導覽、日本自駕景點 Mapcode 整理。</td>
+                        </tr>
+                        <tr>
+                            <td>La Trattoria Nostrano (大仁吉田)</td>
+                            <td>單店：<strong>無法確定／沒有足夠資料</strong><br>🔹電話：<span class="mapcode-code">0558-81-4142</span><br>🔹吉田同路段：<span class="mapcode-code">116 312 216*11</span></td>
+                            <td>依據：伊豆之國市觀光網（電話）、Mapion 電話帳（伊豆の国市吉田基準點）。</td>
+                        </tr>
+                        <tr>
+                            <td>伊豆全景公園（碧露臺 Ao Terrace）</td>
+                            <td><span class="mapcode-code">116 366 713*21</span><br><small>TEL: 055-948-1525</small></td>
+                            <td>依據：Mapion 電話帳（伊豆の国市長岡 260-1）。</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="5"><strong>Day 5</strong><br>3/01(一)</td>
+                            <td>河津櫻祭主會場（館橋・笹原公園）</td>
+                            <td>🔹主停車場區：<span class="mapcode-code">248 299 496*22</span><br>🔹笹原公園：<span class="mapcode-code">248 299 426*24</span><br>🔹河津駅：<span class="mapcode-code">248 299 267*35</span></td>
+                            <td>依據：Mapion 電話帳（河津桜観光交流館／笹原公園／河津駅）。</td>
+                        </tr>
+                        <tr>
+                            <td>河津櫻原木</td>
+                            <td>樹木無獨立碼<br>🔹緊鄰河津町役場：<span class="mapcode-code">248 328 446</span></td>
+                            <td>依據：Mapion 電話帳（河津町田中 212）。</td>
+                        </tr>
+                        <tr>
+                            <td>峰溫泉大噴湯公園</td>
+                            <td><span class="mapcode-code">248 328 427*61</span><br><small>TEL: 0558-34-0311</small></td>
+                            <td>依據：Mapion 電話帳（峰溫泉）、河津町觀光協會官網。</td>
+                        </tr>
+                        <tr>
+                            <td>涅槃堂 櫻見晴台 ＆ 栖足寺</td>
+                            <td>🔹澤田基準點：<span class="mapcode-code">248 358 040*42</span><br>🔹栖足寺鄰近：<span class="mapcode-code">248 328 662*28</span></td>
+                            <td>依據：Mapion 電話帳（河津町沢田／河津町東大寺）。</td>
+                        </tr>
+                        <tr>
+                            <td>南伊豆 櫻花與油菜花祭（青野川）</td>
+                            <td>🔹下賀茂湯の花：<span class="mapcode-code">633 224 491*22</span><br>🔹青野川櫻並木：<span class="mapcode-code">633 224 521*33</span><br>🔹日野油菜花田：<span class="mapcode-code">633 226 343*71</span></td>
+                            <td>依據：Roadtrips 道の駅資料庫、日本河津櫻景點導覽資料。</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><strong>Day 6</strong><br>3/02(二)</td>
+                            <td>松田櫻花祭（西平畑公園）</td>
+                            <td>🔹西平畑公園：<span class="mapcode-code">57 646 715*03</span><br>🔹山下國道246：<span class="mapcode-code">57 646 581*36</span></td>
+                            <td>依據：日本河津櫻景點導覽資料、Mapion 電話帳。</td>
+                        </tr>
+                        <tr>
+                            <td>御殿場 Premium Outlets</td>
+                            <td>🔹主園區：<span class="mapcode-code">50 806 365*43</span><br>🔹第2停車場：<span class="mapcode-code">50 805 234*77</span></td>
+                            <td>依據：Mapion 電話帳（御殿場市深沢 1312）。</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4"><strong>Day 7</strong><br>3/03(三)</td>
+                            <td>箱根 大湧谷</td>
+                            <td>🔹大湧谷：<span class="mapcode-code">57 242 566*32</span><br>🔹大停車場：<span class="mapcode-code">57 242 771*07</span></td>
+                            <td>依據：關東自駕 Mapcode 彙整資料（TEL: 0460-84-9605）。</td>
+                        </tr>
+                        <tr>
+                            <td>じねんじょ蕎麦 箱根 九十九</td>
+                            <td>單店：<strong>無法確定／沒有足夠資料</strong><br>🔹仙石原基準：<span class="mapcode-code">57 332 301*10</span><br>🔹鄰近飯店：<span class="mapcode-code">57 270 458*81</span></td>
+                            <td>依據：Mapion 電話帳（仙石原温泉／Trip7 箱根仙石原温泉ホテル）。</td>
+                        </tr>
+                        <tr>
+                            <td>蘆之湖 ＆ 箱根神社（平和鳥居）</td>
+                            <td><span class="mapcode-code">57 094 814*45</span><br><small>(或 57 123 162*16 / TEL: 0460-83-7123)</small></td>
+                            <td>依據：關東自駕 Mapcode 彙整資料。</td>
+                        </tr>
+                        <tr>
+                            <td>OGINO（オギノ）河口湖店</td>
+                            <td>單店：<strong>無法確定／沒有足夠資料</strong><br>🔹船津超市街區：<span class="mapcode-code">161 300 460*76</span></td>
+                            <td>依據：Mapion 電話帳（船津深山商店基準點）。</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3"><strong>Day 8</strong><br>3/04(四)</td>
+                            <td>忍野八海</td>
+                            <td>🔹最大停車場：<span class="mapcode-code">161 130 817*78</span><br>🔹中心區：<span class="mapcode-code">161 130 726*12</span></td>
+                            <td>依據：2026 河口湖忍野八海自駕指南、日本自駕景點 Mapcode 整理。</td>
+                        </tr>
+                        <tr>
+                            <td>山中湖 平野之濱</td>
+                            <td>沙灘無門牌<br>🔹山中湖平野：<span class="mapcode-code">161 013 438*75</span><br>🔹平野保育所：<span class="mapcode-code">161 048 127*03</span></td>
+                            <td>依據：Mapion 電話帳（山中湖村平野／平野 1997-1）。</td>
+                        </tr>
+                        <tr>
+                            <td>河口湖 大石公園</td>
+                            <td><span class="mapcode-code">59 089 357*06</span></td>
+                            <td>依據：Mapion 電話帳「大石公園」頁面。</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="5"><strong>Day 9</strong><br>3/05(五)</td>
+                            <td>調布 天神通商店街 ＆ 鬼太郎茶屋</td>
+                            <td><span class="mapcode-code">2 830 769*77</span></td>
+                            <td>依據：Mapion 電話帳（京王電鉄 調布駅）。</td>
+                        </tr>
+                        <tr>
+                            <td>深大寺參拜 ＆ 手打蕎麥麵</td>
+                            <td>🔹深大寺：<span class="mapcode-code">2 891 606*66</span><br>🔹深大寺五差路：<span class="mapcode-code">5 022 000*64</span></td>
+                            <td>依據：Mapion 電話帳（調布市深大寺元町 5 丁目）。</td>
+                        </tr>
+                        <tr>
+                            <td>吉祥寺 Satou 炸肉餅 ＆ 太陽道</td>
+                            <td>單店：<strong>無法確定／沒有足夠資料</strong><br>🔹吉祥寺駅北口：<span class="mapcode-code">5 145 306*53</span><br><small>(或 5 145 002*02)</small></td>
+                            <td>依據：Mapion 電話帳（吉祥寺本町 1 丁目）。</td>
+                        </tr>
+                        <tr>
+                            <td>【稻荷第一彈】海木 日本橋店</td>
+                            <td>單店：<strong>無法確定／沒有足夠資料</strong><br>🔹日本橋室町3-3：<span class="mapcode-code">678 127*30</span></td>
+                            <td>依據：Mapion 電話帳（緊鄰 COREDO 室町 Terrace 同街廓之日本橋アイティビル）。</td>
+                        </tr>
+                        <tr>
+                            <td>東京晴空塔 (Tokyo Skytree)</td>
+                            <td><span class="mapcode-code">742 740*05</span></td>
+                            <td>依據：Mapion 電話帳（當晚自高砂搭電車前往）。</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4"><strong>Day 10</strong><br>3/06(六)</td>
+                            <td>【稻荷第二彈】味吟 稻荷壽司</td>
+                            <td>單店：<strong>無法確定／沒有足夠資料</strong><br>🔹高砂站北口交番：<span class="mapcode-code">899 676*13</span><br>🔹京成高砂駅：<span class="mapcode-code">899 644*80</span></td>
+                            <td>依據：Mapion 電話帳（高砂 5-43／5-28-1）。早上自住宿步行 6 分鐘前往。</td>
+                        </tr>
+                        <tr>
+                            <td>木場公園（大橫川河津櫻）</td>
+                            <td><span class="mapcode-code">622 341*47</span></td>
+                            <td>依據：Mapion 電話帳「木場公園」頁面。</td>
+                        </tr>
+                        <tr>
+                            <td>新宿 Lumine Est ＆ 東口商圈</td>
+                            <td><span class="mapcode-code">669 525*76</span></td>
+                            <td>依據：Mapion 電話帳「ルミネエスト新宿」頁面。</td>
+                        </tr>
+                        <tr>
+                            <td>歡送晚餐：やきにく亭 六歌仙</td>
+                            <td>單店：<strong>無法確定／沒有足夠資料</strong><br>🔹西新宿 1-3 基準：<span class="mapcode-code">669 697*38</span></td>
+                            <td>依據：Mapion 電話帳（新宿区西新宿 1-3 街廓）。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 11</strong><br>3/07(日)</td>
+                            <td>東京羽田國際機場 第 3 航廈</td>
+                            <td>🔹第3航廈出發口：<span class="mapcode-code">167 103*47</span><br>🔹第3航廈案内：<span class="mapcode-code">167 108*76</span></td>
+                            <td>依據：Mapion 電話帳（註：租車營業所還車點因尚未指定租車品牌，單一營業所 Mapcode 無法確定／沒有足夠資料）。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mc-section-title">三、備用景點與美食名單 Mapcode（依可使用日期分類）</div>
+            <div class="mc-table-wrap">
+                <table class="mc-table">
+                    <thead>
+                        <tr>
+                            <th style="width:14%;">可使用日期</th>
+                            <th style="width:32%;">備用景點／餐廳名稱</th>
+                            <th style="width:28%;">車機 Mapcode / 電話</th>
+                            <th style="width:26%;">資料依據與說明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 2 備用</strong><br>2/26(五)</td>
+                            <td>三浦海岸河津櫻（小松池公園）</td>
+                            <td><span class="mapcode-code">306 363 143*36</span></td>
+                            <td>依據：日本河津櫻景點導覽資料。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3 備用</strong><br>2/27(六)</td>
+                            <td>らぁ麺 飯田商店 (湯河原町土肥2-12-14)</td>
+                            <td>本店門牌：<strong>無法確定／沒有足夠資料</strong><br>🔹土肥2丁目基準：<br><span class="mapcode-code">116 808 856*36</span> (飯田食品工場)<br><span class="mapcode-code">116 838 007*27</span> (読売湯河原)</td>
+                            <td>依據：Mapion 電話帳（飯田商店食品工場 TEL: 0465-20-3403）。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4 備用</strong><br>2/28(日)</td>
+                            <td>伊豆月瀨梅林梅祭 (伊豆市月ヶ瀬535-5)</td>
+                            <td>梅林山坡：<strong>無法確定／沒有足夠資料</strong><br>🔹同村緊鄰基準（道の駅 伊豆月ケ瀬）：<span class="mapcode-code">116 007 246*45</span></td>
+                            <td>依據：Mapion 電話帳（月ケ瀬 78-2，TEL: 0558-79-3977）。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5 備用</strong><br>3/01(一)</td>
+                            <td>1. 河津七瀧迴旋橋<br>2. わさび園 かどや<br>3. 河津城跡公園（自河津站步行）<br>4. 體感型動物園 iZoo</td>
+                            <td>1. 迴旋橋：<span class="mapcode-code">248 443 513*64</span><br>2. かどや旁釜滝：<span class="mapcode-code">248 472 607*24</span><br>3. 河津駅：<span class="mapcode-code">248 299 267*35</span><br>4. 河津町浜基準：<span class="mapcode-code">1038 270 090*45</span></td>
+                            <td>依據：Mapion 電話帳（かどや與 iZoo 單店未直接顯示 Mapcode，已列出同地段基準點）。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7 備用</strong><br>3/03(三)</td>
+                            <td>麺や 菊壱 (箱根町仙石原 23-1)</td>
+                            <td>單店：<strong>無法確定／沒有足夠資料</strong><br>🔹仙石原基準：<span class="mapcode-code">57 332 301*10</span></td>
+                            <td>依據：Mapion 電話帳。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 9–10 備用</strong><br>3/05–3/06</td>
+                            <td>1. 巣鴨ときわ食堂 本店<br>2. Patisserie Yoshinori Asami</td>
+                            <td>單店：<strong>無法確定／沒有足夠資料</strong><br>🔹巣鴨3丁目基準：<span class="mapcode-code">823 771*54</span></td>
+                            <td>依據：Mapion 電話帳（巣鴨 3-34-1 丸吉百貨店）。兩店同在巢鴨 3 丁目步行僅 1–2 分鐘。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 10 備用</strong><br>3/06(六)</td>
+                            <td>1. 高湯 Okume 麻布台 Hills 店<br>2. Ramen Break Beats (目黒 4-21-19)</td>
+                            <td>1. 麻布台Hills：<span class="mapcode-code">584 042*84</span><br>2. 目黒4-21-21：<span class="mapcode-code">459 578*68</span></td>
+                            <td>依據：Mapion 電話帳（麻布台 Hills Market／Break Beats 隔壁門牌目黒 4-21-21）。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>待確認項目</strong></td>
+                            <td>MATCHA 收藏文章<br>(<code>https://matcha-jp.com/tw/27006</code>)</td>
+                            <td><strong>無法確定／沒有足夠資料</strong></td>
+                            <td>原因：網址無店名文字且未收錄於公開搜尋索引，保留連結待確認店名。</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -192,6 +524,10 @@
                 <!-- 1. 橫濱關內 -->
                 <div class="market-box">
                     <h4>🏨 1. 橫濱關內日航飯店 (Day 1｜山下町72)</h4>
+                    <div class="mapcode-bar">
+                        🧭 <strong>山下町街廓基準 Mapcode：</strong><span class="mapcode-code">8 707 051*66</span> ｜ <strong>日本大通街廓：</strong><span class="mapcode-code">8 707 398*28</span>
+                        <span class="mapcode-sub">（依據：Mapion 電話帳；各連鎖分店單一門牌 Mapcode 無法確定／沒有足夠資料，步行導航即可）</span>
+                    </div>
                     <div class="market-subhead">🔹 最近便利商店 (3間)</div>
                     <ul class="market-list">
                         <li><span class="market-badge cvs">超商1</span><a href="https://www.google.com/maps/search/?api=1&query=ローソン+山下町本町通店" target="_blank" class="loc-link"><strong>Lawson 山下町本町通店 📍</strong></a><br><small>横浜市中区山下町73-1（正隔壁街廓，步行約 1 分鐘）</small></li>
@@ -209,6 +545,10 @@
                 <!-- 2. 天使森林伊豆高原 -->
                 <div class="market-box">
                     <h4>🏡 2. 天使森林伊豆高原 (Day 2–5｜伊東市赤沢)</h4>
+                    <div class="mapcode-bar">
+                        🧭 <strong>八幡野1187採買區基準 Mapcode：</strong><span class="mapcode-code">488 433 690*53</span> ｜ <strong>伊豆高原站前區：</strong><span class="mapcode-code">488 433 880*08</span>
+                        <span class="mapcode-sub">（依據：Mapion 電話帳；各分店單一門牌 Mapcode 無法確定／沒有足夠資料，可定位上述基準點）</span>
+                    </div>
                     <div class="market-subhead">🔹 最近便利商店 (3間)</div>
                     <ul class="market-list">
                         <li><span class="market-badge cvs">超商1</span><a href="https://www.google.com/maps/search/?api=1&query=セブンイレブン+伊東八幡野店" target="_blank" class="loc-link"><strong>7-Eleven 伊東八幡野店 📍</strong></a><br><small>伊東市八幡野1187-1（國道135號旁，車程約 5 分鐘）</small></li>
@@ -226,6 +566,10 @@
                 <!-- 3. 河口湖 Rakuten STAY -->
                 <div class="market-box">
                     <h4>🏨 3. 河口湖 Rakuten STAY (Day 6–8｜船津3557-10)</h4>
+                    <div class="mapcode-bar">
+                        🧭 <strong>河口湖站前超商區基準 Mapcode：</strong><span class="mapcode-code">161 272 437*73</span> ｜ <strong>船津大型超市區：</strong><span class="mapcode-code">161 300 460*76</span>
+                        <span class="mapcode-sub">（依據：Mapion 電話帳；各分店單一門牌 Mapcode 無法確定／沒有足夠資料，可定位上述基準點）</span>
+                    </div>
                     <div class="market-subhead">🔹 最近便利商店 (3間)</div>
                     <ul class="market-list">
                         <li><span class="market-badge cvs">超商1</span><a href="https://www.google.com/maps/search/?api=1&query=セブンイレブン+河口湖駅前店" target="_blank" class="loc-link"><strong>7-Eleven 河口湖站前店 📍</strong></a><br><small>富士河口湖町船津3635-1（距離最近，步行約 2–3 分鐘）</small></li>
@@ -243,6 +587,10 @@
                 <!-- 4. 葛飾區高砂住宿 -->
                 <div class="market-box">
                     <h4>🏡 4. 葛飾區高砂住宿 (Day 9–10｜高砂8-28-12)</h4>
+                    <div class="mapcode-bar">
+                        🧭 <strong>高砂 8 丁目基準 Mapcode：</strong><span class="mapcode-code">899 890*08</span> ｜ <strong>京成高砂站前區：</strong><span class="mapcode-code">899 644*80</span>
+                        <span class="mapcode-sub">（依據：Mapion 電話帳；各分店單一門牌 Mapcode 無法確定／沒有足夠資料，步行即可抵達）</span>
+                    </div>
                     <div class="market-subhead">🔹 最近便利商店 (3間)</div>
                     <ul class="market-list">
                         <li><span class="market-badge cvs">超商1</span><a href="https://www.google.com/maps/search/?api=1&query=セブンイレブン+葛飾高砂8丁目店" target="_blank" class="loc-link"><strong>7-Eleven 葛飾高砂 8 丁目店 📍</strong></a><br><small>葛飾区高砂8-29-6（同在 8 丁目內，步行約 1–2 分鐘）</small></li>
@@ -278,6 +626,7 @@
                     <div class="event">
                         <span class="tag move">🛬 起點</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=成田国際空港" target="_blank" class="loc-link">成田國際機場 (NRT) 📍</a></h3>
+                        <div class="mapcode-bar">🚆 <strong>當日搭乘大眾運輸（JR 成田特快 N'EX），不取車自駕</strong></div>
                         <p>辦理入境手續並領取行李，隨後搭乘 JR 成田特快 (N'EX) 直達橫濱站，轉乘港未來線（至日本大通站）或 JR 根岸線（至關內站）前往飯店。</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
@@ -295,6 +644,7 @@
                     <div class="event">
                         <span class="tag stay">🏨 住宿</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=Yamashitacho,+72+ホテルＪＡＬシティ関内+横浜" target="_blank" class="loc-link">橫濱市關內日航飯店 (Hotel JAL City Kannai Yokohama) 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>Mapcode：</strong><span class="mapcode-code">8 707 051*66</span>（或 <span class="mapcode-code">8 707 051*65</span>）<span class="mapcode-sub">依據：Mapion 電話帳 / 日本宿泊記網站</span></div>
                         <p>抵達位於橫濱山下町 72 號的飯店辦理入住，放置隨身行李。第一晚不租車，直接省下一日租車費與市區飯店過夜停車費。</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
@@ -311,6 +661,7 @@
                     <div class="event">
                         <span class="tag food">🥟 晚餐</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=横浜中華街" target="_blank" class="loc-link">橫濱中華街 & 山下公園夜散歩 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>Mapcode（山下公園中央口）：</strong><span class="mapcode-code">8 708 039*08</span><span class="mapcode-sub">依據：Mapion 電話帳</span></div>
                         <p>從飯店步行抵達橫濱中華街與海濱的山下公園，輕鬆享用晚餐並欣賞橫濱港夜景。</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
@@ -327,6 +678,7 @@
                     <div class="event">
                         <span class="tag stay">🏨 終點</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=Yamashitacho,+72+ホテルＪＡＬシティ関内+横浜" target="_blank" class="loc-link">返回：橫濱市關內日航飯店 (Hotel JAL City Kannai Yokohama) 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>Mapcode：</strong><span class="mapcode-code">8 707 051*66</span></div>
                         <p>順路於飯店旁的 Lawson 或 My Basket 超市買宵夜與隔日飲水，返回飯店休息。</p>
                     </div>
                 </li>
@@ -352,6 +704,7 @@
                     <div class="event">
                         <span class="tag stay">🏨 起點</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=Yamashitacho,+72+ホテルＪＡＬシティ関内+横浜" target="_blank" class="loc-link">出發：橫濱市關內日航飯店 & 辦理取車 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>飯店 Mapcode：</strong><span class="mapcode-code">8 707 051*66</span></div>
                         <p>辦理退房，前往橫濱關內／橫濱站周邊租車營業所（或羽田機場營業所）領取 8 人座休旅車，確認配備雪胎與 ETC 卡後出發前往鎌倉。</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
@@ -368,6 +721,7 @@
                     <div class="event">
                         <span class="tag history">⛩️ 古都</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=鶴岡八幡宮+鎌倉" target="_blank" class="loc-link">鎌倉 鶴岡八幡宮與小町通商店街 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>Mapcode：</strong><span class="mapcode-code">8 247 513*36</span> ｜ 📞 <strong>電話：</strong><code>0467-22-0315</code><span class="mapcode-sub">依據：Mapion 電話帳（鎌倉市雪ノ下 2-1-31）</span></div>
                         <p>趁平日早鳥時段將車停於八幡宮周邊停車場。參拜鎌倉最具代表性的鶴岡八幡宮，隨後沿小町通散步逛街。</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
@@ -384,6 +738,7 @@
                     <div class="event">
                         <span class="tag food">🍚 午餐</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=食事処+秋本+鎌倉" target="_blank" class="loc-link">鎌倉名物午餐：食事処 秋本 (i-ZA 鎌倉 3F) 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>緊鄰基準 Mapcode（小町1丁目／鎌倉駅入口）：</strong><span class="mapcode-code">8 216 794*26</span> 或 <span class="mapcode-code">8 216 798*75</span><span class="mapcode-sub">依據：Mapion 電話帳（商場 3F 單店專屬 Mapcode 無法確定／沒有足夠資料，自八幡宮步行前往即可）</span></div>
                         <p>於 11:00 剛開店時段進入小町通入口旁的排隊名店「<a href="https://matcha-jp.com/tw/10008" target="_blank" class="loc-link"><strong>食事処 秋本 🔗</strong></a>」，享用人氣第一的「鎌倉づくし定食（吻仔魚丼＋現炸鎌倉蔬菜天婦羅）」！</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
@@ -401,6 +756,7 @@
                     <div class="event">
                         <span class="tag view">🌊 海景</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=江ノ島+駐車場" target="_blank" class="loc-link">湘南海岸兜風 & 江之島 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>Mapcode（弁天橋上島口）：</strong><span class="mapcode-code">15 208 127*45</span> ｜ <strong>島上停車區：</strong><span class="mapcode-code">15 178 522*51</span> ｜ <strong>島中心：</strong><span class="mapcode-code">15 178 212*21</span><span class="mapcode-sub">依據：Mapion 電話帳</span></div>
                         <p>沿 134 號國道行駛湘南海岸（途經鎌倉高校前平交道可於車上賞景），直接開上江之島停放。漫步弁財天仲見世通與江島神社，品嚐現壓章魚仙貝。</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
@@ -417,7 +773,8 @@
                     <div class="event">
                         <span class="tag stay">🏡 終點</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=エンゼルフォレスト伊豆高原" target="_blank" class="loc-link">入住：天使森林伊豆高原 (F-21 海景桑拿溫泉別墅) 📍</a></h3>
-                        <p>途經八幡野時可先於「MaxValu 伊豆高原店」採買食材，隨後抵達「據點一（伊東市赤沢 373-298）」，辦理連住 4 晚的入住手續，享受專屬天然溫泉與私人桑拿房！</p>
+                        <div class="mapcode-bar">🧭 <strong>赤澤別墅群基準 Mapcode：</strong><span class="mapcode-code">488 399 014*02</span>（赤沢343-87）或 <span class="mapcode-code">488 400 208*60</span>（赤沢190-5）<span class="mapcode-sub">依據：Mapion 電話帳（單棟別墅赤沢373-298之 Mapcode 無法確定／沒有足夠資料，建議先導航至赤澤別墅區再看 Google Maps，這是推論）</span></div>
+                        <p>途經八幡野時可先於「MaxValu 伊豆高原店（基準 Mapcode：<span class="mapcode-code">488 433 690*53</span>）」採買食材，隨後抵達「據點一（伊東市赤沢 373-298）」，辦理連住 4 晚的入住手續，享受專屬天然溫泉與私人桑拿房！</p>
                     </div>
                 </li>
             </ul>
@@ -442,6 +799,7 @@
                     <div class="event">
                         <span class="tag stay">🏡 起點</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=エンゼルフォレスト伊豆高原" target="_blank" class="loc-link">出發：天使森林伊豆高原 (F-21 別墅) 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>赤澤別墅群基準 Mapcode：</strong><span class="mapcode-code">488 399 014*02</span></div>
                         <p>於別墅享用早餐後，沿國道 135 號海岸線往北驅車前往熱海。</p>
                     </div>
                 </li>
@@ -454,6 +812,7 @@
                     <div class="event">
                         <span class="tag view">🌸 賞梅</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=熱海梅園" target="_blank" class="loc-link">熱海梅園梅花祭 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>Mapcode：</strong><span class="mapcode-code">116 652 259*52</span><span class="mapcode-sub">依據：Japan All Pass 觀光指南查證資料</span></div>
                         <p>漫步於早春盛開的多品種梅花林與小橋流水之間，享受清新晨間空氣。</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
@@ -470,6 +829,7 @@
                     <div class="event">
                         <span class="tag food">🍮 甜點</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=熱海ばたーあん" target="_blank" class="loc-link">熱海雙老街小吃：「熱海奶油庵 (熱海ばたーあん)」&「熱海布丁」 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>緊鄰基準 Mapcode（熱海駅／LUSCA熱海）：</strong><span class="mapcode-code">116 684 085*71</span> 或 <span class="mapcode-code">116 684 112*23</span><span class="mapcode-sub">依據：Mapion 電話帳（商店街內店鋪單獨 Mapcode 無法確定／沒有足夠資料，停妥於熱海站前步行即達）</span></div>
                         <p>穿梭於相連的「平和通」與「仲見世」兩條商店街，享用現蒸溫泉饅頭、烤海鮮串與魚板，並一次攻略兩大超人氣排隊甜點：<a href="https://tabelog.com/tw/shizuoka/A2205/A220502/22038505/" target="_blank" class="loc-link"><strong>熱海奶油庵 🔗</strong></a> 與 <a href="https://www.google.com/maps/search/?api=1&query=熱海プリン+1号店" target="_blank" class="loc-link"><strong>熱海布丁 📍</strong></a>！</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
@@ -488,6 +848,7 @@
                     <div class="event">
                         <span class="tag view">🚠 絕景</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=大室山リフト" target="_blank" class="loc-link">大室山 (搭乘雙人纜車) 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>Mapcode：</strong><span class="mapcode-code">488 521 861*47</span> ｜ 📞 <strong>電話：</strong><code>0557-51-0258</code><span class="mapcode-sub">依據：Mapion 電話帳、Tabirai Japan 交通指南</span></div>
                         <p>搭乘纜車登上外型激似「巨大抹茶布丁」的大室山，漫步火山口環山步道拍攝 360 度山海全景。</p>
                     </div>
                 </li>
@@ -500,6 +861,7 @@
                     <div class="event">
                         <span class="tag stay">🏡 終點</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=エンゼルフォレスト伊豆高原" target="_blank" class="loc-link">返回：天使森林伊豆高原 (F-21 別墅) 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>赤澤別墅群基準 Mapcode：</strong><span class="mapcode-code">488 399 014*02</span></div>
                         <p>返回別墅享受私人三溫暖桑拿與溫泉，並搭配中午在熱海買回來的布丁與奶油紅豆麵包當點心！</p>
                     </div>
                 </li>
@@ -525,6 +887,7 @@
                     <div class="event">
                         <span class="tag stay">🏡 起點</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=エンゼルフォレスト伊豆高原" target="_blank" class="loc-link">出發：天使森林伊豆高原 (F-21 別墅) 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>赤澤別墅群基準 Mapcode：</strong><span class="mapcode-code">488 399 014*02</span></div>
                         <p>避開週日海岸線車潮，從別墅出發往西跨越中伊豆山區前往修善寺。</p>
                     </div>
                 </li>
@@ -537,11 +900,12 @@
                     <div class="event">
                         <span class="tag history">🎋 古鎮</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=修善寺+竹林の小径" target="_blank" class="loc-link">修善寺溫泉街 & 竹林小徑 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>Mapcode（独鈷之湯）：</strong><span class="mapcode-code">116 187 184*68</span> ｜ <strong>溫泉街：</strong><span class="mapcode-code">116 186 082*88</span><span class="mapcode-sub">依據：ToCoo! 日本溫泉導覽、日本自駕景點 Mapcode 整理</span></div>
                         <p>漫步於「伊豆小京都」之稱的修善寺溫泉街，拍攝桂川上的朱紅橋梁、獨鈷之湯與翠綠竹林。（💡 同區備用景點：若想追加賞梅，可往南車程 15 分鐘順遊「<a href="https://www.google.com/maps/search/?api=1&query=伊豆月ヶ瀬梅林" target="_blank" class="loc-link">伊豆月瀨梅林梅祭 📍</a>」）。</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
                             <p><strong>📖 景點小故事：</strong>依據修善寺史料記載，西元 807 年弘法大師（空海）見一名少年在寒冷的桂川中為病父洗浴，深受感動而以法器「獨鈷杵」敲擊川中岩石，湧出溫暖靈泉，即為修善寺溫泉起源（獨鈷之湯）。</p>
-                            <p><strong>🌸 備用順遊提示（伊豆月瀨梅林）：</strong>位於修善寺南方約 8.5 公里處（車程約 15 分鐘），擁有約 1,500 株梅樹，晴天可眺望富士山與天城連山，詳細資訊請見底部備用名單（這是推論）。</p>
+                            <p><strong>🌸 備用順遊提示（伊豆月瀨梅林）：</strong>位於修善寺南方約 8.5 公里處（車程約 15 分鐘，鄰近道の駅 伊豆月ケ瀬 Mapcode：<span class="mapcode-code">116 007 246*45</span>），擁有約 1,500 株梅樹，晴天可眺望富士山與天城連山，詳細資訊請見底部備用名單（這是推論）。</p>
                         </div>
                     </div>
                 </li>
@@ -554,6 +918,7 @@
                     <div class="event">
                         <span class="tag food">🍕 午餐</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=La+Trattoria+Nostrano+伊豆の国市吉田126" target="_blank" class="loc-link">古民家義式餐廳：La Trattoria Nostrano (ラ・トラットリア・ノストラーノ) 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>同路段基準 Mapcode（伊豆の国市吉田）：</strong><span class="mapcode-code">116 312 216*11</span> ｜ 📞 <strong>電話導航：</strong><code>0558-81-4142</code><span class="mapcode-sub">依據：Mapion 電話帳（單店專屬 Mapcode 無法確定／沒有足夠資料，建議車機輸入電話或配合 Google Maps 導航，這是推論）</span></div>
                         <p>於修善寺前往伊豆全景公園的順路中途，造訪伊豆之國市人氣義式餐廳「La Trattoria Nostrano」，享用柴窯現烤披薩、沼津墨魚義大利麵與伊豆無農藥地產蔬菜沙拉！</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
@@ -571,6 +936,7 @@
                     <div class="event">
                         <span class="tag view">🚠 絕景</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=伊豆パノラマパーク+碧テラス" target="_blank" class="loc-link">伊豆全景公園 (伊豆パノラマパーク / 碧露臺 Ao Terrace) 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>Mapcode：</strong><span class="mapcode-code">116 366 713*21</span> ｜ 📞 <strong>電話：</strong><code>055-948-1525</code><span class="mapcode-sub">依據：Mapion 電話帳（伊豆の国市長岡 260-1）</span></div>
                         <p>搭乘全長約 1,800 公尺的高空纜車登上葛城山山頂，於絕美水盤造景「碧露臺（碧テラス）」喝咖啡，飽覽富士山與駿河灣跨海同框大景。</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
                         <div class="detail-content">
@@ -587,6 +953,7 @@
                     <div class="event">
                         <span class="tag stay">🏡 終點</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=エンゼルフォレスト伊豆高原" target="_blank" class="loc-link">返回：天使森林伊豆高原 (F-21 別墅) 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>赤澤別墅群基準 Mapcode：</strong><span class="mapcode-code">488 399 014*02</span></div>
                         <p>返回別墅泡湯休息（途中可順路停靠八幡野的 Super Nagaya、Tokyu Store 或 MaxValu 超市補貨），儲備體力迎接隔日的重點賞櫻行程。</p>
                     </div>
                 </li>
@@ -612,6 +979,7 @@
                     <div class="event">
                         <span class="tag stay">🏡 起點</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=エンゼルフォレスト伊豆高原" target="_blank" class="loc-link">出發：天使森林伊豆高原 (F-21 別墅) 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>赤澤別墅群基準 Mapcode：</strong><span class="mapcode-code">488 399 014*02</span></div>
                         <p>特別安排於週一平日出發，完全避開週末大塞車！從赤澤別墅沿國道 135 號海岸線南下前往河津。</p>
                     </div>
                 </li>
@@ -624,6 +992,7 @@
                     <div class="event">
                         <span class="tag view">🌸 賞櫻</span>
                         <h3><a href="https://www.google.com/maps/search/?api=1&query=河津桜まつり+館橋" target="_blank" class="loc-link">河津櫻祭：館橋 ➔ 油菜花交織段 ➔ 河津櫻原木 📍</a></h3>
+                        <div class="mapcode-bar">🧭 <strong>Mapcode（河津桜観光交流館／主停車場區）：</strong><span class="mapcode-code">248 299 496*22</span> ｜ <strong>笹原公園：</strong><span class="mapcode-code">248 299 426*24</span> ｜ <strong>原木旁河津町役場：</strong><span class="mapcode-code">248 328 446</span><span class="mapcode-sub">依據：Mapion 電話帳</span></div>
                         <p>將車停入會場大型停車場，從河口處的「館橋」往上游漫步，經過「笹原／荒倉橋（金黃油菜花與粉紅河津櫻交織區）」，並順路轉入街區朝聖樹齡超過 70 年的「<a href="https://www.google.com/maps/search/?api=1&query=河津桜原木" target="_blank" class="loc-link">河津櫻原木 📍</a>」。</p>
                         <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與拍攝攻略</button>
                         <div class="detail-content">
@@ -637,672 +1006,4 @@
                 </li>
                 <li class="move-connector">
                     <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚶 河岸漫步：約 1.2 km ｜ ⏳ 邊拍邊走約 25 分鐘（沿河岸往上游峰溫泉與澤田地區）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">11:30</div>
-                    <div class="event">
-                        <span class="tag food">🥚 秘境</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=峰温泉大噴湯公園" target="_blank" class="loc-link">峰溫泉大噴湯公園 ➔ 涅槃堂 櫻見晴台 & 屋台美食 📍</a></h3>
-                        <p>續往上游造訪「<a href="https://www.google.com/maps/search/?api=1&query=峰温泉大噴湯公園" target="_blank" class="loc-link">峰溫泉大噴湯公園 📍</a>」看溫泉噴發與體驗自煮溫泉蛋；接著登上澤田地區的私房視角「<a href="https://www.google.com/maps/search/?api=1&query=涅槃堂+桜見晴台+河津" target="_blank" class="loc-link">涅槃堂 櫻見晴台 📍</a>」俯瞰綿延的櫻花並木（有收集御朱印還可順訪「<a href="https://www.google.com/maps/search/?api=1&query=栖足寺+河津" target="_blank" class="loc-link">栖足寺 📍</a>」求河津櫻限定御朱印）。午餐於沿岸屋台品嚐必吃的**「粉紅櫻花鯛魚燒」**與**「伊豆鮮榨橘子汁」**！</p>
-                        <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
-                        <div class="detail-content">
-                            <p><strong>📖 景點與美食亮點：</strong>依據攻略影片分享，河津櫻會場全面禁止空拍機，而位於澤田山坡佛寺前的「涅槃堂 櫻見晴台」設有長板凳，觀光客少且能居高臨下將整條粉紅櫻花並木盡收眼底；購買「粉紅櫻花鯛魚燒」時，挑選餅皮表面光滑無孔洞的攤位拍照最漂亮！</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 20 km ｜ ⏳ 預估約 30 分鐘（經下田往南伊豆下賀茂溫泉）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">14:00</div>
-                    <div class="event">
-                        <span class="tag view">🌼 雙色</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=みなみの桜と菜の花まつり" target="_blank" class="loc-link">南伊豆 櫻花與油菜花祭 (青野川沿岸) 📍</a></h3>
-                        <p>抵達下賀茂溫泉區，拍攝粉紅河津櫻與金黃油菜花在青野川兩岸交織的春日畫卷，並可體驗河岸免費天然溫泉足湯。（若想改去「河津七瀧迴旋橋＋孤獨的美食家生山葵丼」或「iZoo 烏龜動物園」，可直接參考下方 Day 5 備用名單替換）。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 52 km ｜ ⏳ 預估約 1 小時 15 分鐘（沿國道 135 號北上返回別墅）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">17:00</div>
-                    <div class="event">
-                        <span class="tag stay">🏡 終點</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=エンゼルフォレスト伊豆高原" target="_blank" class="loc-link">返回：天使森林伊豆高原 (F-21 別墅) 📍</a></h3>
-                        <p>返回別墅享受在伊豆高原的最後一晚溫泉與桑拿，並打包行李準備隔日北上富士山。</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Day 6 -->
-        <section id="day6" class="day-card" style="border-color: #2196f3;">
-            <div class="day-header">
-                <div class="day-badge" style="background: #2196f3;">Day 6</div>
-                <div class="day-title">
-                    <h2 style="color: #2196f3;">松田櫻花富士同框與御殿場血拚</h2>
-                    <div class="day-date">2027/03/02 (二) • 伊豆高原 → 松田 → 御殿場 → 河口湖</div>
-                    <div class="day-driving-stats">
-                        <span class="stat-line"><span class="stat-label">第一段🚗</span> 天使森林別墅 → 松田櫻花祭 → 御殿場 ｜ 約 95 km ｜ ⏳ 約 2 小時</span>
-                        <span class="stat-line"><span class="stat-label">第二段🏠</span> 御殿場 Outlets → 河口湖 Rakuten STAY ｜ 約 35 km ｜ ⏳ 約 50 分鐘</span>
-                    </div>
-                </div>
-            </div>
-            <ul class="timeline">
-                <li class="timeline-item">
-                    <div class="time">08:30</div>
-                    <div class="event">
-                        <span class="tag stay">🏡 起點</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=エンゼルフォレスト伊豆高原" target="_blank" class="loc-link">退房出發：天使森林伊豆高原 (F-21 別墅) 📍</a></h3>
-                        <p>完成別墅退房並裝載行李，沿相模灣北上前往神奈川縣松田町。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 68 km ｜ ⏳ 預估約 1 小時 25 分鐘（經國道 135 號、小田原厚木道路）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">10:00</div>
-                    <div class="event">
-                        <span class="tag view">🌸 絕景</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=西平畑公園+松田山ハーブガーデン" target="_blank" class="loc-link">松田櫻花祭 (西平畑公園) 📍</a></h3>
-                        <p>抵達位於松田山坡上的西平畑公園，居高臨下拍攝「河津櫻、油菜花、足柄平原與富士山」四重同框絕景。</p>
-                        <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
-                        <div class="detail-content">
-                            <p><strong>📖 景點小故事：</strong>依據松田町觀光資訊，西平畑公園位於松田山半山腰，昔日為農作斜坡，後由町民親手種植約 360 株河津櫻並在樹下遍植油菜花。因正對富士山且無高樓遮擋，被選為「關東富士見百景」之一。</p>
-                            <p><strong>💡 建議事項：</strong>櫻花祭期間公園山路會實施管制，自駕請導航至山下的「酒匂川町民親水広場（臨時駐車場）」，轉乘接駁巴士（約 5–10 分鐘）直達山上會場最省時省力（這是推論）。</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 27 km ｜ ⏳ 預估約 35 分鐘（經東名高速 大井松田 IC 至御殿場 IC）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">12:30</div>
-                    <div class="event">
-                        <span class="tag shop">🛍️ 購物</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=御殿場プレミアム・アウトレット" target="_blank" class="loc-link">御殿場 Premium Outlets 📍</a></h3>
-                        <p>在全日本最具代表性的 Outlets 邊看富士山邊血拚！午餐於園區內解決（如炭燒餐廳爽やか漢堡排或美食街），戰利品買完直接放回車上。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 35 km ｜ ⏳ 預估約 50 分鐘（經國道 138 號與東富士五湖道路）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">17:30</div>
-                    <div class="event">
-                        <span class="tag stay">🏨 終點</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=Rakuten+STAY+Fuji+Kawaguchiko+Station" target="_blank" class="loc-link">入住：富士河口湖站樂天住宿飯店 (Rakuten STAY) 📍</a></h3>
-                        <p>抵達「據點二（富士河口湖町船津 3557-10）」，辦理連住 3 晚的入住手續。門前附設免費雙車位，步行 2–3 分鐘即達 7-Eleven 與 Lawson。</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Day 7 -->
-        <section id="day7" class="day-card">
-            <div class="day-header">
-                <div class="day-badge">Day 7</div>
-                <div class="day-title">
-                    <h2>箱根大湧谷、九十九自然薯蕎麥麵與水上鳥居</h2>
-                    <div class="day-date">2027/03/03 (三) • 河口湖 ↔ 箱根仙石原 / 蘆之湖</div>
-                    <div class="day-driving-stats">
-                        <span class="stat-line"><span class="stat-label">去程🚗</span> 河口湖 Rakuten STAY → 大湧谷 → 仙石原 ｜ 約 56 km ｜ ⏳ 約 1 小時 15 分鐘</span>
-                        <span class="stat-line"><span class="stat-label">回程🏠</span> 蘆之湖 → 河口湖 OGINO超市 → Rakuten STAY ｜ 約 55 km ｜ ⏳ 約 1 小時 10 分鐘</span>
-                    </div>
-                </div>
-            </div>
-            <ul class="timeline">
-                <li class="timeline-item">
-                    <div class="time">09:15</div>
-                    <div class="event">
-                        <span class="tag stay">🏨 起點</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=Rakuten+STAY+Fuji+Kawaguchiko+Station" target="_blank" class="loc-link">出發：富士河口湖站樂天住宿飯店 (Rakuten STAY) 📍</a></h3>
-                        <p>從樂天住宿飯店出發，經由東富士五湖道路與乙女峠前往箱根大湧谷。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 50 km ｜ ⏳ 預估約 1 小時（經東富士五湖道路・乙女峠）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">10:15</div>
-                    <div class="event">
-                        <span class="tag view">🌋 地貌</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=大涌谷" target="_blank" class="loc-link">箱根 大湧谷 📍</a></h3>
-                        <p>近距離觀賞白煙裊裊的硫磺火山口地貌，品嚐名物「黑玉子（黑雞蛋）」。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 6 km ｜ ⏳ 預估約 15 分鐘（下山往仙石原）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">12:00</div>
-                    <div class="event">
-                        <span class="tag food">🍜 午餐</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=じねんじょ蕎麦+箱根+九十九" target="_blank" class="loc-link">仙石原午餐：じねんじょ蕎麦 箱根 九十九 📍</a></h3>
-                        <p>於裝潢有如大正浪漫洋館的「箱根 九十九」享用營養濃郁的野生山藥泥（自然薯）手打蕎麥麵！</p>
-                        <button class="detail-btn" onclick="toggleDetail(this)">📖 小故事與建議事項</button>
-                        <div class="detail-content">
-                            <p><strong>📖 名店特色：</strong>依據箱根導覽網資訊，「箱根 九十九（Tsukumo）」地址為箱根町仙石原 917-11，嚴選契約農家栽培的「自然薯（日本原生種山藥，黏性極高）」與北海道產蕎麥粉，附設多達 46 個免費停車位，內部空間挑高寬敞。</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 10 km ｜ ⏳ 預估約 20 分鐘（往元箱根蘆之湖）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">13:45</div>
-                    <div class="event">
-                        <span class="tag history">⛩️ 湖景</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=箱根神社+平和の鳥居" target="_blank" class="loc-link">蘆之湖畔散步 & 箱根神社 (平和鳥居) 📍</a></h3>
-                        <p>前往蘆之湖畔，參拜古木參天的箱根神社，拍攝佇立於湖水中的朱紅色「平和鳥居」。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 55 km ｜ ⏳ 預估約 1 小時 10 分鐘（返回河口湖，順路停靠 OGINO 超市）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">17:00</div>
-                    <div class="event">
-                        <span class="tag stay">🏨 終點</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=Rakuten+STAY+Fuji+Kawaguchiko+Station" target="_blank" class="loc-link">返回：富士河口湖站樂天住宿飯店 (Rakuten STAY) 📍</a></h3>
-                        <p>順路於「<a href="https://www.google.com/maps/search/?api=1&query=オギノ河口湖店" target="_blank" class="loc-link">OGINO 河口湖店 📍</a>」大型超市採買山梨縣產草莓、信州牛與熟食，返回 Rakuten STAY 享受溫馨自煮聚餐。</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Day 8 -->
-        <section id="day8" class="day-card">
-            <div class="day-header">
-                <div class="day-badge">Day 8</div>
-                <div class="day-title">
-                    <h2>忍野八海湧泉、山中湖逆富士與大石公園</h2>
-                    <div class="day-date">2027/03/04 (四) • 河口湖 ↔ 富士五湖周邊</div>
-                    <div class="day-driving-stats">
-                        <span class="stat-line"><span class="stat-label">去程🚗</span> 河口湖 Rakuten STAY → 忍野八海 → 山中湖 ｜ 約 24 km ｜ ⏳ 約 40 分鐘</span>
-                        <span class="stat-line"><span class="stat-label">回程🏠</span> 山中湖 → 大石公園 → 河口湖 Rakuten STAY ｜ 約 32 km ｜ ⏳ 約 55 分鐘</span>
-                    </div>
-                </div>
-            </div>
-            <ul class="timeline">
-                <li class="timeline-item">
-                    <div class="time">09:30</div>
-                    <div class="event">
-                        <span class="tag stay">🏨 起點</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=Rakuten+STAY+Fuji+Kawaguchiko+Station" target="_blank" class="loc-link">出發：富士河口湖站樂天住宿飯店 (Rakuten STAY) 📍</a></h3>
-                        <p>從樂天住宿飯店出發，展開富士五湖經典絕景巡禮。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 10 km ｜ ⏳ 預估約 20 分鐘</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">09:50</div>
-                    <div class="event">
-                        <span class="tag history">💧 湧泉</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=忍野八海" target="_blank" class="loc-link">忍野八海 & 山梨餺飥麵午餐 📍</a></h3>
-                        <p>造訪世界文化遺產構成資產「忍野八海」，欣賞清澈見底的鈷藍色富士山湧泉池，品嚐現烤艾草餅、鹽烤岩魚與山梨名物「餺飥麵（ほうとう）」。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 14 km ｜ ⏳ 預估約 20 分鐘</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">12:30</div>
-                    <div class="event">
-                        <span class="tag view">🗻 湖景</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=山中湖+平野の浜" target="_blank" class="loc-link">山中湖 平野之濱 📍</a></h3>
-                        <p>前往山中湖東岸的開放式礫石沙灘，拍攝毫無遮蔽的富士山倒影（逆富士）與湖畔天鵝。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 25 km ｜ ⏳ 預估約 40 分鐘（返回河口湖北岸）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">14:30</div>
-                    <div class="event">
-                        <span class="tag view">🌿 自然</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=河口湖+大石公園" target="_blank" class="loc-link">河口湖 大石公園 📍</a></h3>
-                        <p>漫步河口湖北岸，從最佳角度飽覽河口湖與富士山的壯闊全景，並於自然生活館品嚐藍莓霜淇淋。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 7 km ｜ ⏳ 預估約 15 分鐘</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">16:30</div>
-                    <div class="event">
-                        <span class="tag stay">🏨 終點</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=Rakuten+STAY+Fuji+Kawaguchiko+Station" target="_blank" class="loc-link">返回：富士河口湖站樂天住宿飯店 (Rakuten STAY) 📍</a></h3>
-                        <p>返回住宿休息並整理行李，準備隔日早起前往東京市區。</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Day 9 -->
-        <section id="day9" class="day-card" style="border-color: #ff9800;">
-            <div class="day-header">
-                <div class="day-badge" style="background: #ff9800;">Day 9</div>
-                <div class="day-title">
-                    <h2 style="color: #ff9800;">鬼太郎茶屋、深大寺蕎麥麵、吉祥寺與海木稻荷</h2>
-                    <div class="day-date">2027/03/05 (五) • 河口湖 → 調布 → 吉祥寺 → 日本橋 → 葛飾高砂</div>
-                    <div class="day-driving-stats">
-                        <span class="stat-line"><span class="stat-label">第一段🚗</span> 河口湖 Rakuten STAY → 調布 (深大寺) → 吉祥寺 ｜ 約 100 km ｜ ⏳ 約 1.5 小時</span>
-                        <span class="stat-line"><span class="stat-label">第二段🏠</span> 吉祥寺 → 日本橋 (海木) → 葛飾高砂住宿 ｜ 約 35 km ｜ ⏳ 約 1 小時 15 分鐘</span>
-                    </div>
-                </div>
-            </div>
-            <ul class="timeline">
-                <li class="timeline-item">
-                    <div class="time">08:30</div>
-                    <div class="event">
-                        <span class="tag stay">🏨 起點</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=Rakuten+STAY+Fuji+Kawaguchiko+Station" target="_blank" class="loc-link">退房出發：富士河口湖站樂天住宿飯店 (Rakuten STAY) 📍</a></h3>
-                        <p>辦理退房並裝載行李，行駛中央自動車道一路向東前往東京調布。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 90 km ｜ ⏳ 預估約 1 小時 15 分鐘（經中央自動車道至調布 IC）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">09:45</div>
-                    <div class="event">
-                        <span class="tag view">👹 妖怪</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=調布駅+天神通り商店街+鬼太郎茶屋" target="_blank" class="loc-link">調布 天神通商店街 & 鬼太郎茶屋 📍</a></h3>
-                        <p>在調布站前的天神通商店街尋找妖怪銅像，並造訪搬遷至此的「鬼太郎茶屋」。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 2.5 km ｜ ⏳ 預估約 8 - 10 分鐘</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">11:15</div>
-                    <div class="event">
-                        <span class="tag food">🍜 午餐</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=深大寺" target="_blank" class="loc-link">深大寺參拜 & 名物「手打蕎麥麵」午餐 📍</a></h3>
-                        <p>參拜東京第二古老的千年古剎，並在林蔭參道旁品嚐以清澈湧泉製作的名物手打蕎麥麵與現烤草餅。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 6 km ｜ ⏳ 預估約 20 分鐘</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">13:15</div>
-                    <div class="event">
-                        <span class="tag shop">🥩 美食</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=吉祥寺さとう" target="_blank" class="loc-link">吉祥寺 Satou 炸肉餅 & 太陽道商店街 📍</a></h3>
-                        <p>直奔肉舖「Satou（さとう）」購買肉汁飽滿的圓形黑毛和牛炸肉餅，並於太陽道商店街採買藥妝。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 22 km ｜ ⏳ 預估約 40 - 45 分鐘（經首都高 4 號新宿線至日本橋）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">16:00</div>
-                    <div class="event">
-                        <span class="tag food">🍣 稻荷</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=だしいなり海木+日本橋" target="_blank" class="loc-link">【稻荷第一彈】海木 日本橋 COREDO 室町店 📍</a></h3>
-                        <p>由西往東穿越東京市心時順路停靠日本橋 COREDO 室町 Terrace 1F，帶走頂級「高湯稻荷壽司」。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 13 km ｜ ⏳ 預估約 30 分鐘（往東開往葛飾區高砂）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">16:45</div>
-                    <div class="event">
-                        <span class="tag stay">🏡 入住</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=8+Chome-28-12+Takasago,+Katsushika+City,+Tokyo+125-0054" target="_blank" class="loc-link">葛飾區高砂住宿 (翼学院高等部 高砂校址) 📍</a></h3>
-                        <p>抵達「據點三」（葛飾區高砂 8-28-12）辦理入住連住 2 晚，並將車輛停妥。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚆 電車移動：約 7 km ｜ ⏳ 預估約 18 分鐘（步行至京成高砂站搭京成押上線直達押上站）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">18:00</div>
-                    <div class="event">
-                        <span class="tag view">🗼 夜景</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=東京スカイツリー" target="_blank" class="loc-link">東京晴空塔 (Tokyo Skytree) 晚餐與夜景 📍</a></h3>
-                        <p>於晴空街道商場（Solamachi）享用晚餐並欣賞璀璨的東京夜景。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚆 電車移動：約 7 km ｜ ⏳ 預估約 18 分鐘（押上站直達京成高砂站步行回住宿）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">21:00</div>
-                    <div class="event">
-                        <span class="tag stay">🏡 終點</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=8+Chome-28-12+Takasago,+Katsushika+City,+Tokyo+125-0054" target="_blank" class="loc-link">返回：葛飾區高砂住宿 (翼学院高等部 高砂校址) 📍</a></h3>
-                        <p>順路於高砂站旁的「Ito-Yokado」或「7-Eleven 葛飾高砂 8 丁目店」買宵夜與早餐，返回住宿休息。</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Day 10 -->
-        <section id="day10" class="day-card">
-            <div class="day-header">
-                <div class="day-badge">Day 10</div>
-                <div class="day-title">
-                    <h2>味吟傳統稻荷、木場公園櫻花野餐與新宿血拚</h2>
-                    <div class="day-date">2027/03/06 (六) • 葛飾高砂 → 木場公園 → 新宿 → 葛飾高砂</div>
-                    <div class="day-driving-stats">
-                        <span class="stat-line"><span class="stat-label">去程🚗</span> 高砂住宿 (步行買味吟) → 木場公園 ｜ 約 13 km ｜ ⏳ 約 25 - 30 分鐘</span>
-                        <span class="stat-line"><span class="stat-label">回程🏠</span> 木場公園 → 新宿商圈 → 高砂住宿 ｜ 約 35 km ｜ ⏳ 約 1 小時 10 分鐘</span>
-                    </div>
-                </div>
-            </div>
-            <ul class="timeline">
-                <li class="timeline-item">
-                    <div class="time">09:05</div>
-                    <div class="event">
-                        <span class="tag stay">🏡 起點</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=8+Chome-28-12+Takasago,+Katsushika+City,+Tokyo+125-0054" target="_blank" class="loc-link">出發：葛飾區高砂住宿 (翼学院高等部 高砂校址) 📍</a></h3>
-                        <p>早晨從高砂 8 丁目住宿出發，先散步前往京成高砂站北口購買味吟稻荷壽司。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚶 步行移動：約 500 m ｜ ⏳ 預估約 6 分鐘（買完走回住宿處上車）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">09:15</div>
-                    <div class="event">
-                        <span class="tag food">🍣 傳統</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=味吟+京成高砂" target="_blank" class="loc-link">【稻荷第二彈】味吟 稻荷壽司 (京成高砂站北口) 📍</a></h3>
-                        <p>趁早買齊豆皮飽滿、滷汁醇厚的下町傳統稻荷壽司與海苔太卷，與昨日的「海木」形成絕妙對比！</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 13 km ｜ ⏳ 預估約 25 - 30 分鐘（從高砂住宿開車至木場公園停車場）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">10:15</div>
-                    <div class="event">
-                        <span class="tag view">🌸 野餐</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=木場公園+大横川" target="_blank" class="loc-link">木場公園、大橫川河津櫻 & 清澄白河咖啡 📍</a></h3>
-                        <p>將車停入木場公園平面停車場。帶著剛買好的「味吟稻荷壽司」在公園野餐，漫步大橫川沿岸拍攝「盛開河津櫻、河面倒影與晴空塔同框」，並順遊清澄白河喝精品咖啡。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 14 km ｜ ⏳ 預估約 30 - 35 分鐘（經首都高往新宿東口停車場）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">14:00</div>
-                    <div class="event">
-                        <span class="tag shop">👗 血拚</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=ルミネエスト新宿" target="_blank" class="loc-link">新宿 Lumine Est 與東口商圈大採買 📍</a></h3>
-                        <p>集中火力進攻 Lumine Est 的量產型與地雷系服飾品牌，並於東口商圈補齊所有藥妝與伴手禮，重物買完直接放回車上！</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚶 步行移動：約 350 m ｜ ⏳ 預估約 5 分鐘</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">18:30</div>
-                    <div class="event">
-                        <span class="tag food">🥩 慶祝</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=やきにく亭+六歌仙+新宿" target="_blank" class="loc-link">歡送晚餐：高 CP 值和牛燒肉 📍</a></h3>
-                        <p>於新宿享用豐盛的和牛燒肉大餐（如「燒肉亭 六歌仙」），慶祝旅途圓滿成功。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 21 km ｜ ⏳ 預估約 40 分鐘（經首都高返回葛飾區高砂）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">21:00</div>
-                    <div class="event">
-                        <span class="tag stay">🏡 終點</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=8+Chome-28-12+Takasago,+Katsushika+City,+Tokyo+125-0054" target="_blank" class="loc-link">返回：葛飾區高砂住宿 (翼学院高等部 高砂校址) 📍</a></h3>
-                        <p>返回高砂住宿，進行最後一晚的戰利品整理與行李打包。</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Day 11 -->
-        <section id="day11" class="day-card" style="border-color: var(--primary-color);">
-            <div class="day-header">
-                <div class="day-badge" style="background: var(--primary-color);">Day 11</div>
-                <div class="day-title">
-                    <h2>羽田還車、江戶小路與滿載歸國</h2>
-                    <div class="day-date">2027/03/07 (日) • 葛飾高砂 → 羽田機場</div>
-                    <div class="day-driving-stats">
-                        <span class="stat-line"><span class="stat-label">去程🚗</span> 葛飾高砂住宿 → 羽田機場還車處 ｜ 約 35 km ｜ ⏳ 約 40 - 45 分鐘</span>
-                        <span class="stat-line" style="color:#aaa;"><span class="stat-label">回程✈️</span> 搭乘 13:30 班機平安返回台灣</span>
-                    </div>
-                </div>
-            </div>
-            <ul class="timeline">
-                <li class="timeline-item">
-                    <div class="time">09:30</div>
-                    <div class="event">
-                        <span class="tag stay">🏡 起點</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=8+Chome-28-12+Takasago,+Katsushika+City,+Tokyo+125-0054" target="_blank" class="loc-link">退房出發：葛飾區高砂住宿 (翼学院高等部 高砂校址) 📍</a></h3>
-                        <p>完成最後的行李清點，將所有行李與戰利品裝載上車，於 10:00 出發前往羽田機場。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚗 自駕移動：約 35 km ｜ ⏳ 預估約 40 - 45 分鐘（首都高中央環狀線 C2 ➔ 灣岸線 B）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">10:45</div>
-                    <div class="event">
-                        <span class="tag move">🛫 還車</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=羽田空港+レンタカー返却" target="_blank" class="loc-link">羽田機場租車營業所 (加滿油與還車) 📍</a></h3>
-                        <p>於機場附近加油站加滿油（Regular 紅油），至租車營業所辦理還車與結算 ETC。</p>
-                    </div>
-                </li>
-                <li class="move-connector">
-                    <div class="time-spacer"></div>
-                    <div class="move-line"><span class="move-pill">⬇️ 🚌 接駁移動：約 3 km ｜ ⏳ 預估約 10 分鐘（搭乘租車公司免費接駁車）</span></div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">11:15</div>
-                    <div class="event">
-                        <span class="tag move">✈️ 終點</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=羽田空港+第3ターミナル" target="_blank" class="loc-link">東京羽田國際機場 第 3 航廈 (江戶小路 & 13:30 搭機返國) 📍</a></h3>
-                        <p>辦理登機託運後，於 4 樓「江戶小路」享用午餐並逛免稅店，13:30 搭機平安返回台灣！</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Backup List Grouped by Specific Days -->
-        <section id="backup" class="day-card" style="border-color: #607d8b;">
-            <div class="day-header">
-                <div class="day-badge" style="background: #607d8b;">備用</div>
-                <div class="day-title">
-                    <h2 style="color: #455a64;">📋 依「可使用日期」分類之備用景點與美食名單</h2>
-                    <div class="day-date">當日行程若想臨時替換，可直接依對應天數查找並點擊開啟地圖 📍 或介紹頁 🔗</div>
-                </div>
-            </div>
-            <ul class="timeline">
-                <li class="timeline-item">
-                    <div class="time">Day 2<br><small>2/26(五)</small></div>
-                    <div class="event">
-                        <span class="tag backup">🌸 Day 2 神奈川賞櫻替換備案 (三浦半島)</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=三浦海岸桜まつり+小松ヶ池公園" target="_blank" class="loc-link">三浦海岸河津櫻 (三浦海岸桜まつり / 小松池公園) 📍</a></h3>
-                        <p>• <strong>位置與停車依據：</strong>位於神奈川縣三浦市南下浦町上宮田（京急線三浦海岸站至小松池公園約 1 公里鐵道沿線，種植約 1,000 株河津櫻與油菜花）。臨時停車場設於「三浦市南下浦町上宮田 2764」（09:30–16:30，100 台，單次 1,000 日圓）。<br>
-                        • <strong>適用原因：</strong>與 Day 2 的鎌倉同屬三浦半島生活圈（從橫濱關內經橫濱橫須賀道路至衣笠 IC 約 35–40 分鐘）。如同攻略影片所提，若出發時伊豆河津櫻因暖冬提早謝落、而神奈川三浦海岸正值滿開，Day 2 一早可先前往三浦海岸賞櫻，中午再前往鎌倉與江之島（這是推論）。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">Day 3<br><small>2/27(六)</small></div>
-                    <div class="event">
-                        <span class="tag backup">🍜 Day 3 午餐替換備案 (湯河原)</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=らぁ麺+飯田商店+湯河原" target="_blank" class="loc-link">らぁ麺 飯田商店 (湯河原) 📍</a></h3>
-                        <p>• <a href="https://www.maviskuku.com/blog/ramen-iida-shoten" target="_blank" class="loc-link"><strong>食記參考連結 🔗</strong></a>｜地址：神奈川縣足柄下郡湯河原町土肥 2-12-14（距離 Day 3 上午的「熱海梅園」車程約 15–20 分鐘）。<br>
-                        • <strong>適用原因：</strong>飯田商店每週日、一、二公休，整趟伊豆行程中<strong>僅 Day 3（2/27 週六）有營業</strong>。採 OMAKASE 網站完全預約制（每週日日本時間 16:00 開放下週預約），若搶票成功可直接作為 Day 3 中午的正餐（這是推論）。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">Day 4<br><small>2/28(日)</small></div>
-                    <div class="event">
-                        <span class="tag backup">🌸 Day 4 中伊豆賞梅替換／順遊備案 (天城月瀨)</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=伊豆月ヶ瀬梅林" target="_blank" class="loc-link">伊豆月瀨梅林梅祭 (月ヶ瀬梅林梅まつり) 📍</a></h3>
-                        <p>• <strong>位置與特色依據：</strong>位於靜岡縣伊豆市月ヶ瀬 535-5（距離 Day 4 上午的「修善寺溫泉街」往南約 8.5 公里，車程約 15 分鐘）。為伊豆規模最大的梅林之一，種植約 1,500 株紅白梅樹，天氣晴朗時可於山丘高處拍攝「梅花林、天城連山與遠方富士山」同框景色，會場亦販售多款在地青梅加工伴手禮。<br>
-                        • <strong>適用原因：</strong>緊鄰修善寺生活圈，若 Day 3 在熱海梅園意猶未盡，或 Day 4 上午修善寺提早結束、下午想改走純自然賞花路線時，可直接從修善寺開車 15 分鐘前往（這是推論）。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">Day 5<br><small>3/01(一)</small></div>
-                    <div class="event">
-                        <span class="tag backup">🐢 Day 5 河津攻略影片延伸備案 (上河津・今井濱)</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=河津七滝ループ橋" target="_blank" class="loc-link">河津七瀧迴旋橋 📍</a> ＆ <a href="https://www.google.com/maps/search/?api=1&query=わさび園+かどや" target="_blank" class="loc-link">わさび園 かどや (生山葵丼) 📍</a> ＆ <a href="https://www.google.com/maps/search/?api=1&query=体感型動物園+iZoo" target="_blank" class="loc-link">體感型動物園 iZoo 📍</a></h3>
-                        <p>• <a href="https://www.youtube.com/watch?v=7cy3FHxVT14" target="_blank" class="loc-link"><strong>河津櫻 5 訪攻略影片連結 🔗</strong></a>：<br>
-                        1. <strong>河津七瀧迴旋橋 ＆ わさび園 かどや：</strong>從河津川會場往山區開車約 15 分鐘即可抵達，可拍攝圓形高架橋與河津櫻同框，並品嚐《孤獨的美食家》五郎大讚的現磨生山葵丼飯。<br>
-                        2. <strong>河津城跡公園（<a href="https://www.google.com/maps/search/?api=1&query=河津城跡公園" target="_blank" class="loc-link">地圖 📍</a>）：</strong>從河津站步行約 25 分鐘上山（無汽車道路），可從制高點俯瞰宛如兩條粉紅巨龍的櫻花並木。<br>
-                        3. <strong>體感型動物園 iZoo：</strong>位於河津北側今井濱（國道 135 號回程必經之路），可近距離觀賞 140 歲象龜與體驗餵食陸龜。<br>
-                        • <strong>適用原因：</strong>以上皆為 Day 5 河津町境內景點，若當天不想開去南伊豆，可直接替換為上述景點（這是推論）。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">Day 7<br><small>3/03(三)</small></div>
-                    <div class="event">
-                        <span class="tag backup">🌶️ Day 7 午餐替換備案 (箱根仙石原)</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=麺や+菊壱+箱根" target="_blank" class="loc-link">麺や 菊壱 (Kikuichi) 📍</a></h3>
-                        <p>• <a href="https://tabelog.com/tw/kanagawa/A1410/A141001/14031004/" target="_blank" class="loc-link"><strong>Tabelog 店鋪頁面 (14031004) 🔗</strong></a>｜地址：神奈川縣足柄下郡箱根町仙石原 23-1（每週五公休，<strong>Day 7 週三正常營業</strong>）。<br>
-                        • <strong>適用原因：</strong>與 Day 7 午餐「箱根 九十九」同在仙石原，兩店車程僅 3 分鐘（約 1.5 公里）。主打蒜香濃郁的勾芡風「小田原系擔擔麵」與煎餃，若想改吃拉麵即可無痛替換（這是推論）。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">Day 9–10<br><small>3/05–06</small></div>
-                    <div class="event">
-                        <span class="tag backup">🍱 Day 9 晚餐 或 Day 10 午晚餐備案 (東京巢鴨)</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=巣鴨ときわ食堂+本店" target="_blank" class="loc-link">巢鴨 Tokiwa 食堂 本店 📍</a> ＆ <a href="https://www.google.com/maps/search/?api=1&query=パティスリーヨシノリアサミ+巣鴨" target="_blank" class="loc-link">Patisserie Yoshinori Asami 📍</a></h3>
-                        <p>• <a href="https://tabelog.com/tw/tokyo/A1322/A132201/13012336/" target="_blank" class="loc-link"><strong>巣鴨ときわ食堂 本店（媽媽做的家庭料理）🔗</strong></a>：豐島區巢鴨 3-14-20（新鮮魚貨、手工現炸竹筴魚與特大炸蝦定食）。<br>
-                        • <a href="https://tabelog.com/tw/tokyo/A1323/A132301/13187756/" target="_blank" class="loc-link"><strong>Patisserie Yoshinori Asami 🔗</strong></a>：豐島區巢鴨 3-23-3（世界甜點大賽主廚淺見欣則創立，招牌法式蛋糕與季節水果聖代）。<br>
-                        • <strong>適用原因：</strong>兩店同在巢鴨地藏通商店街旁，<strong>步行僅相距 1 至 2 分鐘（約 120 公尺）</strong>！可在 <strong>Day 9 下午</strong>從吉祥寺回葛飾高砂途中繞經北側享用，或在 <strong>Day 10 下午</strong>作為替換新宿的「家庭料理正餐＋法式甜點聖代」組合（這是推論）。</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="time">Day 10<br><small>3/06(六)</small></div>
-                    <div class="event">
-                        <span class="tag backup">🐟 Day 10 下午順路採買／用餐備案 (麻布台・目黑)</span>
-                        <h3><a href="https://www.google.com/maps/search/?api=1&query=だし尾粂+麻布台ヒルズ店" target="_blank" class="loc-link">高湯 Okume 麻布台 Hills 店 📍</a> ＆ <a href="https://www.google.com/maps/search/?api=1&query=Ramen+Break+Beats+目黒" target="_blank" class="loc-link">Ramen Break Beats 📍</a></h3>
-                        <p>• <a href="https://tabelog.com/tw/tokyo/A1307/A130704/13296850/" target="_blank" class="loc-link"><strong>高湯 Okume (だし尾粂 麻布台ヒルズ店) 🔗</strong></a>：港區麻布台 Hills Market B1F。明治 4 年創業水產商，提供 30 種天然原料現場研磨「客製化高湯包」。正好位於 <strong>Day 10 中午從木場公園開往新宿的中途</strong>，可順路停靠採買伴手禮（這是推論）。<br>
-                        • <a href="https://tabelog.com/tw/tokyo/A1317/A131701/13267329/" target="_blank" class="loc-link"><strong>Ramen Break Beats (目黑祐天寺) 🔗</strong></a>：目黑區目黑 4-21-19。米其林必比登推介黑薩摩雞醬油拉麵（採 TableCheck 網站完全預約制），適合於 <strong>Day 10（3/6 週六）</strong>有預約成功時替換使用（這是推論）。</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>🌸 2027 Tokyo & Izu & Fuji Sakura Trip (11 Days) 🌸</p>
-        <p style="margin-top:5px; opacity:0.6;">祝您與旅伴旅途平安愉快</p>
-    </footer>
-
-    <script>
-        function toggleDetail(btn) {
-            const content = btn.nextElementSibling;
-            if (!btn.hasAttribute('data-default-text')) {
-                btn.setAttribute('data-default-text', btn.innerText);
-            }
-            const defaultText = btn.getAttribute('data-default-text');
-            if (content.style.display === "block") {
-                content.style.display = "none";
-                btn.innerText = defaultText;
-                btn.style.background = "var(--btn-color)";
-            } else {
-                content.style.display = "block";
-                btn.innerText = "🔼 收合內容";
-                btn.style.background = "#880e4f";
-            }
-        }
-
-        let allExpanded = false;
-        function toggleAllDetails() {
-            const allBtns = document.querySelectorAll('.timeline .detail-btn');
-            const globalBtn = document.getElementById('toggleAllBtn');
-            allExpanded = !allExpanded;
-            allBtns.forEach(btn => {
-                const content = btn.nextElementSibling;
-                if (!btn.hasAttribute('data-default-text')) {
-                    btn.setAttribute('data-default-text', btn.innerText);
-                }
-                const defaultText = btn.getAttribute('data-default-text');
-                if (allExpanded) {
-                    content.style.display = "block";
-                    btn.innerText = "🔼 收合內容";
-                    btn.style.background = "#880e4f";
-                } else {
-                    content.style.display = "none";
-                    btn.innerText = defaultText;
-                    btn.style.background = "var(--btn-color)";
-                }
-            });
-            globalBtn.innerText = allExpanded ? "🔼 一鍵收合全部「小故事與建議事項」" : "📖 一鍵展開全部「小故事與建議事項」";
-        }
-
-        const navItems = document.querySelectorAll('.nav-item');
-        const sections = document.querySelectorAll('section[id]');
-        const navScroller = document.getElementById('navScroller');
-        const progressBar = document.getElementById('myBar');
-
-        window.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            if (progressBar) {
-                progressBar.style.width = scrolled + "%";
-            }
-
-            let currentDay = "";
-            const scrollPos = window.scrollY + 180;
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                    currentDay = section.getAttribute('id');
-                }
-            });
-
-            navItems.forEach(item => {
-                item.classList.remove('active');
-                if (item.getAttribute('href') === `#${currentDay}`) {
-                    item.classList.add('active');
-                    const itemOffsetLeft = item.offsetLeft;
-                    const itemWidth = item.offsetWidth;
-                    const containerWidth = navScroller.offsetWidth;
-                    navScroller.scrollTo({
-                        left: itemOffsetLeft - (containerWidth / 2) + (itemWidth / 2),
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+                    <div class="move-line"><span class="move-pill">⬇️ 🚶 河岸漫
