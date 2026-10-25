@@ -2591,5 +2591,87 @@
             }
         });
     </script>
+    <!-- 🛡️ 修正手機版「一鍵複製」文字選取干擾與防連點錯亂模組 -->
+    <style>
+        /* 禁止手機長按彈出系統選取選單、禁止文字反白、消除手機點擊藍框 */
+        .mc-code,
+        .mc-tel,
+        .pk-copy,
+        .detail-btn,
+        .global-btn,
+        .mc-filter-btn,
+        .pk-filter-btn {
+            -webkit-user-select: none; /* Safari / iOS */
+            -moz-user-select: none;    /* Firefox */
+            -ms-user-select: none;     /* IE / Edge */
+            user-select: none;         /* 標準語法：禁止文字反白 */
+            -webkit-touch-callout: none; /* iOS Safari：禁止長按彈出放大鏡與拷貝選單 */
+            -webkit-tap-highlight-color: transparent; /* 移除手機點擊瞬間的預設灰藍底色框 */
+            touch-action: manipulation; /* 移除手機雙擊縮放延遲，讓單擊複製立即觸發 */
+        }
+
+        /* 點擊瞬間給予輕微縮放回饋，取代系統反白 */
+        .mc-code:active,
+        .mc-tel:active,
+        .pk-copy:active {
+            transform: scale(0.95);
+        }
+    </style>
+
+    <script>
+        // 統一且防連點錯亂的安全複製函式
+        function cleanCopyHandler(el) {
+            // 1. 首次點擊時，將原始純淨文字鎖定在 data-raw-text 屬性中
+            if (!el.hasAttribute('data-raw-text')) {
+                el.setAttribute('data-raw-text', el.innerText.trim());
+            }
+            const rawText = el.getAttribute('data-raw-text');
+
+            // 2. 若手機瀏覽器不小心殘留任何文字選取反白，強制清除
+            if (window.getSelection) {
+                window.getSelection().removeAllRanges();
+            }
+
+            // 3. 執行剪貼簿複製（支援現代 Clipboard API 與舊版相容備援）
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(rawText).catch(() => {
+                    fallbackCopyText(rawText);
+                });
+            } else {
+                fallbackCopyText(rawText);
+            }
+
+            // 4. 顯示「✅ 已複製」回饋，若在 1.2 秒內重複點擊則重置計時器，避免文字閃爍或複製到提示語
+            if (el.dataset.copyTimer) {
+                clearTimeout(Number(el.dataset.copyTimer));
+            }
+            el.innerText = '✅ 已複製: ' + rawText;
+
+            const timerId = setTimeout(() => {
+                el.innerText = rawText;
+                delete el.dataset.copyTimer;
+            }, 1200);
+            el.dataset.copyTimer = String(timerId);
+        }
+
+        // 離線或非 HTTPS 環境下的備援複製機制（設定 readonly 防止手機彈出虛擬鍵盤）
+        function fallbackCopyText(text) {
+            const tempInput = document.createElement('textarea');
+            tempInput.value = text;
+            tempInput.setAttribute('readonly', '');
+            tempInput.style.position = 'fixed';
+            tempInput.style.top = '-9999px';
+            tempInput.style.opacity = '0';
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            tempInput.setSelectionRange(0, tempInput.value.length);
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+        }
+
+        // 自動覆寫原本的 Mapcode 與停車場複製函式
+        window.copyMcCode = cleanCopyHandler;
+        window.copyPkText = cleanCopyHandler;
+    </script>
 </body>
 </html>
