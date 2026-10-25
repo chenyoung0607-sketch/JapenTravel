@@ -2431,5 +2431,165 @@
             });
         });
     </script>
+
+    <!-- 🚀 懸浮按鈕 (FAB)：自動跳轉今日行程 & 回到頂部 -->
+    <style>
+        .fab-wrapper {
+            position: fixed;
+            right: 18px;
+            bottom: 24px;
+            z-index: 1999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+        .fab-btn {
+            background: #ffffff;
+            color: var(--btn-color);
+            border: 2px solid #5d5d5d;
+            border-radius: 30px;
+            padding: 9px 16px;
+            font-size: 0.88rem;
+            font-weight: bold;
+            font-family: inherit;
+            cursor: pointer;
+            box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.15);
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        .fab-btn.today-btn {
+            background: var(--primary-color);
+            color: #ffffff;
+        }
+        .fab-btn:hover {
+            transform: translateY(-2px);
+            background: var(--btn-color);
+            color: #ffffff;
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+        }
+        /* 回到頂部按鈕：預設在頂端時隱藏，下滑後自動顯示 */
+        .fab-btn.top-btn {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+        }
+        .fab-btn.top-btn.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        /* 跳轉後的卡片高亮閃爍動畫 */
+        @keyframes highlightCard {
+            0% { box-shadow: 0 0 0 0 rgba(216, 27, 96, 0.6); }
+            50% { box-shadow: 0 0 0 10px rgba(216, 27, 96, 0.25); }
+            100% { box-shadow: var(--shadow); }
+        }
+        .day-card.flash-focus {
+            animation: highlightCard 1.4s ease-out;
+        }
+        /* 輕量狀態提示氣泡 (Toast) */
+        .fab-toast {
+            position: fixed;
+            bottom: 130px;
+            right: 18px;
+            background: rgba(93, 93, 93, 0.92);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 2001;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .fab-toast.show {
+            opacity: 1;
+        }
+    </style>
+
+    <div id="fabToast" class="fab-toast"></div>
+
+    <div class="fab-wrapper">
+        <button type="button" id="backToTopBtn" class="fab-btn top-btn" onclick="scrollToPageTop()" title="回到頁面最上方">
+            ⬆️ 回到頂部
+        </button>
+        <button type="button" class="fab-btn today-btn" onclick="jumpToTodaySchedule()" title="自動跳轉至今日行程">
+            📅 今日行程
+        </button>
+    </div>
+
+    <script>
+        // 1. 對應 2027/02/25 ~ 2027/03/07 的行程區塊 ID
+        const tripDateToIdMap = {
+            '2027-02-25': { id: 'day1', label: 'Day 1 (2/25)' },
+            '2027-02-26': { id: 'day2', label: 'Day 2 (2/26)' },
+            '2027-02-27': { id: 'day3', label: 'Day 3 (2/27)' },
+            '2027-02-28': { id: 'day4', label: 'Day 4 (2/28)' },
+            '2027-03-01': { id: 'day5', label: 'Day 5 (3/1)' },
+            '2027-03-02': { id: 'day6', label: 'Day 6 (3/2)' },
+            '2027-03-03': { id: 'day7', label: 'Day 7 (3/3)' },
+            '2027-03-04': { id: 'day8', label: 'Day 8 (3/4)' },
+            '2027-03-05': { id: 'day9', label: 'Day 9 (3/5)' },
+            '2027-03-06': { id: 'day10', label: 'Day 10 (3/6)' },
+            '2027-03-07': { id: 'day11', label: 'Day 11 (3/7)' }
+        };
+
+        function showFabToast(msg) {
+            const toast = document.getElementById('fabToast');
+            if (!toast) return;
+            toast.innerText = msg;
+            toast.classList.add('show');
+            clearTimeout(toast.timer);
+            toast.timer = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2200);
+        }
+
+        function jumpToTodaySchedule() {
+            const now = new Date();
+            const yyyy = now.getFullYear();
+            const mm = String(now.getMonth() + 1).padStart(2, '0');
+            const dd = String(now.getDate()).padStart(2, '0');
+            const todayStr = `${yyyy}-${mm}-${dd}`;
+
+            const matched = tripDateToIdMap[todayStr];
+            const targetId = matched ? matched.id : 'day1';
+            const targetEl = document.getElementById(targetId);
+
+            if (targetEl) {
+                targetEl.scrollIntoView({ behavior: 'smooth' });
+                targetEl.classList.remove('flash-focus');
+                void targetEl.offsetWidth; // 觸發重繪以重播閃爍效果
+                targetEl.classList.add('flash-focus');
+
+                if (matched) {
+                    showFabToast(`🌸 已跳轉至今日行程：${matched.label}`);
+                } else {
+                    showFabToast(`📌 目前非旅途期間，已跳轉至 Day 1 (2/25)`);
+                }
+            }
+        }
+
+        // 2. 回到頂部與滾動偵測顯示
+        function scrollToPageTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.addEventListener('scroll', () => {
+            const topBtn = document.getElementById('backToTopBtn');
+            if (!topBtn) return;
+            if (window.scrollY > 300) {
+                topBtn.classList.add('show');
+            } else {
+                topBtn.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>
